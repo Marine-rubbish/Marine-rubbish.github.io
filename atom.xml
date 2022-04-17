@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-17T09:03:42.309Z</updated>
+  <updated>2022-04-17T15:23:13.224Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Matlab中的随机数生成函数</title>
+    <link href="http://example.com/2022/04/17/Matlab%E4%B8%AD%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/"/>
+    <id>http://example.com/2022/04/17/Matlab%E4%B8%AD%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/</id>
+    <published>2022-04-17T14:10:20.000Z</published>
+    <updated>2022-04-17T15:23:13.224Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;　　Matlab 统计工具箱中有 27 种概率分布，工具箱对每一种分布都提供 5 类函数，其命令的字符是：&lt;br&gt;    pdf</summary>
+        
+      
+    
+    
+    
+    
+    <category term="数学建模" scheme="http://example.com/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>96. 奇怪的汉诺塔</title>
