@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-17T05:27:17.265Z</updated>
+  <updated>2022-04-17T08:05:33.610Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>95. 费解的开关</title>
+    <link href="http://example.com/2022/04/17/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/95-%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/"/>
+    <id>http://example.com/2022/04/17/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/95-%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/</id>
+    <published>2022-04-17T08:05:04.000Z</published>
+    <updated>2022-04-17T08:05:33.610Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="代码打卡" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>94. 递归实现排列型枚举</title>
