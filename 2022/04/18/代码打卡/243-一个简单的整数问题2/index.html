@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Matlab中的随机数生成函数 |  My Blog</title>
+      <title>243. 一个简单的整数问题2 |  My Blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -54,7 +54,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Matlab中的随机数生成函数"
+  id="post-代码打卡/243-一个简单的整数问题2"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -65,7 +65,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Matlab中的随机数生成函数
+  243. 一个简单的整数问题2
 </h1>
  
 
@@ -73,15 +73,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/04/17/Matlab%E4%B8%AD%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/" class="article-date">
-  <time datetime="2022-04-17T14:10:20.000Z" itemprop="datePublished">2022-04-17</time>
+      <a href="/2022/04/18/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/243-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B4%E6%95%B0%E9%97%AE%E9%A2%982/" class="article-date">
+  <time datetime="2022-04-18T14:49:04.000Z" itemprop="datePublished">2022-04-18</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">706</span>
+            <span class="post-count">383</span>
         </span>
     </span>
 
@@ -97,30 +97,13 @@
  
     </div>
       
-    <div class="tocbot"></div>
-
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　Matlab 统计工具箱中有 27 种概率分布，工具箱对每一种分布都提供 5 类函数，其命令的字符是：<br>pdf 概率密度； cdf 分布函数； inv 分布函数的反函数；stat 均值与方差； rnd 随机数生成<br>　　这里主要介绍常用的rnd类函数</p>
-<h2 id="rand-函数"><a href="#rand-函数" class="headerlink" title="rand 函数"></a>rand 函数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rand(n) %返回一个 n×n 在区间 (0,1) 内均匀分布的随机数矩阵</span><br><span class="line">rand(m,n) %返回一个 m×n 在区间 (0,1) 内均匀分布的随机数矩阵</span><br></pre></td></tr></table></figure>
-<h2 id="unifrnd-函数"><a href="#unifrnd-函数" class="headerlink" title="unifrnd 函数"></a>unifrnd 函数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unifrnd(a,b,m,n) %返回一个 m×n 在区间 (a,b) 内均匀分布的随机数矩阵</span><br></pre></td></tr></table></figure>
-<h2 id="randn-函数"><a href="#randn-函数" class="headerlink" title="randn 函数"></a>randn 函数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">randn(n) %返回一个 n×n 标准正态分布的随机数矩阵</span><br><span class="line">randn(m,n) %返回一个 m×n 标准正态分布的随机数矩阵</span><br></pre></td></tr></table></figure>
-<h2 id="exprnd-函数"><a href="#exprnd-函数" class="headerlink" title="exprnd 函数"></a>exprnd 函数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exprnd(lambda,m,n) %返回一个均值为lambda的 m×n 的指数分布随机数矩阵</span><br></pre></td></tr></table></figure>
-<h2 id="normrnd-函数"><a href="#normrnd-函数" class="headerlink" title="normrnd 函数"></a>normrnd 函数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">normrnd(mu,sigma,m,n) %返回一个满足N(mu,sigma)的 m×n 的正态分布随机数矩阵</span><br></pre></td></tr></table></figure>
-<h2 id="poissrnd-函数"><a href="#poissrnd-函数" class="headerlink" title="poissrnd 函数"></a>poissrnd 函数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">poissrnd(lambda,m,n) %返回一个参数为lambda的 m×n 的泊松分布随机数矩阵</span><br></pre></td></tr></table></figure>
-<h2 id="binornd-函数"><a href="#binornd-函数" class="headerlink" title="binornd 函数"></a>binornd 函数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">binornd(n,p,m,n) %返回一个满足B(n,p)的 m×n 的二项分布随机数矩阵</span><br></pre></td></tr></table></figure>
-<h2 id="randperm-函数"><a href="#randperm-函数" class="headerlink" title="randperm 函数"></a>randperm 函数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">randperm(n) %返回行向量，其中包含从 1 到 n 没有重复元素的整数随机排列</span><br><span class="line">randperm(n,k) %返回行向量，其中包含在 1 到 n 之间随机选择的 k 个唯一整数(1-n随机选择k个互不相同的整数)</span><br></pre></td></tr></table></figure>
-<h2 id="perms-函数"><a href="#perms-函数" class="headerlink" title="perms 函数"></a>perms 函数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">perms(n) %返回的矩阵包含了向量 v 中元素按字典序反序的所有排列。  </span><br><span class="line">% P 的每一行包含 v 中 n 个元素的一个不同排列。矩阵 P 具有与 v 相同的数据类型，包含 n! 行和 n 列。</span><br></pre></td></tr></table></figure>
-<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>　　以下介绍几种绘制数据分布图的方法，建议配合以上的随机数生成函数学习：  </p>
-<h3 id="hist-函数"><a href="#hist-函数" class="headerlink" title="hist 函数"></a>hist 函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[N,X] = hist(Y,M); </span><br><span class="line">%得到数组（行、列均可）Y 的频数表。</span><br><span class="line">%它将区间[min(Y),max(Y)]等分为 M 份（缺省时M 设定为 10）。</span><br><span class="line">%N 返回 M 个小区间的频数，X 返回 M 个小区间的中点。</span><br></pre></td></tr></table></figure>
-<h3 id="cdfplot-函数"><a href="#cdfplot-函数" class="headerlink" title="cdfplot 函数"></a>cdfplot 函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cdfplot(X) %作样本X（向量）的经验累积分布(也就是F(X))函数图形</span><br><span class="line">%如果表头(title)出现矩形则是中文显示异常，可以通过设置字体解决</span><br><span class="line">%set(0,&#x27;defaultAxesFontName&#x27;, &#x27;Microsft YaHei UI&#x27;);实测有效，就是每次启动都要设置</span><br></pre></td></tr></table></figure>
-<h2 id="参考文献以及资料"><a href="#参考文献以及资料" class="headerlink" title="参考文献以及资料"></a>参考文献以及资料</h2><p>1、司守奎数学建模算法课件（2版含源程序）  </p>
-<p>2、<a target="_blank" rel="noopener" href="https://max.book118.com/html/2017/0702/119736142.shtm">https://max.book118.com/html/2017/0702/119736142.shtm</a></p>
-<p>3、南信大的数学建模课件（Monte-Carlo 方法介绍及其建模应用）</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int maxn =1e5+1;</span><br><span class="line">typedef long long ll;</span><br><span class="line">ll d[4*maxn],b[4*maxn],a[maxn],n,m,l,r,k;</span><br><span class="line">string op;</span><br><span class="line">void build(ll s,ll t,ll p)</span><br><span class="line">&#123;</span><br><span class="line">    ll mid=(t+s)&gt;&gt;1;</span><br><span class="line">    if(s==t)</span><br><span class="line">    &#123;</span><br><span class="line">        d[p]=a[s];</span><br><span class="line">        return ;</span><br><span class="line">    &#125;</span><br><span class="line">    build(s,mid,p*2);</span><br><span class="line">    build(mid+1,t,p*2+1);</span><br><span class="line">    d[p]=d[p*2]+d[p*2+1];</span><br><span class="line">&#125;</span><br><span class="line">void pushdown(ll s,ll t,ll p)</span><br><span class="line">&#123;</span><br><span class="line">    ll m=(s+t)&gt;&gt;1;</span><br><span class="line">    if(b[p])</span><br><span class="line">    &#123;</span><br><span class="line">        d[p*2]+=(m-s+1)*b[p];</span><br><span class="line">        d[p*2+1]+=(t-m)*b[p];</span><br><span class="line">        b[p*2+1]+=b[p];b[p*2]+=b[p];</span><br><span class="line">        b[p]=0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">void add(ll l,ll r,ll c,ll s,ll t,ll p)</span><br><span class="line">&#123;</span><br><span class="line">    ll mid=(s+t)&gt;&gt;1;</span><br><span class="line">    if(l&lt;=s&amp;&amp;t&lt;=r)</span><br><span class="line">    &#123;</span><br><span class="line">        d[p]+=(t-s+1)*c;</span><br><span class="line">        b[p]+=c;</span><br><span class="line">        return ;</span><br><span class="line">    &#125;</span><br><span class="line">    pushdown(s,t,p);</span><br><span class="line">    if(l&lt;=mid)</span><br><span class="line">        add(l,r,c,s,mid,p*2);</span><br><span class="line">    if(r&gt;mid)</span><br><span class="line">        add(l,r,c,mid+1,t,p*2+1);</span><br><span class="line">    d[p]=d[p*2]+d[p*2+1];</span><br><span class="line">&#125;</span><br><span class="line">ll getsum(ll l,ll r,ll s,ll t,ll p)</span><br><span class="line">&#123;</span><br><span class="line">    ll res=0;</span><br><span class="line">    if(l&lt;=s&amp;&amp;t&lt;=r)</span><br><span class="line">    &#123;</span><br><span class="line">        return d[p];</span><br><span class="line">    &#125;</span><br><span class="line">    ll mid=(s+t)&gt;&gt;1;</span><br><span class="line">    pushdown(s,t,p);</span><br><span class="line">    if(l&lt;=mid)</span><br><span class="line">        res+=getsum(l,r,s,mid,p*2);</span><br><span class="line">    if(r&gt;mid)</span><br><span class="line">        res+=getsum(l,r,mid+1,t,p*2+1);</span><br><span class="line">    return res;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)</span><br><span class="line">        scanf(&quot;%lld&quot;,&amp;a[i]);</span><br><span class="line">    build(1,n,1);</span><br><span class="line">    while (m -- )</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;op;</span><br><span class="line">        if(op==&quot;Q&quot;)</span><br><span class="line">        &#123;</span><br><span class="line">            scanf(&quot;%lld%lld&quot;,&amp;l,&amp;r);</span><br><span class="line">            printf(&quot;%lld\n&quot;,getsum(l,r,1,n,1));</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            scanf(&quot;%lld%lld%lld&quot;,&amp;l,&amp;r,&amp;k);</span><br><span class="line">            add(l,r,k,1,n,1);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
       
@@ -191,12 +174,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/04/17/Matlab%E4%B8%AD%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/04/18/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/243-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B4%E6%95%B0%E9%97%AE%E9%A2%982/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" rel="tag">数学建模</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/" rel="tag">代码打卡</a></li></ul>
 
     </footer>
   </div>
@@ -204,19 +187,10 @@
    
   <nav class="article-nav">
     
-      <a href="/2022/04/18/to-do-list/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            to-do-list
-          
-        </div>
-      </a>
     
-    
-      <a href="/2022/04/17/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/96-%E5%A5%87%E6%80%AA%E7%9A%84%E6%B1%89%E8%AF%BA%E5%A1%94/" class="article-nav-link">
+      <a href="/2022/04/18/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/242-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B4%E6%95%B0%E9%97%AE%E9%A2%98/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">96. 奇怪的汉诺塔</div>
+        <div class="article-nav-title">242. 一个简单的整数问题</div>
       </a>
     
   </nav>
