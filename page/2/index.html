@@ -171,6 +171,55 @@
     
     
     <article
+  id="post-代码打卡/91-最短Hamilton路径"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/04/16/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/91-%E6%9C%80%E7%9F%ADHamilton%E8%B7%AF%E5%BE%84/"
+    >91. 最短Hamilton路径</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/04/16/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/91-%E6%9C%80%E7%9F%ADHamilton%E8%B7%AF%E5%BE%84/" class="article-date">
+  <time datetime="2022-04-16T08:09:11.000Z" itemprop="datePublished">2022-04-16</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int N = 20;</span><br><span class="line">int w[N][N];</span><br><span class="line">int f[1&lt;&lt;N][N],n;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    for (int i = 0; i &lt; n; i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        for (int j = 0; j &lt; n; j ++ )</span><br><span class="line">        &#123;</span><br><span class="line">            cin&gt;&gt;w[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    memset(f,0x3f,sizeof(f));</span><br><span class="line">    f[1][0]=0;</span><br><span class="line">    for (int i = 1; i &lt; (1&lt;&lt;n); i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        for(int j=0;j&lt;n;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(i&gt;&gt;j&amp;1)</span><br><span class="line">            &#123;</span><br><span class="line">                for(int k=0;k&lt;n;k++)</span><br><span class="line">                &#123;</span><br><span class="line">                    if(i-(1&lt;&lt;j)&gt;&gt;k&amp;1)</span><br><span class="line">                    &#123;</span><br><span class="line">                        f[i][j]=min(f[i-(1&lt;&lt;j)][k]+w[k][j],f[i][j]);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;f[(1&lt;&lt;n)-1][n-1]&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/" rel="tag">代码打卡</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-代码打卡/90-64位整数乘法"
   class="article article-type-post"
   itemscope
