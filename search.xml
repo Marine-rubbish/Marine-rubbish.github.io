@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>0：GUI中的基本操作</title>
+    <url>/2022/04/22/0%EF%BC%9AGUI%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Markdown笔记1</title>
     <url>/2022/04/14/Markdown%E7%AC%94%E8%AE%B01/</url>
     <content><![CDATA[<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><pre><code>Markdown 支持两种标题的语法，类 Setext 和类 atx 形式。
@@ -94,6 +99,14 @@ Markdown 应用程序在处理单词或短语中间添加的下划线上并不�
       </tags>
   </entry>
   <entry>
+    <title>第一题</title>
+    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%B8%80%E9%A2%98/</url>
+    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">a=input(<span class="string">&#x27;输入三角形的一条边 &#x27;</span>);</span><br><span class="line">b=input(<span class="string">&#x27;输入三角形的一条边 &#x27;</span>);</span><br><span class="line">c=input(<span class="string">&#x27;输入三角形的一条边 &#x27;</span>);</span><br><span class="line"><span class="keyword">if</span>(a&gt;<span class="number">0</span>&amp;&amp;b&gt;<span class="number">0</span>&amp;&amp;c&gt;<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">if</span>((a+b&gt;c)&amp;&amp;(a+c&gt;b)&amp;&amp;(b+c&gt;a))</span><br><span class="line">        p=(a+b+c)/<span class="number">2</span>;</span><br><span class="line">        s=<span class="built_in">sqrt</span>(p*(p-a)*(p-b)*(p-c));</span><br><span class="line">        fprintf(<span class="string">&#x27;三角形面积为%f\n&#x27;</span>,s);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        fprintf(<span class="string">&#x27;不能构成一个三角形\n&#x27;</span>);</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    fprintf(<span class="string">&#x27;不能构成一个三角形\n&#x27;</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>matlab作业</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>旧作补档</title>
     <url>/2022/04/16/%E6%97%A7%E4%BD%9C%E8%A1%A5%E6%A1%A3/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>快考蓝桥杯了，发现自己dp不会，补了几题。<br>写一篇题解攒攒人品以防爆零</p>
@@ -105,6 +118,76 @@ Markdown 应用程序在处理单词或短语中间添加的下划线上并不�
 <h3 id="算法1"><a href="#算法1" class="headerlink" title="算法1"></a>算法1</h3><h5 id="dp-O-n-2m-2"><a href="#dp-O-n-2m-2" class="headerlink" title="(dp)  $O(n^2m^2)$"></a>(dp)  $O(n^2m^2)$</h5><h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++ 代码"></a>C++ 代码</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//来回传纸条和从起点传两次到终点是等价的，建模成从起点传两次到终点更好写</span><br><span class="line">//dp[i][j][k][l]表示第一次传到(i,j)、第二次传到(k,l)时好心程度的最大值</span><br><span class="line">//显然第一次传到(i,j)的最大值可以从(i-1,j)、(i,j-1)的最大值得来</span><br><span class="line">//第二次传到(k,l)的最大值可以从(k-1,j)、(k,j-1)的最大值得来</span><br><span class="line">//所以dp[i][j][k][l]的值是max(dp[i-1][j][k-1][l],dp[i-1][j][k][l-1],dp[i][j-1][k-1][l],dp[i][j-1][k][l-1])+a[i][j]+a[k][l];(两种转移方式的组合的最大值再加上两个格子上的值)</span><br><span class="line">//需要注意的是i==k&amp;&amp;j==l时，此时两个纸条到了同一格子上，但是每个格子上的好心值只能计算一次，所以要减去重复的</span><br><span class="line">//最后结果根据dp的定义是dp[n][m][n][m]</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int N = 51;</span><br><span class="line">int dp[N][N][N][N],a[N][N],m,n;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    cin &gt;&gt; n&gt;&gt;m;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        for(int j=1;j&lt;=m;j++)</span><br><span class="line">            cin &gt;&gt; a[i][j];</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        for (int j = 1; j &lt;=m; j ++ )</span><br><span class="line">        &#123;</span><br><span class="line">            for(int k=1;k&lt;=n;k++)</span><br><span class="line">            &#123;</span><br><span class="line">                for(int l=1;l&lt;=m;l++)</span><br><span class="line">                &#123;</span><br><span class="line">                    dp[i][j][k][l]=max(dp[i-1][j][k-1][l],max(dp[i-1][j][k][l-1],max(dp[i][j-1][k-1][l],dp[i][j-1][k][l-1])))+a[i][j]+a[k][l];</span><br><span class="line">                    if(i==k&amp;&amp;j==l)</span><br><span class="line">                        dp[i][j][k][l]-=(a[i][j]+a[k][l]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; dp[n][m][n][m]&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>杂谈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第七题</title>
+    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%B8%83%E9%A2%98/</url>
+    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">n=input(<span class="string">&#x27;学生成绩: &#x27;</span>);</span><br><span class="line"><span class="keyword">switch</span> <span class="built_in">floor</span>(n/<span class="number">10</span>)</span><br><span class="line">    <span class="keyword">case</span> &#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;</span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">&#x27;不及格&#x27;</span>);</span><br><span class="line">    <span class="keyword">case</span> &#123;<span class="number">6</span>,<span class="number">7</span>&#125;</span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">&#x27;及格&#x27;</span>);</span><br><span class="line">    <span class="keyword">case</span> &#123;<span class="number">8</span>&#125;</span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">&#x27;良好&#x27;</span>);</span><br><span class="line">    <span class="keyword">case</span> &#123;<span class="number">9</span>,<span class="number">10</span>&#125;</span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">&#x27;优秀&#x27;</span>);</span><br><span class="line">    <span class="keyword">otherwise</span></span><br><span class="line">        <span class="built_in">disp</span>(<span class="number">-1</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>matlab作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第三题</title>
+    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%B8%89%E9%A2%98/</url>
+    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">res</span>=<span class="title">myfactorial</span><span class="params">(n)</span></span></span><br><span class="line">res=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span> n==<span class="number">1</span></span><br><span class="line">    res=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    res=myfactorial(n<span class="number">-1</span>)*n;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>matlab作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第九题</title>
+    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%B9%9D%E9%A2%98/</url>
+    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">n=[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">5</span> <span class="number">7</span>];</span><br><span class="line">buf=n;</span><br><span class="line"><span class="keyword">for</span> ii=<span class="number">1</span>:<span class="number">5</span></span><br><span class="line">    cnt=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">if</span> (cnt~=<span class="number">0</span>&amp;&amp;n(ii)==<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">mod</span>(n(ii),<span class="number">2</span>)==<span class="number">0</span></span><br><span class="line">                n(ii)=n(ii)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                n(ii)=n(ii)*<span class="number">3</span>+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">            cnt=cnt+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    fprintf(<span class="string">&#x27;%d经过%d步变为1\n&#x27;</span>,buf(ii),cnt);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>matlab作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第二题</title>
+    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%BA%8C%E9%A2%98/</url>
+    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">n=input(<span class="string">&#x27;输入一个数n &#x27;</span>);</span><br><span class="line">sum=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> ii=<span class="number">1</span>:n</span><br><span class="line">    sum=sum+ii;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">sum</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>matlab作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第五题</title>
+    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%BA%94%E9%A2%98/</url>
+    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">a=input(<span class="string">&#x27;输入二次项系数a &#x27;</span>);</span><br><span class="line">b=input(<span class="string">&#x27;输入一次项系数b &#x27;</span>);</span><br><span class="line">c=input(<span class="string">&#x27;输入常数c &#x27;</span>);</span><br><span class="line">r=roots([a b c]);</span><br><span class="line"><span class="built_in">disp</span>(r);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>matlab作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第八题</title>
+    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E5%85%AB%E9%A2%98/</url>
+    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">a=<span class="number">1</span>;b=<span class="number">1</span>;c=<span class="number">2</span>;n=<span class="number">3</span>;</span><br><span class="line"><span class="keyword">while</span> c&lt;=<span class="number">500</span></span><br><span class="line">    c=a+b;</span><br><span class="line">    <span class="comment">%fprintf(&#x27;%d %d\n&#x27;,a,b);</span></span><br><span class="line">    a=b;</span><br><span class="line">    b=c;</span><br><span class="line">    n=n+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">fprintf(<span class="string">&quot;%d %d\n&quot;</span>,c,n);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>matlab作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第六题</title>
+    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E5%85%AD%E9%A2%98/</url>
+    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[r,theta]</span>=<span class="title">Coord_Trans</span><span class="params">(x,y)</span></span></span><br><span class="line">r=<span class="built_in">sqrt</span>(x*x+y*y);</span><br><span class="line">theta=<span class="built_in">atan</span>(y/x);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>matlab作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第四题</title>
+    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E5%9B%9B%E9%A2%98/</url>
+    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a=input(<span class="string">&#x27;输入一个数a &#x27;</span>);</span><br><span class="line">b=input(<span class="string">&#x27;输入一个数b &#x27;</span>);</span><br><span class="line">t=a;</span><br><span class="line">a=b;</span><br><span class="line">b=t;</span><br><span class="line">fprintf(<span class="string">&#x27;a=%d\n&#x27;</span>,a);</span><br><span class="line">fprintf(<span class="string">&#x27;b=%d\n&#x27;</span>,b);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>matlab作业</tag>
       </tags>
   </entry>
   <entry>
@@ -204,89 +287,6 @@ Markdown 应用程序在处理单词或短语中间添加的下划线上并不�
       <tags>
         <tag>代码打卡</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>第一题</title>
-    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%B8%80%E9%A2%98/</url>
-    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">a=input(<span class="string">&#x27;输入三角形的一条边 &#x27;</span>);</span><br><span class="line">b=input(<span class="string">&#x27;输入三角形的一条边 &#x27;</span>);</span><br><span class="line">c=input(<span class="string">&#x27;输入三角形的一条边 &#x27;</span>);</span><br><span class="line"><span class="keyword">if</span>(a&gt;<span class="number">0</span>&amp;&amp;b&gt;<span class="number">0</span>&amp;&amp;c&gt;<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">if</span>((a+b&gt;c)&amp;&amp;(a+c&gt;b)&amp;&amp;(b+c&gt;a))</span><br><span class="line">        p=(a+b+c)/<span class="number">2</span>;</span><br><span class="line">        s=<span class="built_in">sqrt</span>(p*(p-a)*(p-b)*(p-c));</span><br><span class="line">        fprintf(<span class="string">&#x27;三角形面积为%f\n&#x27;</span>,s);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        fprintf(<span class="string">&#x27;不能构成一个三角形\n&#x27;</span>);</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    fprintf(<span class="string">&#x27;不能构成一个三角形\n&#x27;</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>matlab作业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第七题</title>
-    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%B8%83%E9%A2%98/</url>
-    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">n=input(<span class="string">&#x27;学生成绩: &#x27;</span>);</span><br><span class="line"><span class="keyword">switch</span> <span class="built_in">floor</span>(n/<span class="number">10</span>)</span><br><span class="line">    <span class="keyword">case</span> &#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;</span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">&#x27;不及格&#x27;</span>);</span><br><span class="line">    <span class="keyword">case</span> &#123;<span class="number">6</span>,<span class="number">7</span>&#125;</span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">&#x27;及格&#x27;</span>);</span><br><span class="line">    <span class="keyword">case</span> &#123;<span class="number">8</span>&#125;</span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">&#x27;良好&#x27;</span>);</span><br><span class="line">    <span class="keyword">case</span> &#123;<span class="number">9</span>,<span class="number">10</span>&#125;</span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">&#x27;优秀&#x27;</span>);</span><br><span class="line">    <span class="keyword">otherwise</span></span><br><span class="line">        <span class="built_in">disp</span>(<span class="number">-1</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>matlab作业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第三题</title>
-    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%B8%89%E9%A2%98/</url>
-    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">res</span>=<span class="title">myfactorial</span><span class="params">(n)</span></span></span><br><span class="line">res=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span> n==<span class="number">1</span></span><br><span class="line">    res=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    res=myfactorial(n<span class="number">-1</span>)*n;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>matlab作业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第九题</title>
-    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%B9%9D%E9%A2%98/</url>
-    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">n=[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">5</span> <span class="number">7</span>];</span><br><span class="line">buf=n;</span><br><span class="line"><span class="keyword">for</span> ii=<span class="number">1</span>:<span class="number">5</span></span><br><span class="line">    cnt=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">if</span> (cnt~=<span class="number">0</span>&amp;&amp;n(ii)==<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">mod</span>(n(ii),<span class="number">2</span>)==<span class="number">0</span></span><br><span class="line">                n(ii)=n(ii)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                n(ii)=n(ii)*<span class="number">3</span>+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">            cnt=cnt+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    fprintf(<span class="string">&#x27;%d经过%d步变为1\n&#x27;</span>,buf(ii),cnt);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>matlab作业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第二题</title>
-    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%BA%8C%E9%A2%98/</url>
-    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">n=input(<span class="string">&#x27;输入一个数n &#x27;</span>);</span><br><span class="line">sum=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> ii=<span class="number">1</span>:n</span><br><span class="line">    sum=sum+ii;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">sum</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>matlab作业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第五题</title>
-    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%BA%94%E9%A2%98/</url>
-    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">a=input(<span class="string">&#x27;输入二次项系数a &#x27;</span>);</span><br><span class="line">b=input(<span class="string">&#x27;输入一次项系数b &#x27;</span>);</span><br><span class="line">c=input(<span class="string">&#x27;输入常数c &#x27;</span>);</span><br><span class="line">r=roots([a b c]);</span><br><span class="line"><span class="built_in">disp</span>(r);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>matlab作业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第八题</title>
-    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E5%85%AB%E9%A2%98/</url>
-    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">a=<span class="number">1</span>;b=<span class="number">1</span>;c=<span class="number">2</span>;n=<span class="number">3</span>;</span><br><span class="line"><span class="keyword">while</span> c&lt;=<span class="number">500</span></span><br><span class="line">    c=a+b;</span><br><span class="line">    <span class="comment">%fprintf(&#x27;%d %d\n&#x27;,a,b);</span></span><br><span class="line">    a=b;</span><br><span class="line">    b=c;</span><br><span class="line">    n=n+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">fprintf(<span class="string">&quot;%d %d\n&quot;</span>,c,n);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>matlab作业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第六题</title>
-    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E5%85%AD%E9%A2%98/</url>
-    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[r,theta]</span>=<span class="title">Coord_Trans</span><span class="params">(x,y)</span></span></span><br><span class="line">r=<span class="built_in">sqrt</span>(x*x+y*y);</span><br><span class="line">theta=<span class="built_in">atan</span>(y/x);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>matlab作业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第四题</title>
-    <url>/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E5%9B%9B%E9%A2%98/</url>
-    <content><![CDATA[<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a=input(<span class="string">&#x27;输入一个数a &#x27;</span>);</span><br><span class="line">b=input(<span class="string">&#x27;输入一个数b &#x27;</span>);</span><br><span class="line">t=a;</span><br><span class="line">a=b;</span><br><span class="line">b=t;</span><br><span class="line">fprintf(<span class="string">&#x27;a=%d\n&#x27;</span>,a);</span><br><span class="line">fprintf(<span class="string">&#x27;b=%d\n&#x27;</span>,b);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>matlab作业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>0：GUI中的基本操作</title>
-    <url>/2022/04/22/0%EF%BC%9AGUI%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>第一章习题</title>
