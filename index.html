@@ -171,6 +171,63 @@
     
     
     <article
+  id="post-matlab作业4/matlab第四次作业"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/05/04/matlab%E4%BD%9C%E4%B8%9A4/matlab%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%BD%9C%E4%B8%9A/"
+    >matlab第四次作业</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/05/04/matlab%E4%BD%9C%E4%B8%9A4/matlab%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="article-date">
+  <time datetime="2022-05-04T11:35:08.000Z" itemprop="datePublished">2022-05-04</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="第一题代码"><a href="#第一题代码" class="headerlink" title="第一题代码"></a>第一题代码</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">a=input(<span class="string">&#x27;输入三角形的一条边 &#x27;</span>);</span><br><span class="line">b=input(<span class="string">&#x27;输入三角形的一条边 &#x27;</span>);</span><br><span class="line">c=input(<span class="string">&#x27;输入三角形的一条边 &#x27;</span>);</span><br><span class="line"><span class="keyword">if</span>(a&gt;<span class="number">0</span>&amp;&amp;b&gt;<span class="number">0</span>&amp;&amp;c&gt;<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">if</span>((a+b&gt;c)&amp;&amp;(a+c&gt;b)&amp;&amp;(b+c&gt;a))</span><br><span class="line">        p=(a+b+c)/<span class="number">2</span>;</span><br><span class="line">        s=<span class="built_in">sqrt</span>(p*(p-a)*(p-b)*(p-c));</span><br><span class="line">        fprintf(<span class="string">&#x27;三角形面积为%f\n&#x27;</span>,s);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        fprintf(<span class="string">&#x27;不能构成一个三角形\n&#x27;</span>);</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    fprintf(<span class="string">&#x27;不能构成一个三角形\n&#x27;</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="第二题代码"><a href="#第二题代码" class="headerlink" title="第二题代码"></a>第二题代码</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">n=input(<span class="string">&#x27;输入一个数n &#x27;</span>);</span><br><span class="line">sum=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> ii=<span class="number">1</span>:n</span><br><span class="line">    sum=sum+ii;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">sum</span><br></pre></td></tr></table></figure>
+<h2 id="第三题代码"><a href="#第三题代码" class="headerlink" title="第三题代码"></a>第三题代码</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">res</span>=<span class="title">myfactorial</span><span class="params">(n)</span></span></span><br><span class="line">res=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span> n==<span class="number">1</span></span><br><span class="line">    res=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    res=myfactorial(n<span class="number">-1</span>)*n;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="第四题代码"><a href="#第四题代码" class="headerlink" title="第四题代码"></a>第四题代码</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a=input(<span class="string">&#x27;输入一个数a &#x27;</span>);</span><br><span class="line">b=input(<span class="string">&#x27;输入一个数b &#x27;</span>);</span><br><span class="line">t=a;</span><br><span class="line">a=b;</span><br><span class="line">b=t;</span><br><span class="line">fprintf(<span class="string">&#x27;a=%d\n&#x27;</span>,a);</span><br><span class="line">fprintf(<span class="string">&#x27;b=%d\n&#x27;</span>,b);</span><br></pre></td></tr></table></figure>
+<h2 id="第五题代码"><a href="#第五题代码" class="headerlink" title="第五题代码"></a>第五题代码</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">a=input(<span class="string">&#x27;输入二次项系数a &#x27;</span>);</span><br><span class="line">b=input(<span class="string">&#x27;输入一次项系数b &#x27;</span>);</span><br><span class="line">c=input(<span class="string">&#x27;输入常数c &#x27;</span>);</span><br><span class="line">r=roots([a b c]);</span><br><span class="line"><span class="built_in">disp</span>(r);</span><br></pre></td></tr></table></figure>
+<h2 id="第六题代码"><a href="#第六题代码" class="headerlink" title="第六题代码"></a>第六题代码</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[r,theta]</span>=<span class="title">Coord_Trans</span><span class="params">(x,y)</span></span></span><br><span class="line">r=<span class="built_in">sqrt</span>(x*x+y*y);</span><br><span class="line">theta=<span class="built_in">atan</span>(y/x);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="第七题代码"><a href="#第七题代码" class="headerlink" title="第七题代码"></a>第七题代码</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">n=input(<span class="string">&#x27;学生成绩: &#x27;</span>);</span><br><span class="line"><span class="keyword">switch</span> <span class="built_in">floor</span>(n/<span class="number">10</span>)</span><br><span class="line">    <span class="keyword">case</span> &#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;</span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">&#x27;不及格&#x27;</span>);</span><br><span class="line">    <span class="keyword">case</span> &#123;<span class="number">6</span>,<span class="number">7</span>&#125;</span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">&#x27;及格&#x27;</span>);</span><br><span class="line">    <span class="keyword">case</span> &#123;<span class="number">8</span>&#125;</span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">&#x27;良好&#x27;</span>);</span><br><span class="line">    <span class="keyword">case</span> &#123;<span class="number">9</span>,<span class="number">10</span>&#125;</span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">&#x27;优秀&#x27;</span>);</span><br><span class="line">    <span class="keyword">otherwise</span></span><br><span class="line">        <span class="built_in">disp</span>(<span class="number">-1</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="第八题代码"><a href="#第八题代码" class="headerlink" title="第八题代码"></a>第八题代码</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">a=<span class="number">1</span>;b=<span class="number">1</span>;c=<span class="number">2</span>;n=<span class="number">3</span>;</span><br><span class="line"><span class="keyword">while</span> c&lt;=<span class="number">500</span></span><br><span class="line">    c=a+b;</span><br><span class="line">    <span class="comment">%fprintf(&#x27;%d %d\n&#x27;,a,b);</span></span><br><span class="line">    a=b;</span><br><span class="line">    b=c;</span><br><span class="line">    n=n+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">fprintf(<span class="string">&quot;%d %d\n&quot;</span>,c,n);</span><br></pre></td></tr></table></figure>
+<h2 id="第九题代码"><a href="#第九题代码" class="headerlink" title="第九题代码"></a>第九题代码</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">n=[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">5</span> <span class="number">7</span>];</span><br><span class="line">buf=n;</span><br><span class="line"><span class="keyword">for</span> ii=<span class="number">1</span>:<span class="number">5</span></span><br><span class="line">    cnt=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">if</span> (cnt~=<span class="number">0</span>&amp;&amp;n(ii)==<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">mod</span>(n(ii),<span class="number">2</span>)==<span class="number">0</span></span><br><span class="line">                n(ii)=n(ii)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                n(ii)=n(ii)*<span class="number">3</span>+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">            cnt=cnt+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    fprintf(<span class="string">&#x27;%d经过%d步变为1\n&#x27;</span>,buf(ii),cnt);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/matlab%E4%BD%9C%E4%B8%9A/" rel="tag">matlab作业</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-随机好句摘抄"
   class="article article-type-post"
   itemscope
@@ -198,7 +255,8 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>在你最冷的时候，有人不顾自己寒冷抱着你，这就是幸福。</p>
+  <p>在你最冷的时候，有人不顾自己寒冷抱着你，这就是幸福。  </p>
+<p>所谓辉煌的人生，不过是欲望的囚徒。</p>
  
       <!-- reward -->
       
@@ -600,56 +658,6 @@
     <div class="article-entry" itemprop="articleBody">
        
   <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[r,theta]</span>=<span class="title">Coord_Trans</span><span class="params">(x,y)</span></span></span><br><span class="line">r=<span class="built_in">sqrt</span>(x*x+y*y);</span><br><span class="line">theta=<span class="built_in">atan</span>(y/x);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/matlab%E4%BD%9C%E4%B8%9A/" rel="tag">matlab作业</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-matlab作业4/第五题"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%BA%94%E9%A2%98/"
-    >第五题</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%BA%94%E9%A2%98/" class="article-date">
-  <time datetime="2022-04-21T08:02:52.000Z" itemprop="datePublished">2022-04-21</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">a=input(<span class="string">&#x27;输入二次项系数a &#x27;</span>);</span><br><span class="line">b=input(<span class="string">&#x27;输入一次项系数b &#x27;</span>);</span><br><span class="line">c=input(<span class="string">&#x27;输入常数c &#x27;</span>);</span><br><span class="line">r=roots([a b c]);</span><br><span class="line"><span class="built_in">disp</span>(r);</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
       
