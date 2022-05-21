@@ -171,7 +171,7 @@
     
     
     <article
-  id="post-matlab作业4/matlab第四次作业"
+  id="post-lower-bound的小技巧"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -182,7 +182,110 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/05/04/matlab%E4%BD%9C%E4%B8%9A4/matlab%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%BD%9C%E4%B8%9A/"
+  <a class="article-title" href="/2022/05/21/lower-bound%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7/"
+    >lower_bound的小技巧</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/05/21/lower-bound%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="article-date">
+  <time datetime="2022-05-21T09:32:29.000Z" itemprop="datePublished">2022-05-21</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="契机"><a href="#契机" class="headerlink" title="契机"></a>契机</h2><p>在做导弹拦截这题的时候发现自己不太会用lower_bound和upper_bound,所以写一篇文章备忘。  </p>
+<h2 id="常规用法"><a href="#常规用法" class="headerlink" title="常规用法"></a>常规用法</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//以下都需要在不下降序列中用</span></span><br><span class="line"><span class="built_in">lower_bound</span>(f,f+n,a[i]); <span class="comment">//返回f中大于等于a[i]的第一个数</span></span><br><span class="line"><span class="built_in">upper_bound</span>(f,f+n,a[i]); <span class="comment">//返回f中大于a[i]的第一个数</span></span><br></pre></td></tr></table></figure>
+<h2 id="在不上升序列中用"><a href="#在不上升序列中用" class="headerlink" title="在不上升序列中用"></a>在不上升序列中用</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">lower_bound</span>(f,f+n,a[i],<span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;()); <span class="comment">//返回f中大于等于a[i]的第一个数</span></span><br><span class="line"><span class="built_in">upper_bound</span>(f,f+n,a[i]，<span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;()); <span class="comment">//返回f中大于a[i]的第一个数</span></span><br><span class="line"><span class="comment">//当然greater也可以换成自己写的比较函数</span></span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-蓝桥杯复盘"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/05/04/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%8D%E7%9B%98/"
+    >蓝桥杯复盘</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/05/04/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%8D%E7%9B%98/" class="article-date">
+  <time datetime="2022-05-04T11:44:27.000Z" itemprop="datePublished">2022-05-04</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前一直考虑复盘一下今年的蓝桥杯，但是苦于没有时间（摸鱼摸掉了）。所以拖到现在才写。<br>我参加的是C++ B组，最后省一中等偏上。<br>由于我语文不太好，行文整体偏向于流水账。</p>
+<h2 id="Day0"><a href="#Day0" class="headerlink" title="Day0"></a>Day0</h2><p>敲了一些常用的数据结构，比如线段树、树状数组、ST表、倍增LCA等等。还写了一下图论最短路的模板题（dijkstra、SPFA、Floyd）。<br>晚上吃完饭突然发现不能用无线鼠标，于是去买了一个有线鼠标，手感一般（和机房的类似）。买完鼠标后晚上写了一些数论的板子（线性筛、exgcd、线性求逆元等等）。最后看了一些洛谷上一些经典的线性dp（但是没有看递推题单，结果G题推错方程当场炸掉20分）。看完发现也十二点多了，遂睡觉。<br>晚上比较紧张睡不着，三点钟看了一次手机，大概四点才睡的。</p>
+<h2 id="Day1-上午"><a href="#Day1-上午" class="headerlink" title="Day1 上午"></a>Day1 上午</h2><p>早上起的比较晚，于是没吃早饭直接开打了。<br>开考后没几分钟就收到了5张黄牌，吓得我都不敢在动了。但是好在监考老师说没事。于是开始写题。以下是考试的时间线（不准确）：<br>9:05 写掉A<br>9:06 看到B和日期有关，遂不写，开始看C<br>9:14 发现C是模拟，于是切掉<br>9:15-9:20 开始看D，把玩了一些小案例。发现就是对于每个元素在2*(n-i)和2*(i-1)之间取最大值。<br>9:31 写掉D，开始看E<br>9:40 E看不懂，开始看F，一眼看出暴力前缀和可以得到70。于是直接开始写。<br>9:50 码出了F的二维前缀和，放着开始看G<br>9:55 发现G好像有点像原题，通过分析小样例可以一眼看出边界条件，于是开始重点突破递推方程。<br>10:10 感觉递推方程的f[i][j]意义不明，遂放着，开H<br>10:15 看完H感觉是搜索，但是又怕爆复杂度，想着重新优化一下降到O(nlogn)以下。开始犯困了。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-matlab作业/matlab第四次作业"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/05/04/matlab%E4%BD%9C%E4%B8%9A/matlab%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%BD%9C%E4%B8%9A/"
     >matlab第四次作业</a> 
 </h2>
  
@@ -191,7 +294,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/05/04/matlab%E4%BD%9C%E4%B8%9A4/matlab%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="article-date">
+      <a href="/2022/05/04/matlab%E4%BD%9C%E4%B8%9A/matlab%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="article-date">
   <time datetime="2022-05-04T11:35:08.000Z" itemprop="datePublished">2022-05-04</time>
 </a>    
     </div>
@@ -256,7 +359,8 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p>在你最冷的时候，有人不顾自己寒冷抱着你，这就是幸福。  </p>
-<p>所谓辉煌的人生，不过是欲望的囚徒。</p>
+<p>所谓辉煌的人生，不过是欲望的囚徒。  </p>
+<p>我有故人抱剑去，斩尽春风未肯归。</p>
  
       <!-- reward -->
       
@@ -481,7 +585,7 @@
 
     
     <article
-  id="post-matlab作业4/第九题"
+  id="post-代码打卡/97. 约数之和"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -492,8 +596,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%B9%9D%E9%A2%98/"
-    >第九题</a> 
+  <a class="article-title" href="/2022/04/20/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/97.%20%E7%BA%A6%E6%95%B0%E4%B9%8B%E5%92%8C/"
+    >97. 约数之和</a> 
 </h2>
  
 
@@ -501,14 +605,14 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%B9%9D%E9%A2%98/" class="article-date">
-  <time datetime="2022-04-21T08:04:30.000Z" itemprop="datePublished">2022-04-21</time>
+      <a href="/2022/04/20/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/97.%20%E7%BA%A6%E6%95%B0%E4%B9%8B%E5%92%8C/" class="article-date">
+  <time datetime="2022-04-20T13:15:29.000Z" itemprop="datePublished">2022-04-20</time>
 </a>    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">n=[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">5</span> <span class="number">7</span>];</span><br><span class="line">buf=n;</span><br><span class="line"><span class="keyword">for</span> ii=<span class="number">1</span>:<span class="number">5</span></span><br><span class="line">    cnt=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">if</span> (cnt~=<span class="number">0</span>&amp;&amp;n(ii)==<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">mod</span>(n(ii),<span class="number">2</span>)==<span class="number">0</span></span><br><span class="line">                n(ii)=n(ii)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                n(ii)=n(ii)*<span class="number">3</span>+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">            cnt=cnt+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    fprintf(<span class="string">&#x27;%d经过%d步变为1\n&#x27;</span>,buf(ii),cnt);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> mod =<span class="number">9901</span>; </span><br><span class="line">ll a,b,ans;</span><br><span class="line"><span class="function">ll <span class="title">qpow</span><span class="params">(ll x,ll k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll res=<span class="number">1</span>;</span><br><span class="line">    x%=mod;</span><br><span class="line">    <span class="keyword">while</span>(k)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(k&amp;<span class="number">1</span>)</span><br><span class="line">            res=(res*x)%mod;</span><br><span class="line">        x=(x*x)%mod;</span><br><span class="line">        k&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">sum</span><span class="params">(ll p,ll k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(k==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(k%<span class="number">2</span>==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> (p%mod*<span class="built_in">sum</span>(p,k<span class="number">-1</span>)+<span class="number">1</span>)%mod;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">return</span> (<span class="number">1</span>+<span class="built_in">qpow</span>(p,k/<span class="number">2</span>+<span class="number">1</span>))*<span class="built_in">sum</span>(p,k/<span class="number">2</span>)%mod;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt;b;</span><br><span class="line">    ans=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=a;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(a%i==<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            cnt++;</span><br><span class="line">            a/=i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(cnt)</span><br><span class="line">            ans=ans*<span class="built_in">sum</span>(i,cnt*b)%mod;</span><br><span class="line">        <span class="comment">//cout&lt;&lt;a&lt;&lt;endl;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!a)</span><br><span class="line">        ans=<span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; ans&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
       
@@ -519,7 +623,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/matlab%E4%BD%9C%E4%B8%9A/" rel="tag">matlab作业</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/" rel="tag">代码打卡</a></li></ul>
 
     </footer>
   </div>
@@ -531,7 +635,7 @@
 
     
     <article
-  id="post-matlab作业4/第八题"
+  id="post-代码打卡/243-一个简单的整数问题2"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -542,8 +646,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E5%85%AB%E9%A2%98/"
-    >第八题</a> 
+  <a class="article-title" href="/2022/04/18/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/243-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B4%E6%95%B0%E9%97%AE%E9%A2%982/"
+    >243. 一个简单的整数问题2</a> 
 </h2>
  
 
@@ -551,14 +655,14 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E5%85%AB%E9%A2%98/" class="article-date">
-  <time datetime="2022-04-21T08:04:24.000Z" itemprop="datePublished">2022-04-21</time>
+      <a href="/2022/04/18/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/243-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B4%E6%95%B0%E9%97%AE%E9%A2%982/" class="article-date">
+  <time datetime="2022-04-18T14:49:04.000Z" itemprop="datePublished">2022-04-18</time>
 </a>    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">a=<span class="number">1</span>;b=<span class="number">1</span>;c=<span class="number">2</span>;n=<span class="number">3</span>;</span><br><span class="line"><span class="keyword">while</span> c&lt;=<span class="number">500</span></span><br><span class="line">    c=a+b;</span><br><span class="line">    <span class="comment">%fprintf(&#x27;%d %d\n&#x27;,a,b);</span></span><br><span class="line">    a=b;</span><br><span class="line">    b=c;</span><br><span class="line">    n=n+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">fprintf(<span class="string">&quot;%d %d\n&quot;</span>,c,n);</span><br></pre></td></tr></table></figure>
+  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> maxn =<span class="number">1e5</span>+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line">ll d[<span class="number">4</span>*maxn],b[<span class="number">4</span>*maxn],a[maxn],n,m,l,r,k;</span><br><span class="line">string op;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">(ll s,ll t,ll p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll mid=(t+s)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(s==t)</span><br><span class="line">    &#123;</span><br><span class="line">        d[p]=a[s];</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">build</span>(s,mid,p*<span class="number">2</span>);</span><br><span class="line">    <span class="built_in">build</span>(mid+<span class="number">1</span>,t,p*<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">    d[p]=d[p*<span class="number">2</span>]+d[p*<span class="number">2</span>+<span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">pushdown</span><span class="params">(ll s,ll t,ll p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll m=(s+t)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(b[p])</span><br><span class="line">    &#123;</span><br><span class="line">        d[p*<span class="number">2</span>]+=(m-s+<span class="number">1</span>)*b[p];</span><br><span class="line">        d[p*<span class="number">2</span>+<span class="number">1</span>]+=(t-m)*b[p];</span><br><span class="line">        b[p*<span class="number">2</span>+<span class="number">1</span>]+=b[p];b[p*<span class="number">2</span>]+=b[p];</span><br><span class="line">        b[p]=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(ll l,ll r,ll c,ll s,ll t,ll p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll mid=(s+t)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(l&lt;=s&amp;&amp;t&lt;=r)</span><br><span class="line">    &#123;</span><br><span class="line">        d[p]+=(t-s+<span class="number">1</span>)*c;</span><br><span class="line">        b[p]+=c;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">pushdown</span>(s,t,p);</span><br><span class="line">    <span class="keyword">if</span>(l&lt;=mid)</span><br><span class="line">        <span class="built_in">add</span>(l,r,c,s,mid,p*<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">if</span>(r&gt;mid)</span><br><span class="line">        <span class="built_in">add</span>(l,r,c,mid+<span class="number">1</span>,t,p*<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">    d[p]=d[p*<span class="number">2</span>]+d[p*<span class="number">2</span>+<span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">getsum</span><span class="params">(ll l,ll r,ll s,ll t,ll p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll res=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(l&lt;=s&amp;&amp;t&lt;=r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> d[p];</span><br><span class="line">    &#125;</span><br><span class="line">    ll mid=(s+t)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">pushdown</span>(s,t,p);</span><br><span class="line">    <span class="keyword">if</span>(l&lt;=mid)</span><br><span class="line">        res+=<span class="built_in">getsum</span>(l,r,s,mid,p*<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">if</span>(r&gt;mid)</span><br><span class="line">        res+=<span class="built_in">getsum</span>(l,r,mid+<span class="number">1</span>,t,p*<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;a[i]);</span><br><span class="line">    <span class="built_in">build</span>(<span class="number">1</span>,n,<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">while</span> (m -- )</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;op;</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="string">&quot;Q&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld&quot;</span>,&amp;l,&amp;r);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>,<span class="built_in">getsum</span>(l,r,<span class="number">1</span>,n,<span class="number">1</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld%lld&quot;</span>,&amp;l,&amp;r,&amp;k);</span><br><span class="line">            <span class="built_in">add</span>(l,r,k,<span class="number">1</span>,n,<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
       
@@ -569,106 +673,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/matlab%E4%BD%9C%E4%B8%9A/" rel="tag">matlab作业</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-matlab作业4/第七题"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%B8%83%E9%A2%98/"
-    >第七题</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E4%B8%83%E9%A2%98/" class="article-date">
-  <time datetime="2022-04-21T08:04:16.000Z" itemprop="datePublished">2022-04-21</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">n=input(<span class="string">&#x27;学生成绩: &#x27;</span>);</span><br><span class="line"><span class="keyword">switch</span> <span class="built_in">floor</span>(n/<span class="number">10</span>)</span><br><span class="line">    <span class="keyword">case</span> &#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;</span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">&#x27;不及格&#x27;</span>);</span><br><span class="line">    <span class="keyword">case</span> &#123;<span class="number">6</span>,<span class="number">7</span>&#125;</span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">&#x27;及格&#x27;</span>);</span><br><span class="line">    <span class="keyword">case</span> &#123;<span class="number">8</span>&#125;</span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">&#x27;良好&#x27;</span>);</span><br><span class="line">    <span class="keyword">case</span> &#123;<span class="number">9</span>,<span class="number">10</span>&#125;</span><br><span class="line">        <span class="built_in">disp</span>(<span class="string">&#x27;优秀&#x27;</span>);</span><br><span class="line">    <span class="keyword">otherwise</span></span><br><span class="line">        <span class="built_in">disp</span>(<span class="number">-1</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/matlab%E4%BD%9C%E4%B8%9A/" rel="tag">matlab作业</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-matlab作业4/第六题"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E5%85%AD%E9%A2%98/"
-    >第六题</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/04/21/matlab%E4%BD%9C%E4%B8%9A4/%E7%AC%AC%E5%85%AD%E9%A2%98/" class="article-date">
-  <time datetime="2022-04-21T08:04:04.000Z" itemprop="datePublished">2022-04-21</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[r,theta]</span>=<span class="title">Coord_Trans</span><span class="params">(x,y)</span></span></span><br><span class="line">r=<span class="built_in">sqrt</span>(x*x+y*y);</span><br><span class="line">theta=<span class="built_in">atan</span>(y/x);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/matlab%E4%BD%9C%E4%B8%9A/" rel="tag">matlab作业</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/" rel="tag">代码打卡</a></li></ul>
 
     </footer>
   </div>
@@ -685,7 +690,7 @@
   
   <nav class="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
   </nav>
   
 </section>
