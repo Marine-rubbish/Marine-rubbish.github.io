@@ -676,7 +676,7 @@ $(document).ready(function () {
 
     
     <article
-  id="post-算法笔记/P6136-【模板】普通平衡树（数据加强版）"
+  id="post-小技巧/lower-bound的小技巧"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -687,82 +687,7 @@ $(document).ready(function () {
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/05/21/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/P6136-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%99%AE%E9%80%9A%E5%B9%B3%E8%A1%A1%E6%A0%91%EF%BC%88%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%BC%BA%E7%89%88%EF%BC%89/"
-    >P6136 【模板】普通平衡树（数据加强版）</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/05/21/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/P6136-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%99%AE%E9%80%9A%E5%B9%B3%E8%A1%A1%E6%A0%91%EF%BC%88%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%BC%BA%E7%89%88%EF%BC%89/" class="article-date">
-  <time datetime="2022-05-21T11:09:21.000Z" itemprop="datePublished">2022-05-21</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="【模板】普通平衡树（数据加强版）"><a href="#【模板】普通平衡树（数据加强版）" class="headerlink" title="【模板】普通平衡树（数据加强版）"></a>【模板】普通平衡树（数据加强版）</h1><h2 id="题目背景"><a href="#题目背景" class="headerlink" title="题目背景"></a>题目背景</h2><p>本题是 P3369 数据加强版，<strong>扩大数据范围</strong>并增加了<strong>强制在线</strong>。</p>
-<p><strong>题目的输入、输出和原题略有不同</strong>，但需要支持的操作相同。</p>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>您需要写一种数据结构（可参考题目标题），来维护一些整数，其中需要提供以下操作：</p>
-<ol>
-<li>插入一个整数 $x$。</li>
-<li>删除一个整数 $x$（若有多个相同的数，只删除一个）。</li>
-<li>查询整数 $x$ 的排名（排名定义为比当前数小的数的个数 $+1$）。</li>
-<li>查询排名为 $x$ 的数（如果不存在，则认为是排名小于 $x$ 的最大数。保证 $x$ 不会超过当前数据结构中数的总数）。</li>
-<li>求 $x$ 的前驱（前驱定义为小于 $x$，且最大的数）。</li>
-<li>求 $x$ 的后继（后继定义为大于 $x$，且最小的数）。</li>
-</ol>
-<p>本题<strong>强制在线</strong>，保证所有操作合法（操作 $2$ 保证存在至少一个 $x$，操作 $4,5,6$ 保证存在答案）。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行两个正整数 $n,m$，表示<strong>初始数的个数</strong>和操作的个数。</p>
-<p><strong>第二行 $n$ 个整数 $a_1,a_2,a_3,\ldots,a_n$，表示初始的数</strong>。</p>
-<p>接下来 $m$ 行，每行有两个整数 $\text{opt}$ 和 $x’$，$\text{opt}$ 表示操作的序号（$ 1 \leq \text{opt} \leq 6 $），$x’$ 表示加密后的操作数。</p>
-<p>我们记 $\text{last}$ 表示上一次 $3,4,5,6$ 操作的答案，则每次操作的 $x’$ 都要<strong>异或</strong>上 $\text{last}$ 才是真实的 $x$。初始 $\text{last}$ 为 $0$。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出一行一个整数，表示所有 $3,4,5,6$ 操作的答案的<strong>异或和</strong>。</p>
-<h2 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">6 7</span><br><span class="line">1 1 4 5 1 4</span><br><span class="line">2 1</span><br><span class="line">1 9</span><br><span class="line">4 1</span><br><span class="line">5 8</span><br><span class="line">3 13</span><br><span class="line">6 7</span><br><span class="line">1 4</span><br></pre></td></tr></table></figure>
-
-<h2 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">6 7</span><br><span class="line">1 1 4 5 1 4</span><br><span class="line">2 1</span><br><span class="line">1 9</span><br><span class="line">4 1</span><br><span class="line">5 8</span><br><span class="line">3 13</span><br><span class="line">6 7</span><br><span class="line">1 4</span><br></pre></td></tr></table></figure>
-
-<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><h3 id="样例解释"><a href="#样例解释" class="headerlink" title="样例解释"></a>样例解释</h3><p>样例加密前为：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">6 7</span><br><span class="line">1 1 4 5 1 4</span><br><span class="line">2 1</span><br><span class="line">1 9</span><br><span class="line">4 1</span><br><span class="line">5 9</span><br><span class="line">3 8</span><br><span class="line">6 1</span><br><span class="line">1 0</span><br></pre></td></tr></table></figure>
-
-<h3 id="限制与约定"><a href="#限制与约定" class="headerlink" title="限制与约定"></a>限制与约定</h3><p>对于 $100%$ 的数据，$1\leq n\leq 10^5$，$1\leq m\leq 10^6$，$0\leq a_i,x\lt 2^{30}$。</p>
-<p><strong>本题输入数据较大，请使用较快的读入方式。</strong></p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" rel="tag">算法笔记</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-lower-bound的小技巧"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/05/21/lower-bound%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7/"
+  <a class="article-title" href="/2022/05/21/%E5%B0%8F%E6%8A%80%E5%B7%A7/lower-bound%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7/"
     >lower_bound的小技巧</a> 
 </h2>
  
@@ -771,7 +696,7 @@ $(document).ready(function () {
     </header>
      
     <div class="article-meta">
-      <a href="/2022/05/21/lower-bound%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="article-date">
+      <a href="/2022/05/21/%E5%B0%8F%E6%8A%80%E5%B7%A7/lower-bound%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="article-date">
   <time datetime="2022-05-21T09:32:29.000Z" itemprop="datePublished">2022-05-21</time>
 </a>    
     </div>
@@ -1118,7 +1043,7 @@ $(document).ready(function () {
 
     
     <article
-  id="post-0：GUI中的基本操作"
+  id="post-GUI入门实例/0：GUI中的基本操作"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -1129,7 +1054,7 @@ $(document).ready(function () {
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/04/22/0%EF%BC%9AGUI%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"
+  <a class="article-title" href="/2022/04/22/GUI%E5%85%A5%E9%97%A8%E5%AE%9E%E4%BE%8B/0%EF%BC%9AGUI%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"
     >0：GUI中的基本操作</a> 
 </h2>
  
@@ -1138,7 +1063,7 @@ $(document).ready(function () {
     </header>
      
     <div class="article-meta">
-      <a href="/2022/04/22/0%EF%BC%9AGUI%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="article-date">
+      <a href="/2022/04/22/GUI%E5%85%A5%E9%97%A8%E5%AE%9E%E4%BE%8B/0%EF%BC%9AGUI%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="article-date">
   <time datetime="2022-04-22T15:05:53.000Z" itemprop="datePublished">2022-04-22</time>
 </a>    
     </div>
@@ -1155,6 +1080,56 @@ $(document).ready(function () {
     
     <footer class="article-footer">
        
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-代码打卡/97. 约数之和"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/04/20/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/97.%20%E7%BA%A6%E6%95%B0%E4%B9%8B%E5%92%8C/"
+    >97. 约数之和</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/04/20/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/97.%20%E7%BA%A6%E6%95%B0%E4%B9%8B%E5%92%8C/" class="article-date">
+  <time datetime="2022-04-20T13:15:29.000Z" itemprop="datePublished">2022-04-20</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> mod =<span class="number">9901</span>; </span><br><span class="line">ll a,b,ans;</span><br><span class="line"><span class="function">ll <span class="title">qpow</span><span class="params">(ll x,ll k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll res=<span class="number">1</span>;</span><br><span class="line">    x%=mod;</span><br><span class="line">    <span class="keyword">while</span>(k)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(k&amp;<span class="number">1</span>)</span><br><span class="line">            res=(res*x)%mod;</span><br><span class="line">        x=(x*x)%mod;</span><br><span class="line">        k&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">sum</span><span class="params">(ll p,ll k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(k==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(k%<span class="number">2</span>==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> (p%mod*<span class="built_in">sum</span>(p,k<span class="number">-1</span>)+<span class="number">1</span>)%mod;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">return</span> (<span class="number">1</span>+<span class="built_in">qpow</span>(p,k/<span class="number">2</span>+<span class="number">1</span>))*<span class="built_in">sum</span>(p,k/<span class="number">2</span>)%mod;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt;b;</span><br><span class="line">    ans=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=a;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(a%i==<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            cnt++;</span><br><span class="line">            a/=i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(cnt)</span><br><span class="line">            ans=ans*<span class="built_in">sum</span>(i,cnt*b)%mod;</span><br><span class="line">        <span class="comment">//cout&lt;&lt;a&lt;&lt;endl;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!a)</span><br><span class="line">        ans=<span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; ans&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/" rel="tag">代码打卡</a></li></ul>
+
     </footer>
   </div>
 
