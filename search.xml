@@ -1036,11 +1036,15 @@ $(document).ready(function () {
   <entry>
     <title>粗糙度定标公式整理</title>
     <url>/2023/02/19/%E7%A7%91%E7%A0%94%E9%A1%B9%E7%9B%AE%E7%B3%BB%E5%88%97/%E7%B2%97%E7%B3%99%E5%BA%A6%E5%AE%9A%E6%A0%87%E5%85%AC%E5%BC%8F%E6%95%B4%E7%90%86/</url>
-    <content><![CDATA[<h2 id="1、L-opt-公式形式"><a href="#1、L-opt-公式形式" class="headerlink" title="1、L_{opt}公式形式"></a>1、<script type="math/tex">L_{opt}</script>公式形式</h2><script type="math/tex; mode=display">L_{opt1}$$在低粗糙度时表现为常数，在高粗糙度时表现为指数形式：</script><p>\begin{equation}\tag{1}<br>L_{opt1}(rms,\theta,pp) = \alpha rms^{\beta}<br>\end{equation}</p>
+    <content><![CDATA[<h2 id="1-L-opt-公式形式"><a href="#1-L-opt-公式形式" class="headerlink" title="1 L_{opt}公式形式"></a>1 <script type="math/tex">L_{opt}</script>公式形式</h2><script type="math/tex; mode=display">L_{opt1}$$在低粗糙度时表现为常数，在高粗糙度时表现为指数形式：</script><p>\begin{equation}\tag{1}<br>L_{opt1}(rms,\theta,pp) = \alpha rms^{\beta}<br>\end{equation}</p>
 <script type="math/tex; mode=display">
 
-$$L_{opt2}$$在指数粗糙面和分形粗糙面时表现为$$\ref{1}$$这类幂函数形式，
-在高斯粗糙面表现为：$$L_{opt2} = \alpha rms + \beta</script><h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2>]]></content>
+$$L_{opt2}$$在指数粗糙面和分形粗糙面时表现为$$\eqref{1}$$这类幂函数形式，
+在高斯粗糙面表现为：$$L_{opt2} = \alpha rms + \beta</script><h2 id="2-L-opt1-公式"><a href="#2-L-opt1-公式" class="headerlink" title="2 L_{opt1}公式"></a>2 <script type="math/tex">L_{opt1}</script>公式</h2><h4 id="2-1-在HH极化下35-circ-的公式"><a href="#2-1-在HH极化下35-circ-的公式" class="headerlink" title="2.1 在HH极化下35^{\circ}的公式"></a>2.1 在HH极化下<script type="math/tex">35^{\circ}</script>的公式</h4><script type="math/tex; mode=display">
+\begin{array}
+\begin{equation}
+
+\end{equation}</script>]]></content>
       <tags>
         <tag>科研项目系列</tag>
       </tags>
