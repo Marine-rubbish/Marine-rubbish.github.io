@@ -35,7 +35,8 @@
   <entry>
     <title>latex 测试</title>
     <url>/2023/02/19/latex-%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<script type="math/tex; mode=display">\sqrt{2}</script><script type="math/tex; mode=display">\sigma_{s} = \sqrt{2}\sigma/l</script>]]></content>
+    <content><![CDATA[<p>高斯粗糙面的均方根斜率<script type="math/tex">\sigma_{s}</script>可以表示为均方根高度<script type="math/tex">\sigma</script>和相关长度<script type="math/tex">l</script>的函数：</p>
+<script type="math/tex; mode=display">\sigma_{s} = \sqrt{2}\sigma/l</script>]]></content>
   </entry>
   <entry>
     <title>matlab编码规范学习</title>

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-19T13:44:30.795Z</updated>
+  <updated>2023-02-19T13:59:19.349Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="http://example.com/2023/02/19/latex-%E6%B5%8B%E8%AF%95/"/>
     <id>http://example.com/2023/02/19/latex-%E6%B5%8B%E8%AF%95/</id>
     <published>2023-02-19T13:29:56.000Z</published>
-    <updated>2023-02-19T13:44:30.795Z</updated>
+    <updated>2023-02-19T13:59:19.349Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sqrt{2}&lt;/script&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sigma_{s} =</summary>
+    <summary type="html">&lt;p&gt;高斯粗糙面的均方根斜率&lt;script type=&quot;math/tex&quot;&gt;\sigma_{s}&lt;/script&gt;可以表示为均方根高度&lt;script type=&quot;math/tex&quot;&gt;\sigma&lt;/script&gt;和相关长度&lt;script</summary>
         
       
     
