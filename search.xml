@@ -9,6 +9,12 @@
       </tags>
   </entry>
   <entry>
+    <title>latex 测试</title>
+    <url>/2023/02/19/latex-%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p>高斯粗糙面的均方根斜率<script type="math/tex">\sigma_{s}</script>可以表示为均方根高度<script type="math/tex">\sigma</script>和相关长度<script type="math/tex">l</script>的函数：</p>
+<script type="math/tex; mode=display">\sigma_{s} = \sqrt{2}\sigma/l</script>]]></content>
+  </entry>
+  <entry>
     <title>Matlab中的随机数生成函数</title>
     <url>/2022/04/17/Matlab%E4%B8%AD%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　Matlab 统计工具箱中有 27 种概率分布，工具箱对每一种分布都提供 5 类函数，其命令的字符是：<br>pdf 概率密度； cdf 分布函数； inv 分布函数的反函数；stat 均值与方差； rnd 随机数生成<br>　　这里主要介绍常用的rnd类函数</p>
@@ -33,12 +39,6 @@
       </tags>
   </entry>
   <entry>
-    <title>latex 测试</title>
-    <url>/2023/02/19/latex-%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p>高斯粗糙面的均方根斜率<script type="math/tex">\sigma_{s}</script>可以表示为均方根高度<script type="math/tex">\sigma</script>和相关长度<script type="math/tex">l</script>的函数：</p>
-<script type="math/tex; mode=display">\sigma_{s} = \sqrt{2}\sigma/l</script>]]></content>
-  </entry>
-  <entry>
     <title>matlab编码规范学习</title>
     <url>/2022/12/16/matlab%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h1 id="命名约定"><a href="#命名约定" class="headerlink" title="命名约定"></a>命名约定</h1><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>变量名应该记录它们的含义或用途。<br><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">wage = hourlyRate * nHours</span><br></pre></td></tr></table></figure></p>
@@ -54,6 +54,19 @@
       <tags>
         <tag>小技巧</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>pdf test</title>
+    <url>/2023/02/19/pdf-test/</url>
+    <content><![CDATA[
+
+	<div class="row">
+    <embed src="/pdf/ocean_wave_spectrum.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+]]></content>
   </entry>
   <entry>
     <title>python语言规范学习</title>
@@ -375,15 +388,6 @@
       </tags>
   </entry>
   <entry>
-    <title>AcWing 89. a^b</title>
-    <url>/2022/04/16/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/89.%20a%5Eb/</url>
-    <content><![CDATA[<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line">ll a,b,p;</span><br><span class="line"><span class="function">ll <span class="title">qpow</span><span class="params">(ll a,ll b,ll p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll res=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(b)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>)</span><br><span class="line">            res=(res*a)%p;</span><br><span class="line">        a=(a*a)%p;</span><br><span class="line">        b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res%p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;a&gt;&gt;b&gt;&gt;p;</span><br><span class="line">    cout&lt;&lt;<span class="built_in">qpow</span>(a,b,p)&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>代码打卡</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>243. 一个简单的整数问题2</title>
     <url>/2022/04/18/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/243-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B4%E6%95%B0%E9%97%AE%E9%A2%982/</url>
     <content><![CDATA[<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> maxn =<span class="number">1e5</span>+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line">ll d[<span class="number">4</span>*maxn],b[<span class="number">4</span>*maxn],a[maxn],n,m,l,r,k;</span><br><span class="line">string op;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">(ll s,ll t,ll p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll mid=(t+s)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(s==t)</span><br><span class="line">    &#123;</span><br><span class="line">        d[p]=a[s];</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">build</span>(s,mid,p*<span class="number">2</span>);</span><br><span class="line">    <span class="built_in">build</span>(mid+<span class="number">1</span>,t,p*<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">    d[p]=d[p*<span class="number">2</span>]+d[p*<span class="number">2</span>+<span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">pushdown</span><span class="params">(ll s,ll t,ll p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll m=(s+t)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(b[p])</span><br><span class="line">    &#123;</span><br><span class="line">        d[p*<span class="number">2</span>]+=(m-s+<span class="number">1</span>)*b[p];</span><br><span class="line">        d[p*<span class="number">2</span>+<span class="number">1</span>]+=(t-m)*b[p];</span><br><span class="line">        b[p*<span class="number">2</span>+<span class="number">1</span>]+=b[p];b[p*<span class="number">2</span>]+=b[p];</span><br><span class="line">        b[p]=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(ll l,ll r,ll c,ll s,ll t,ll p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll mid=(s+t)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(l&lt;=s&amp;&amp;t&lt;=r)</span><br><span class="line">    &#123;</span><br><span class="line">        d[p]+=(t-s+<span class="number">1</span>)*c;</span><br><span class="line">        b[p]+=c;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">pushdown</span>(s,t,p);</span><br><span class="line">    <span class="keyword">if</span>(l&lt;=mid)</span><br><span class="line">        <span class="built_in">add</span>(l,r,c,s,mid,p*<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">if</span>(r&gt;mid)</span><br><span class="line">        <span class="built_in">add</span>(l,r,c,mid+<span class="number">1</span>,t,p*<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">    d[p]=d[p*<span class="number">2</span>]+d[p*<span class="number">2</span>+<span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">getsum</span><span class="params">(ll l,ll r,ll s,ll t,ll p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll res=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(l&lt;=s&amp;&amp;t&lt;=r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> d[p];</span><br><span class="line">    &#125;</span><br><span class="line">    ll mid=(s+t)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">pushdown</span>(s,t,p);</span><br><span class="line">    <span class="keyword">if</span>(l&lt;=mid)</span><br><span class="line">        res+=<span class="built_in">getsum</span>(l,r,s,mid,p*<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">if</span>(r&gt;mid)</span><br><span class="line">        res+=<span class="built_in">getsum</span>(l,r,mid+<span class="number">1</span>,t,p*<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;a[i]);</span><br><span class="line">    <span class="built_in">build</span>(<span class="number">1</span>,n,<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">while</span> (m -- )</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;op;</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="string">&quot;Q&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld&quot;</span>,&amp;l,&amp;r);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>,<span class="built_in">getsum</span>(l,r,<span class="number">1</span>,n,<span class="number">1</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld%lld&quot;</span>,&amp;l,&amp;r,&amp;k);</span><br><span class="line">            <span class="built_in">add</span>(l,r,k,<span class="number">1</span>,n,<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -396,6 +400,15 @@
     <title>90. 64位整数乘法</title>
     <url>/2022/04/16/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/90-64%E4%BD%8D%E6%95%B4%E6%95%B0%E4%B9%98%E6%B3%95/</url>
     <content><![CDATA[<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line">ll a,b,p;</span><br><span class="line"><span class="function">ll <span class="title">qmul</span><span class="params">(ll a,ll b,ll p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll res=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(b)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>)</span><br><span class="line">            res=(res+a)%p;</span><br><span class="line">        a=(a*<span class="number">2</span>)%p;</span><br><span class="line">        b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; a&gt;&gt;b&gt;&gt;p;</span><br><span class="line">    cout&lt;&lt;<span class="built_in">qmul</span>(a,b,p)&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>代码打卡</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AcWing 89. a^b</title>
+    <url>/2022/04/16/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/89.%20a%5Eb/</url>
+    <content><![CDATA[<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line">ll a,b,p;</span><br><span class="line"><span class="function">ll <span class="title">qpow</span><span class="params">(ll a,ll b,ll p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll res=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(b)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>)</span><br><span class="line">            res=(res*a)%p;</span><br><span class="line">        a=(a*a)%p;</span><br><span class="line">        b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res%p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;a&gt;&gt;b&gt;&gt;p;</span><br><span class="line">    cout&lt;&lt;<span class="built_in">qpow</span>(a,b,p)&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
       <tags>
         <tag>代码打卡</tag>
       </tags>
@@ -541,9 +554,49 @@ Markdown 应用程序在处理单词或短语中间添加的下划线上并不�
       </tags>
   </entry>
   <entry>
+    <title>粗糙度定标公式整理</title>
+    <url>/2023/02/19/%E7%A7%91%E7%A0%94%E9%A1%B9%E7%9B%AE%E7%B3%BB%E5%88%97/%E7%B2%97%E7%B3%99%E5%BA%A6%E5%AE%9A%E6%A0%87%E5%85%AC%E5%BC%8F%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<h2 id="1-L-opt-公式形式"><a href="#1-L-opt-公式形式" class="headerlink" title="1 L_{opt}公式形式"></a>1 <script type="math/tex">L_{opt}</script>公式形式</h2><script type="math/tex; mode=display">L_{opt1}$$在低粗糙度时表现为常数，在高粗糙度时表现为指数形式：</script><p>\begin{equation}\tag{1}<br>L_{opt1}(rms,\theta,pp) = \alpha rms^{\beta}<br>\end{equation}</p>
+<script type="math/tex; mode=display">
+
+$$L_{opt2}$$在指数粗糙面和分形粗糙面时表现为$$\eqref{1}$$这类幂函数形式，
+在高斯粗糙面表现为：$$L_{opt2} = \alpha rms + \beta</script><h2 id="2-L-opt1-公式"><a href="#2-L-opt1-公式" class="headerlink" title="2 L_{opt1}公式"></a>2 <script type="math/tex">L_{opt1}</script>公式</h2><h4 id="2-1-在HH极化下35-circ-的公式"><a href="#2-1-在HH极化下35-circ-的公式" class="headerlink" title="2.1 在HH极化下35^{\circ}的公式"></a>2.1 在HH极化下<script type="math/tex">35^{\circ}</script>的公式</h4><script type="math/tex; mode=display">
+\begin{array}
+\begin{equation}
+
+\end{equation}</script>]]></content>
+      <tags>
+        <tag>科研项目系列</tag>
+      </tags>
+  </entry>
+  <entry>
     <title></title>
     <url>/2022/04/23/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E4%B8%8E%E5%BA%94%E7%94%A8%E4%B9%A0%E9%A2%98/%E7%AC%AC%E4%B8%89%E7%AB%A0/</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>chap2 感知机模型简洁总结</title>
+    <url>/2023/05/12/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/chap2%20%E6%84%9F%E7%9F%A5%E6%9C%BA%E6%A8%A1%E5%9E%8B%E7%AE%80%E6%B4%81%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h2 id="1、感知机模型"><a href="#1、感知机模型" class="headerlink" title="1、感知机模型"></a>1、感知机模型</h2><p>输入空间：$\mathcal{X} \in \mathbb{R}^n$</p>
+<p>输出空间：$\mathcal{Y} = \{+1,-1\}$</p>
+<p>特征空间：$\{f|f(\vec{x}) = sign(\vec{w} \cdot \vec{x} + b)\}$<br>($sign$ 为符号函数)</p>
+<h2 id="2、学习策略"><a href="#2、学习策略" class="headerlink" title="2、学习策略"></a>2、学习策略</h2><p>$x_0$到超平面的距离：$\frac{1}{\Vert \vec{w} \Vert} \lvert \vec{w} \cdot \vec{x_0} + b \rvert$<br>($\Vert \vec{w} \Vert$ 是 $\vec{w}$ 的 $L_2$ 范数)</p>
+<p>由于误分类点实际类别$y_i$与预测类别$f(\vec{x_i}) = sign(\vec{w} \cdot \vec{x_i} + b)$正负相反</p>
+<p>因此误分类点到超平面的距离是：$-\frac{1}{\Vert \vec{w} \Vert} y_i (\vec{w} \cdot \vec{x_i} + b)$</p>
+<p>为了便于求导，损失函数可以定义为：$L(\vec{w},b) = -\sum\limits_{x_i \in M} y_i (\vec{w} \cdot \vec{x_i} + b)$</p>
+<h2 id="3、学习算法"><a href="#3、学习算法" class="headerlink" title="3、学习算法"></a>3、学习算法</h2><p>随机梯度下降：一次随机选取一个误分类点进行梯度下降</p>
+<p>损失函数$L$ 分别对 $\vec{w}$ 和 $b$ 求梯度得：<br>$\nabla_{\vec{w}} L(\vec{w},b) = -\sum\limits_{x_i \in M} y_i \vec{x_i}$、<br>$\nabla_{b} L(\vec{w},b) = -\sum\limits_{x_i \in M} y_i$</p>
+<p>参数更新方式：$\vec{w} = \vec{w} + \eta y_i x_i$、$b = b + \eta y_i$<br>($\eta \in (0,1]$ 为学习率)</p>
+<p>参数一直更新，直到样本点中没有误分类点为止。</p>
+<h2 id="4、对偶问题"><a href="#4、对偶问题" class="headerlink" title="4、对偶问题"></a>4、对偶问题</h2><p>由上文的学习算法可得，$\vec{w}$ 和 $b$ 是通过逐次随机选取一个误分类点更新而来</p>
+<p>因此可以设 $\vec{w}$ 的每个元素和 $b$ 都为0，参数总共更新 $n$ 次；</p>
+<p>最终学习到的 $\vec{w}$ 和 $b$ 可以表示为：<br>$\vec{w} = \sum\limits_{i=1}\limits^{N} \alpha_i y_i x_i$、<br>$b = \sum\limits_{i=1}\limits^{N} \alpha_i y_i$<br>($\alpha_i = n_i \eta$，其中 $n_i$ 为点i被选中用于更新的次数)</p>
+<p>由第三节中提到的 $\vec{w}$ 和 $b$ 的更新方式，可以反推出 $\alpha$ 和 $b$ 的更新方式：</p>
+<p>$\alpha_i = \alpha_i + \eta$、$b = b + \eta y_i$</p>
+]]></content>
+      <tags>
+        <tag>统计学习方法</tag>
+      </tags>
   </entry>
   <entry>
     <title></title>
@@ -1019,58 +1072,5 @@ $(document).ready(function () {
 </body>
 </html>
 ]]></content>
-  </entry>
-  <entry>
-    <title>pdf test</title>
-    <url>/2023/02/19/pdf-test/</url>
-    <content><![CDATA[
-
-	<div class="row">
-    <embed src="/pdf/ocean_wave_spectrum.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-]]></content>
-  </entry>
-  <entry>
-    <title>粗糙度定标公式整理</title>
-    <url>/2023/02/19/%E7%A7%91%E7%A0%94%E9%A1%B9%E7%9B%AE%E7%B3%BB%E5%88%97/%E7%B2%97%E7%B3%99%E5%BA%A6%E5%AE%9A%E6%A0%87%E5%85%AC%E5%BC%8F%E6%95%B4%E7%90%86/</url>
-    <content><![CDATA[<h2 id="1-L-opt-公式形式"><a href="#1-L-opt-公式形式" class="headerlink" title="1 L_{opt}公式形式"></a>1 <script type="math/tex">L_{opt}</script>公式形式</h2><script type="math/tex; mode=display">L_{opt1}$$在低粗糙度时表现为常数，在高粗糙度时表现为指数形式：</script><p>\begin{equation}\tag{1}<br>L_{opt1}(rms,\theta,pp) = \alpha rms^{\beta}<br>\end{equation}</p>
-<script type="math/tex; mode=display">
-
-$$L_{opt2}$$在指数粗糙面和分形粗糙面时表现为$$\eqref{1}$$这类幂函数形式，
-在高斯粗糙面表现为：$$L_{opt2} = \alpha rms + \beta</script><h2 id="2-L-opt1-公式"><a href="#2-L-opt1-公式" class="headerlink" title="2 L_{opt1}公式"></a>2 <script type="math/tex">L_{opt1}</script>公式</h2><h4 id="2-1-在HH极化下35-circ-的公式"><a href="#2-1-在HH极化下35-circ-的公式" class="headerlink" title="2.1 在HH极化下35^{\circ}的公式"></a>2.1 在HH极化下<script type="math/tex">35^{\circ}</script>的公式</h4><script type="math/tex; mode=display">
-\begin{array}
-\begin{equation}
-
-\end{equation}</script>]]></content>
-      <tags>
-        <tag>科研项目系列</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>chap2 感知机模型简洁总结</title>
-    <url>/2023/05/12/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/chap2%20%E6%84%9F%E7%9F%A5%E6%9C%BA%E6%A8%A1%E5%9E%8B%E7%AE%80%E6%B4%81%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h2 id="1、感知机模型"><a href="#1、感知机模型" class="headerlink" title="1、感知机模型"></a>1、感知机模型</h2><p>输入空间：$\mathcal{X} \in \mathbb{R}^n$</p>
-<p>输出空间：$\mathcal{Y} = \{+1,-1\}$</p>
-<p>特征空间：$\{f|f(\vec{x}) = sign(\vec{w} \cdot \vec{x} + b)\}$<br>($sign$ 为符号函数)</p>
-<h2 id="2、学习策略"><a href="#2、学习策略" class="headerlink" title="2、学习策略"></a>2、学习策略</h2><p>$x_0$到超平面的距离：$\frac{1}{\Vert \vec{w} \Vert} \lvert \vec{w} \cdot \vec{x_0} + b \rvert$<br>($\Vert \vec{w} \Vert$ 是 $\vec{w}$ 的 $L_2$ 范数)</p>
-<p>由于误分类点实际类别$y_i$与预测类别$f(\vec{x_i}) = sign(\vec{w} \cdot \vec{x_i} + b)$正负相反</p>
-<p>因此误分类点到超平面的距离是：$-\frac{1}{\Vert \vec{w} \Vert} y_i (\vec{w} \cdot \vec{x_i} + b)$</p>
-<p>为了便于求导，损失函数可以定义为：$L(\vec{w},b) = -\sum\limits_{x_i \in M} y_i (\vec{w} \cdot \vec{x_i} + b)$</p>
-<h2 id="3、学习算法"><a href="#3、学习算法" class="headerlink" title="3、学习算法"></a>3、学习算法</h2><p>随机梯度下降：一次随机选取一个误分类点进行梯度下降</p>
-<p>损失函数$L$ 分别对 $\vec{w}$ 和 $b$ 求梯度得：<br>$\nabla_{\vec{w}} L(\vec{w},b) = -\sum\limits_{x_i \in M} y_i \vec{x_i}$、<br>$\nabla_{b} L(\vec{w},b) = -\sum\limits_{x_i \in M} y_i$</p>
-<p>参数更新方式：$\vec{w} = \vec{w} + \eta y_i x_i$、$b = b + \eta y_i$<br>($\eta \in (0,1]$ 为学习率)</p>
-<p>参数一直更新，直到样本点中没有误分类点为止。</p>
-<h2 id="4、对偶问题"><a href="#4、对偶问题" class="headerlink" title="4、对偶问题"></a>4、对偶问题</h2><p>由上文的学习算法可得，$\vec{w}$ 和 $b$ 是通过逐次随机选取一个误分类点更新而来</p>
-<p>因此可以设 $\vec{w}$ 的每个元素和 $b$ 都为0，参数总共更新 $n$ 次；</p>
-<p>最终学习到的 $\vec{w}$ 和 $b$ 可以表示为：<br>$\vec{w} = \sum\limits_{i=1}\limits^{N} \alpha_i y_i x_i$、<br>$b = \sum\limits_{i=1}\limits^{N} \alpha_i y_i$<br>($\alpha_i = n_i \eta$，其中 $n_i$ 为点i被选中用于更新的次数)</p>
-<p>由第三节中提到的 $\vec{w}$ 和 $b$ 的更新方式，可以反推出 $\alpha$ 和 $b$ 的更新方式：</p>
-<p>$\alpha_i = \alpha_i + \eta$、$b = b + \eta y_i$</p>
-]]></content>
-      <tags>
-        <tag>统计学习方法</tag>
-      </tags>
   </entry>
 </search>
