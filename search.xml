@@ -1098,4 +1098,165 @@ $(document).ready(function () {
         <tag>统计学习方法</tag>
       </tags>
   </entry>
+  <entry>
+    <title>chap4 朴素贝叶斯模型简洁总结</title>
+    <url>/2023/05/13/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/chap4%20%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%A8%A1%E5%9E%8B%E7%AE%80%E6%B4%81%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>统计学习方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>林轩田机器学习每章要点</title>
+    <url>/2023/05/14/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/%E6%9E%97%E8%BD%A9%E7%94%B0%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%AF%8F%E7%AB%A0%E8%A6%81%E7%82%B9/</url>
+    <content><![CDATA[<h1 id="0-符号假设"><a href="#0-符号假设" class="headerlink" title="0. 符号假设"></a>0. 符号假设</h1><h1 id="1-When-Can-Machine-Learn"><a href="#1-When-Can-Machine-Learn" class="headerlink" title="1. When Can Machine Learn?"></a>1. When Can Machine Learn?</h1><h2 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h2><h2 id="1-2-Learning-to-Answer-Yes-­No"><a href="#1-2-Learning-to-Answer-Yes-­No" class="headerlink" title="1.2 Learning to Answer Yes-­No"></a>1.2 Learning to Answer Yes-­No</h2><p>本节主要介绍了感知机算法，它在一定条件下可以使得 $\textbf{E}_{in} \approx 0$ (在数据集上的误差近似为0)。</p>
+<p>感知机学习算法 $\mathcal{A}$ 通过线性可分的数据 $\mathcal{D}$ 以及感知机 $\mathcal{H}$ 获得假设 $g$ </p>
+<ul>
+<li>感知机的假设空间：定义在 $\mathbb{R}^d$ 上的一条直线或超平面</li>
+<li>感知机算法可以不断纠正错误并改进</li>
+<li>感知机的分类正确性保证：数据是线性可分的</li>
+<li>无法分类的数据：存储效果最好的直线</li>
+</ul>
+<h2 id="1-3-Types-of-Learning"><a href="#1-3-Types-of-Learning" class="headerlink" title="1.3 Types of Learning"></a>1.3 Types of Learning</h2><p>本节主要介绍机器学习的分类</p>
+<ul>
+<li>按输出空间 $\mathcal{Y}$ 分类：分类、回归、结构化学习</li>
+<li>按数据标签 $y_n$ 分类：监督学习、半监督学习、无监督学习、强化学习</li>
+<li>按不同的学习方式分类：批量学习、在线学习、主动学习</li>
+<li>按输入空间 $\mathcal{X}$ 分类：具体意义的数据、原始数据、抽象数据</li>
+</ul>
+<h2 id="1-4-Feasibility-of-Learning"><a href="#1-4-Feasibility-of-Learning" class="headerlink" title="1.4 Feasibility of Learning"></a>1.4 Feasibility of Learning</h2><p>本节主要介绍机器学习的可能性 </p>
+<ul>
+<li>NFL定理：面对所有的问题，没有一种算法能说比另一种算法更好</li>
+<li><p>验证一个固定假设 $h$ 的 $E_{in}$ 和 $E_{out}$ 是否PAC</p>
+<ul>
+<li><p>机器能够学习的必要条件：样本满足独立同分布假设 (每次抽样之间相互独立，样本服从同一分布)</p>
+</li>
+<li><p>$E_{in}$ 为抽样样本（数据集）内所有数据中 $h(\vec{x}) = f(\vec{x})$ 的概率，<br>$E_{out}$ 为抽样样本外所有数据中 $h(\vec{x}) = f(\vec{x})$ 的概率</p>
+<p> ($E_{in}(h) = \frac{1}{N} \sum\limits_{n=1}^{N} \mathbb{I}[h(\vec{x}) \neq y_n]$、<br> $E_{out} = \mathop{\varepsilon}\limits_{\vec{x} \sim{P}} \mathbb{I}[h(\vec{x}) \neq f(\vec{x})]$)</p>
+</li>
+<li><p>Hoeffding 不等式：$P[\lvert E_{in} - E_{out} \rvert &gt; \epsilon] \leq 2exp(-2 \epsilon^2 N)$</p>
+<p> (说明了只要样本数 $N$ 够大，$E_{in}$ 和 $E_{out}$ 相差的很大概率会很小，也就可以用 $E_{in}$ 来估计 $E_{out}$)</p>
+</li>
+<li>上述 Hoeffding 不等式说明了 $E_{in}$ 和 $E_{out}$ 是 PAC(概率近似相等) 的</li>
+</ul>
+</li>
+<li><p>在 $E_{in}(h)$ 足够小且 $\lvert \mathcal{H} \rvert$ 有限的情况下，学习有可能能实现了</p>
+<ul>
+<li>坏数据集 (BAD $\mathcal{D}$)：使得假设 $h$ 的 $E_{in}$ 和 $E_{out}$ 相差很大的数据集</li>
+<li><p>$P_{\mathcal{D}}(BAD \; \mathcal{D}) \leq P(BAD \; \mathcal{D} \; for \; h_1) + … + P(BAD \; \mathcal{D} \; for \; h_M)$</p>
+<p> $P_{\mathcal{D}}(BAD \; \mathcal{D}) \leq 2exp(-2 \epsilon^2 N) + … + 2exp(-2 \epsilon^2 N)$</p>
+<p> $P_{\mathcal{D}}(BAD \; \mathcal{D}) \leq 2Mexp(-2 \epsilon^2 N)$ </p>
+<p> 也就是说只要 $N$ 足够大，$\lvert \mathcal{H} \rvert$ 有限的情况下。<br> 不管使用什么算法 $\mathcal{A}$ 都能够使得 $E_{in}$ 和 $E_{out}$ PAC，</p>
+<p> 如果 $\mathcal{A}$ 可以找到 $g$ 使 $E_{in}(g) \approx 0$ 那么PAC可以保证 $E_{out}(g) \approx 0$</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-Why-Can-Machines-Learn"><a href="#2-Why-Can-Machines-Learn" class="headerlink" title="2. Why Can Machines Learn?"></a>2. Why Can Machines Learn?</h1><h2 id="2-1-Training-VS-Testing"><a href="#2-1-Training-VS-Testing" class="headerlink" title="2.1 Training VS Testing"></a>2.1 Training VS Testing</h2><p>本节主要介绍假设数量 $M = \infty$ 时，机器学习是否有可能性</p>
+<ul>
+<li>$M$ 过小 $E_{in}(g) \approx 0$ 难以实现(选择过少)，$M$ 过大出现坏样本的概率又显著增加，<br>导致 $E_{in}(g)$ 和 $E_{out}(g)$ 无法PAC</li>
+<li>按照对数据集中样本点的分类结果可以将无穷种假设分成 $effective(N)$ 种，<br>如果 $effective(N) &lt;&lt; 2^N$ ，机器学习是有可能的</li>
+<li>成长函数 $m_{\mathcal{H}}(N)$ 是含N个数据点的数据集最多的假设种类数<br>($m_{\mathcal{H}}(N) = \mathop{max}\limits_{\vec{x_1},…,\vec{x_N} \in \mathcal{X}} \lvert \mathcal{H}(x_1,…,x_N) \rvert$)</li>
+<li>$m_{\mathcal{H}}(N) = O(N^{k-1})$ ($k$ 是break point，也就是 $k$ 个样本点类别的 $2^k$ 种情况<br>都能被 $\mathcal{H}$ 中其中一个假设全部正确分类)   </li>
+</ul>
+<h2 id="2-2-Theory-of-Generalization"><a href="#2-2-Theory-of-Generalization" class="headerlink" title="2.2 Theory of Generalization"></a>2.2 Theory of Generalization</h2><ul>
+<li>$N &gt; k$ 时，$m_{\mathcal{H}}(N)$ 会比 $2^N$ 小的多</li>
+<li><p>Bounding Function $B(N,k)$ 是 $m_{\mathcal{H}}(N)$ 的上限，以下是它的一些性质:</p>
+<ul>
+<li><p>$k = 1$ 时，$B(N,1) = 1$</p>
+</li>
+<li><p>$N &lt; k$ 时，$B(N,k) = 2^N$ (相当于没有限制)</p>
+</li>
+<li><p>$N = k$ 时，$B(N,k) = 2^k - 1$ (刚出现不能被覆盖的分类情况)</p>
+</li>
+</ul>
+</li>
+<li><p>通过递推得到 $B(N,k)$ 其他情况下的一些性质:</p>
+<ul>
+<li><p>把 $N$ 个样本可以被覆盖的二分情况再分为两类：第一类每两种情况的 $x_1$ 到 $x_{k-1}$ 的类别完全相同，$x_k$ 的类别不同且成对，其他为第二类</p>
+</li>
+<li><p>第一类情况个数记为 $\alpha$，第二类为 $\beta$，存在以下关系：$B(N,k) = 2\alpha + \beta$、<br>$\alpha + \beta \leq B(N-1,k)$、$\alpha \leq B(N-1,k-1)$</p>
+</li>
+<li><p>因此可以得到 $B(N,k) = B(N-1,k) + B(N-1,k-1)$ (取等证明略)</p>
+</li>
+<li><p>因此 $B(N,k) = \sum\limits_{i=0}^{k-1} C_i^N$，最高次项为 $N^{k-1}$，所以成长函数 $m_{\mathcal{H}}(N)$ 是 $poly(N)$ 的</p>
+</li>
+</ul>
+</li>
+<li><p>用成长函数 $m_{\mathcal{H}}(N)$ 替代 $M$ 证明 $E_{in}$ 和 $E_{out}$ 是PAC的</p>
+<ul>
+<li><p>证明略</p>
+</li>
+<li><p>VC bound：$P_{\mathcal{D}}(\lvert E_{in} - E_{out} \rvert &gt; \epsilon) \leq 4m_{\mathcal{H}}(N)exp(-\frac{1}{8} \epsilon^2 N)$</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-The-VC-Dimension"><a href="#2-3-The-VC-Dimension" class="headerlink" title="2.3 The VC Dimension"></a>2.3 The VC Dimension</h2><p>本节介绍VC维的意义及其与泛化能力的关系</p>
+<ul>
+<li><p>VC维的定义：使得 $m_{\mathcal{H}}(N) = 2^N$ 成立的最大N，记为 $d_{VC}$</p>
+<ul>
+<li><p>机器学习的条件：1、$m_{\mathcal{H}}(N)$ 有间断点k；2、样本数N足够大(这两点保证 $E_{out}$ 和 $E_{in}$ PAC)；<br>3、合适的算法 $\mathcal{A}$ (保证 $E_{in} \approx 0$)</p>
+</li>
+<li><p>$d_{VC}$ 有限时，$E_{out}$ 和 $E_{in}$ 是PAC的</p>
+</li>
+</ul>
+</li>
+<li><p>$d_{VC} = d+1$ </p>
+<ul>
+<li><p>先证明 $d_{VC} \geq d+1$，由于 $X\vec{w}_{d+1} = \vec{y}_{d+1}$ 可得 $\vec{w} = X^{-1}\vec{y}$<br> (X有 $d+1$ 个维度和 $d+1$ 个样本).</p>
+<p> 因此对每一种 $\vec{y}$，$\vec{w}$ 唯一确定. $\vec{w}$ 的所有情况也就可以覆盖 $\vec{y}$ 的所有情况</p>
+</li>
+<li><p>再证明 $d_{VC} \leq d+1$，也就是对 $d+2$ 个样本 $\vec{w}$ 的所有情况不可以覆盖 $\vec{y}$ 的所有情况</p>
+<p> 由于 $\vec{x}_{d+2}$ (第 $d+2$ 个样本) 能被表示成前 $d+1$ 个样本的线性组合. </p>
+<p> 也就是：$\vec{x}_{d+2} = a_1\vec{x}_{1} + … + a_{d+1}\vec{x}_{d+1}$ </p>
+<p> 因此存在 $\vec{w}$ 使得 $\vec{x}_{d+2}<em>\vec{w} = a_1\vec{x}_{1}</em>\vec{w} + … + a_{d+1}\vec{x}_{d+1}*\vec{w}&gt;0$</p>
+<p> 这种情况下 $\vec{x}_{d+2}$ 一定是正类. $\vec{w}$ 的所有情况不能覆盖 $\vec{y}$ 的所有情况</p>
+</li>
+</ul>
+</li>
+<li>$d_{VC}$ 的物理意义：假设空间的自由度。所以 $M$ 和 $d_{VC}$ 是成正比的</li>
+<li><p>$d_{VC}$ 和泛化能力、样本复杂度以及模型复杂度的关系</p>
+<ul>
+<li><p>$E_{out}(g) \leq E_{in}(g) + \sqrt{\dfrac{8}{N} \ln{\dfrac{4(2N)^{d_{VC}}}{\delta}}}$</p>
+</li>
+<li><p>$\Omega(N,\mathcal{H},\delta) = \sqrt{\dfrac{8}{N} \ln{\dfrac{4(2N)^{d_{VC}}}{\delta}}}$ 称为模型复杂度的惩罚项</p>
+</li>
+<li><p>随着 $d_{VC}$ 增加，$E_{in}$ 下降，但是 $\Omega$ 上升。所以 $E_{out}$ 随 $d_{VC}$ 先下降后上升</p>
+</li>
+<li><p>样本复杂度：$d_{VC}$ 固定的情况下，$N$ 的合理取值(理论上 $N \approx 10000d_{VC}$ 实际上只需要 $N \approx 10d_{VC}$)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-4-Noise-and-Error"><a href="#2-4-Noise-and-Error" class="headerlink" title="2.4  Noise and Error"></a>2.4  Noise and Error</h2><p>本节主要说了在数据集有噪声的情况下，VC维依然是成立的，机器学习依然是可能的</p>
+<ul>
+<li>样本由 $P(y|\vec{x})$ (也就是 $f(\vec{x}) + noise$ ) 产生<ul>
+<li>只要 $\vec{x} \stackrel{\text{i.i.d}}{\sim}{P(\vec{x})}$ 和 $y \stackrel{\text{i.i.d}}{\sim}{P(y)}$，VC维理论依然成立</li>
+</ul>
+</li>
+<li><p>误差的度量方式</p>
+<ul>
+<li><p>误差度量的特点：1、只考虑样本外的未知数据，2、分别考虑每个数据点的误差(不一定满足，但本课程只考虑这个)</p>
+</li>
+<li><p>常用误差有：0-1误差和平均平方误差(MSE)，前者用于分类，后者用于回归</p>
+</li>
+<li><p>0-1误差下的 $f(\vec{x}) = \mathop{\arg\max}\limits_{y \in \mathcal{Y}} P(y|\vec{x})$，使得翻转噪声最小</p>
+</li>
+<li><p>MSE下的 $f(\vec{x}) = \sum\limits_{y \in \mathcal{Y}} yP(y|\vec{x})$，使得高斯噪声最小</p>
+</li>
+</ul>
+</li>
+<li>错误衡量设计的两种方式：有意义的或者易于设计算法</li>
+<li>通过”虚拟复制”某类错误对应的标签的样本w次的方法，可以计算 $E_{in}^w$ (w为某类错误的权重)</li>
+</ul>
+<h1 id="3-How-Can-Machines-Learn"><a href="#3-How-Can-Machines-Learn" class="headerlink" title="3. How Can Machines Learn?"></a>3. How Can Machines Learn?</h1><h2 id="3-1-Linear-Regression"><a href="#3-1-Linear-Regression" class="headerlink" title="3.1 Linear Regression"></a>3.1 Linear Regression</h2><ul>
+<li>线性回归使用超平面 $h(\vec{x}) = \vec{w}^T\vec{x}$ 估计真实值</li>
+<li>线性回归存在用伪逆表示的解析解<br> * </li>
+</ul>
+]]></content>
+      <tags>
+        <tag>统计学习方法</tag>
+      </tags>
+  </entry>
 </search>

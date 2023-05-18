@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-05-12T16:33:38.812Z</updated>
+  <updated>2023-05-18T13:09:58.103Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>林轩田机器学习每章要点</title>
+    <link href="http://example.com/2023/05/14/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/%E6%9E%97%E8%BD%A9%E7%94%B0%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%AF%8F%E7%AB%A0%E8%A6%81%E7%82%B9/"/>
+    <id>http://example.com/2023/05/14/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/%E6%9E%97%E8%BD%A9%E7%94%B0%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%AF%8F%E7%AB%A0%E8%A6%81%E7%82%B9/</id>
+    <published>2023-05-14T15:33:59.000Z</published>
+    <updated>2023-05-18T13:09:58.103Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;0-符号假设&quot;&gt;&lt;a href=&quot;#0-符号假设&quot; class=&quot;headerlink&quot; title=&quot;0. 符号假设&quot;&gt;&lt;/a&gt;0. 符号假设&lt;/h1&gt;&lt;h1 id=&quot;1-When-Can-Machine-Learn&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="统计学习方法" scheme="http://example.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>chap4 朴素贝叶斯模型简洁总结</title>
+    <link href="http://example.com/2023/05/13/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/chap4%20%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%A8%A1%E5%9E%8B%E7%AE%80%E6%B4%81%E6%80%BB%E7%BB%93/"/>
+    <id>http://example.com/2023/05/13/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/chap4%20%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%A8%A1%E5%9E%8B%E7%AE%80%E6%B4%81%E6%80%BB%E7%BB%93/</id>
+    <published>2023-05-13T05:31:49.000Z</published>
+    <updated>2023-05-16T05:34:37.392Z</updated>
+    
+    
+    
+    
+    
+    <category term="统计学习方法" scheme="http://example.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>chap3 KNN模型简洁总结</title>
@@ -413,53 +451,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>第二章</title>
-    <link href="http://example.com/2022/04/23/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E4%B8%8E%E5%BA%94%E7%94%A8%E4%B9%A0%E9%A2%98/%E7%AC%AC%E4%BA%8C%E7%AB%A0/"/>
-    <id>http://example.com/2022/04/23/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E4%B8%8E%E5%BA%94%E7%94%A8%E4%B9%A0%E9%A2%98/%E7%AC%AC%E4%BA%8C%E7%AB%A0/</id>
-    <published>2022-04-23T15:00:00.000Z</published>
-    <updated>2022-04-23T14:59:47.349Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;第一题&quot;&gt;&lt;a href=&quot;#第一题&quot; class=&quot;headerlink&quot; title=&quot;第一题&quot;&gt;&lt;/a&gt;第一题&lt;/h2&gt;&lt;p&gt;　　只需要把$x_1x_2$换成y在利用0-1规划的性质对条件进行变形即可。&lt;/p&gt;
-&lt;h2 id=&quot;第二题&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="数学建模算法与应用习题" scheme="http://example.com/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E4%B8%8E%E5%BA%94%E7%94%A8%E4%B9%A0%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第一章</title>
-    <link href="http://example.com/2022/04/23/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E4%B8%8E%E5%BA%94%E7%94%A8%E4%B9%A0%E9%A2%98/%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
-    <id>http://example.com/2022/04/23/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E4%B8%8E%E5%BA%94%E7%94%A8%E4%B9%A0%E9%A2%98/%E7%AC%AC%E4%B8%80%E7%AB%A0/</id>
-    <published>2022-04-23T06:34:09.000Z</published>
-    <updated>2022-04-23T14:59:49.895Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;第一题&quot;&gt;&lt;a href=&quot;#第一题&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="数学建模算法与应用习题" scheme="http://example.com/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E4%B8%8E%E5%BA%94%E7%94%A8%E4%B9%A0%E9%A2%98/"/>
     
   </entry>
   
