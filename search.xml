@@ -1252,11 +1252,142 @@ $(document).ready(function () {
 </ul>
 <h1 id="3-How-Can-Machines-Learn"><a href="#3-How-Can-Machines-Learn" class="headerlink" title="3. How Can Machines Learn?"></a>3. How Can Machines Learn?</h1><h2 id="3-1-Linear-Regression"><a href="#3-1-Linear-Regression" class="headerlink" title="3.1 Linear Regression"></a>3.1 Linear Regression</h2><ul>
 <li>线性回归使用超平面 $h(\vec{x}) = \vec{w}^T\vec{x}$ 估计真实值</li>
-<li>线性回归存在用伪逆表示的解析解<br> * </li>
+<li><p>线性回归存在用伪逆表示的解析解 $\vec{w}_{LIN} = X^{\dagger}\vec{y}$</p>
+<ul>
+<li><p>MSE误差最小等价于：$\min\limits_{\vec{w}} E_{in}(\vec{w}) = \frac{1}{N} \Vert X\vec{w} - \vec{y} \Vert^2$</p>
+</li>
+<li><p>因为MSE损失函数为凸函数，所以 $\nabla E_{in}(\vec{w}) = 0$ 处即为最小值点</p>
+</li>
+</ul>
+</li>
+<li><p>线性回归相当于使 $\vec{y}$ 投影到由 $X$ 的特征张成的平面内，其中 $y - \hat{y}$ 是误差</p>
+<ul>
+<li><p>$trace(I - H) = N-(d+1)$ 表示$\vec{y}$ 投影到由 $X$ 的特征张成的平面内损失的自由度</p>
+</li>
+<li><p>如果有真实值来自于$f(X) \in span{X}$，那么对 <strong>noise</strong> 进行投影即 $I-H$ 操作可得：</p>
+<p>  $\overline{E_{in}} = \frac{1}{N}\Vert y - \hat{y} \Vert^2 = \frac{1}{N}\Vert (I-H)\textbf{noise} \Vert^2 =<br>  \textbf{noise} (1-\frac{d+1}{N})$</p>
+</li>
+<li><p>$\overline{E_{out}} = \textbf{noise} (1+\frac{d+1}{N})$，随着 $N$ 逐渐增大 $\overline{E_{in}} \approx \overline{E_{out}}$</p>
+</li>
+</ul>
+</li>
+<li>用回归器进行分类的代价是更松的上界，因为 $err_{0/1} \leq err_{sqr}$，所以 $E_{out} \leq 分类E_{in} + 复杂度 \leq 回归E_{in} + 复杂度$</li>
+</ul>
+<h2 id="3-2-Logistic-Regression"><a href="#3-2-Logistic-Regression" class="headerlink" title="3.2  Logistic Regression"></a>3.2  Logistic Regression</h2><ul>
+<li>Logistic 回归的目标函数是 $P(+1|x)$，其假设为 $h(x) = \theta(\vec{w}^T x)$(其中 $\theta = \dfrac{1}{1+e^{-s}}$)</li>
+<li>Logistic 回归的损失函数是交叉熵函数(似然函数的负对数 $L(\vec{w}) = \frac{1}{N}\sum\limits_{n=1}^{N} -\ln \theta(y_n \vec{w}^T \vec{x}_n)$)</li>
+<li>Logistic 回归的损失函数是凸函数，因此其最小值在<br>$\nabla E_{in}(\vec{w}) = \frac{1}{N} \sum\limits_{n=1}^{N} \theta(-y_n \vec{w}^T \vec{x}_n) (-y_n \vec{x}_n) = 0$ 处取得</li>
+<li>Logistic 回归可以用梯度下降法求得 $L(\vec{w})$ 最小值<ul>
+<li>$\vec{w}$ 更新方式：$\vec{w}_{t+1} = \vec{w}_{t} + \eta \vec{v}$</li>
+<li>$\eta$ 很小的时候可以泰勒展开近似，$E_{in}(\vec{w}_{t+1}) \approx E_{in}(\vec{w}_{t} + \eta \vec{v}^T \nabla E_{in}(\vec{w}_t))$</li>
+<li>当 $\vec{v}$ 与 $\nabla E_{in}(\vec{w}_t)$ 方向相反时(即 $\vec{v} = -\dfrac{\nabla E_{in}(\vec{w}_t)}{\Vert \nabla E_{in}(\vec{w}_t) \Vert}$)<br>$E_{in}$ 下降最快</li>
+<li>我们希望 $\eta$ 与 $\Vert \nabla E_{in}(\vec{w}_t) \Vert$ 正相关，因此更新的式子可以改为:<br>$\vec{w}_{t+1} = \vec{w}_{t} - \eta \nabla E_{in}(\vec{w}_t)$</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-Linear-Models-for-Classification"><a href="#3-3-Linear-Models-for-Classification" class="headerlink" title="3.3 Linear Models for Classification"></a>3.3 Linear Models for Classification</h2><ul>
+<li>线性回归和Logistic 回归都可以解决线性分类问题</li>
+<li>随机梯度下降(SGD)可以简化更新操作到 $\mathcal{O}(1)$ 复杂度<br>简化后的更新操作：$\vec{w}_{t+1} = \vec{w}_{t} - \eta \theta(-y_n \vec{w}_t^T \vec{x}_n) (-y_n \vec{x}_n)$</li>
+<li>多分类问题<ul>
+<li>OVA：对每一类和所有其他类别数据做二分类，分别计算 $P(k|\vec{x})$<ul>
+<li>优点：高效，可以和所有类似Logistic 回归的算法结合</li>
+<li>缺点：K较大时容易类别不平衡</li>
+</ul>
+</li>
+<li>OVO：对每一类和每种其他类别数据做二分类<ul>
+<li>优点：可以和所有二分类算法结合</li>
+<li>缺点：时空复杂度高，预测速度慢</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-4-Nonlinear-Transformation"><a href="#3-4-Nonlinear-Transformation" class="headerlink" title="3.4 Nonlinear Transformation"></a>3.4 Nonlinear Transformation</h2><ul>
+<li>可以用一非线性函数 $\Phi$ 将非线性函数映射到线性空间中，实现x域到z域特征转换</li>
+<li>z域特征维度 $\tilde{d} = C_{Q+d}^{Q} = C_{Q+d}^{d} = \mathcal{O}(Q^d)$ 较大，<br>会导致模型泛化能力差，时空复杂度高</li>
+<li>优先选择 $Q$ 较小的假设，如果 $E_{in}$ 太高在考虑复杂假设</li>
+</ul>
+<h1 id="4-How-Can-Machines-Learn-Better"><a href="#4-How-Can-Machines-Learn-Better" class="headerlink" title="4. How Can Machines Learn Better?"></a>4. How Can Machines Learn Better?</h1><h2 id="4-1-Hazard-of-Overfitting"><a href="#4-1-Hazard-of-Overfitting" class="headerlink" title="4.1  Hazard of Overfitting"></a>4.1  Hazard of Overfitting</h2><ul>
+<li>过拟合：$E_{in}$ 变小但是 $E_{out}$ 变大的过程。以下是过拟合常见原因：<ul>
+<li>VC Dimension太大</li>
+<li>随机噪声或系统性噪声过强</li>
+<li>训练样本数 $N$ 不够</li>
+</ul>
+</li>
+<li>避免过拟合的措施:<ul>
+<li>从简单的模型开始</li>
+<li>数据清理(修正明显错误的label或者删除错误样本点)</li>
+<li>数据增强(注意新增的数据可能和原来数据不是 $i.i.d.$ 的，尽量保证新数据内的样本是 $i.i.d.$ 的)</li>
+<li>正则化</li>
+<li>验证</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-2-Regularization"><a href="#4-2-Regularization" class="headerlink" title="4.2 Regularization"></a>4.2 Regularization</h2><ul>
+<li>正则化约束条件：$\Vert \vec{w} \Vert^2 \leq C$，$H_n \subset H(C) \subset H_m$ ($n&lt;m$)</li>
+<li>最优解需要满足 $-\nabla E_{in}(w_{reg})$ 与 $w^Tw = C$ 的法向量平行，<br>即 $\nabla E_{in}(w_{reg}) + \frac{2\lambda}{N}w_{reg}=0$<ul>
+<li>求解 $w_{reg}$ 等价于最小化 $E_{aug} = E_{in} + \frac{\lambda}{N} w_{reg}^Tw_{reg}$</li>
+<li>多项式变换除了可以用朴素的 $x^n$，也可以用勒让德多项式</li>
+</ul>
+</li>
+<li>$E_{aug}$ 可以看成 $E_{out}$ 的代理<ul>
+<li>$E_{aug} = E_{in} + \frac{\lambda}{N} w^Tw$ 中的 $w^Tw$ 是单个假设的复杂度，记为 $\Omega(w)$。<br>整个 $H$ 的复杂度为 $\Omega(H)$，$\Omega(w)$ 包含在 $\Omega(H)$ 中</li>
+<li>整个 $H$ 的VC维是 $d_{VC} = \tilde{d} + 1$，引入正则化限定条件 $H(C)$ 后的VC维记为 $d_{EFF}(H,A)$.<br>则有 $d_{EFF}(H,A) \leq d_{VC}$</li>
+</ul>
+</li>
+<li>正则化项选择方法<ul>
+<li>基于目标特性，比如目标具有对称性则考虑用 $\sum\mathbb{I}(q \% 2==0)w^2_q$ 作为正则化项</li>
+<li>接近真实(曲线平滑、简单)，如L1正则化 $\sum \vert w_q \vert$</li>
+<li>易于实现，如L2正则化 $\sum w^2_q$</li>
+<li>噪音越大，$\lambda$ 也要越大</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-3-Validation"><a href="#4-3-Validation" class="headerlink" title="4.3 Validation"></a>4.3 Validation</h2><p>模型选择指的是在 $M$ 个假设空间 $H_m$ 对应 $M$ 种算法 $A_m$ 中选择最优假设空间 $H_{m^*}$ </p>
+<p>使得 $g_{m^<em>} = A_{m^</em>}(D)$，$E_{out}(g_{m^*})$ 最小</p>
+<ul>
+<li>用验证集选择模型<ul>
+<li>用 $E_{in}$ 选择模型是危险的(因为即用 $D$ 训练模型又用它选择模型)</li>
+<li>用 $E_{test}$ 选择模型是作弊且无法实现的(难以获得测试数据)</li>
+</ul>
+</li>
+<li>验证集模型选择原理：$E_{out}(g) \mathop{\approx}\limits_{small K} E_{out}(g^-) \mathop{\approx}\limits_{large K} E_{val}(g^-)$<ul>
+<li>验证集大小 $K$ 越大，$g^-$ 越不如 $g$，但是 $E_{val}$ 越接近 $E_{out}$ (学习曲线)</li>
+<li>验证集大小 $K$ 越小，$g^-$ 越接近 $g$，但是 $E_{val}$ 越不如 $E_{out}$ (学习曲线)</li>
+</ul>
+</li>
+<li>留一法交叉验证(LOOCV) 的期望 $\mathop{\varepsilon}\limits_{D} E_{LOOCV}(H,A) = \overline{E_{out}}(N-1)$<br>是对 $\overline{E_{out}}$的近似无偏估计<ul>
+<li>$E_{LOOCV} = \frac{1}{N} \sum\limits_{n=1}^{N} err(g_m^-(\vec{x}_n),y_n)$ ($K = 1$ 的特殊情况)</li>
+<li>LOOCV的缺点：计算量大、结果不稳定</li>
+</ul>
+</li>
+<li>V折交叉验证公式：$E_{CV} = \frac{1}{V} \sum\limits_{v=1}^{V} E_{val}^{(v)}(g_v^-)$</li>
+</ul>
+<h2 id="4-4-Three-Learning-Principles"><a href="#4-4-Three-Learning-Principles" class="headerlink" title="4.4 Three Learning Principles"></a>4.4 Three Learning Principles</h2><ul>
+<li>奥卡姆剃刀原则：适合数据的最简单的模型是最合适的</li>
+<li>抽样误差：数据要匹配测试环境</li>
+<li>偷窥数据：容易造成过拟合。应当避免通过数据进行决策，并且对别人的研究成果保持警惕</li>
+<li>power of three<ul>
+<li>机器学习相关的三个领域：数据挖掘、机器学习、统计</li>
+<li>三个理论保证：霍夫丁不等式、多假设霍夫丁不等式、VC维</li>
+<li>三种线性模型：感知机、线性回归、Logistic回归</li>
+<li>三种重要的工具：特征转换、正则化、验证</li>
+<li>三个锦囊妙计：奥卡姆剃刀、防止抽样误差、谨慎偷窥数据</li>
+<li>机器学习未来方向：更多转换、更多正则化、更少标签</li>
+</ul>
+</li>
 </ul>
 ]]></content>
       <tags>
         <tag>统计学习方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>辐射基础1</title>
+    <url>/2023/05/21/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80/%E8%BE%90%E5%B0%84%E5%9F%BA%E7%A1%80/%E8%BE%90%E5%B0%84%E5%9F%BA%E7%A1%801/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>遥感基础</tag>
       </tags>
   </entry>
 </search>
