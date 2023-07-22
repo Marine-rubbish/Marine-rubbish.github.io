@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-07-22T11:16:33.862Z</updated>
+  <updated>2023-07-22T15:04:53.950Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Matlab Cody——Basics Rounding 题解</title>
+    <link href="http://example.com/2023/07/22/Matlab%20Cody/Matlab-Cody%E2%80%94%E2%80%94Basics%20Rounding%E9%A2%98%E8%A7%A3/"/>
+    <id>http://example.com/2023/07/22/Matlab%20Cody/Matlab-Cody%E2%80%94%E2%80%94Basics%20Rounding%E9%A2%98%E8%A7%A3/</id>
+    <published>2023-07-22T11:21:38.000Z</published>
+    <updated>2023-07-22T15:04:53.950Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-Problem-42641-MATLAB-Basic-rounding&quot;&gt;&lt;a href=&quot;#1-Problem-42641-MATLAB-Basic-rounding&quot; class=&quot;headerlink&quot; title=&quot;1. Problem 42641.</summary>
+        
+      
+    
+    
+    
+    
+    <category term="代码打卡" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>Matlab Cody——Basics on Vectors题解</title>
@@ -429,29 +452,6 @@
     
     
     <category term="杂谈" scheme="http://example.com/tags/%E6%9D%82%E8%B0%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>matlab第四次作业</title>
-    <link href="http://example.com/2022/05/04/matlab%E4%BD%9C%E4%B8%9A/matlab%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%BD%9C%E4%B8%9A/"/>
-    <id>http://example.com/2022/05/04/matlab%E4%BD%9C%E4%B8%9A/matlab%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%BD%9C%E4%B8%9A/</id>
-    <published>2022-05-04T11:35:08.000Z</published>
-    <updated>2022-05-04T11:39:07.680Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;第一题代码&quot;&gt;&lt;a href=&quot;#第一题代码&quot; class=&quot;headerlink&quot; title=&quot;第一题代码&quot;&gt;&lt;/a&gt;第一题代码&lt;/h2&gt;&lt;figure class=&quot;highlight matlab&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
-        
-      
-    
-    
-    
-    
-    <category term="matlab作业" scheme="http://example.com/tags/matlab%E4%BD%9C%E4%B8%9A/"/>
     
   </entry>
   

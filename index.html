@@ -173,6 +173,66 @@
     
     
     <article
+  id="post-Matlab Cody/Matlab-Cody——Basics Rounding题解"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/07/22/Matlab%20Cody/Matlab-Cody%E2%80%94%E2%80%94Basics%20Rounding%E9%A2%98%E8%A7%A3/"
+    >Matlab Cody——Basics Rounding 题解</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/07/22/Matlab%20Cody/Matlab-Cody%E2%80%94%E2%80%94Basics%20Rounding%E9%A2%98%E8%A7%A3/" class="article-date">
+  <time datetime="2023-07-22T11:21:38.000Z" itemprop="datePublished">2023-07-22</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="1-Problem-42641-MATLAB-Basic-rounding"><a href="#1-Problem-42641-MATLAB-Basic-rounding" class="headerlink" title="1. Problem 42641. MATLAB Basic: rounding"></a>1. Problem 42641. MATLAB Basic: rounding</h2><p>错误写法：<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">round_zero</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">round</span>(x,TieBreaker=<span class="string">&quot;tozero&quot;</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<p>正确写法：<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">round_zero</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">fix</span>(x);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="2-Problem-42642-MATLAB-Basic-rounding-II"><a href="#2-Problem-42642-MATLAB-Basic-rounding-II" class="headerlink" title="2. Problem 42642. MATLAB Basic: rounding II"></a>2. Problem 42642. MATLAB Basic: rounding II</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">round_x</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">round</span>(x);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-Problem-42643-MATLAB-Basic-rounding-III"><a href="#3-Problem-42643-MATLAB-Basic-rounding-III" class="headerlink" title="3. Problem 42643. MATLAB Basic: rounding III"></a>3. Problem 42643. MATLAB Basic: rounding III</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">round_x</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">floor</span>(x);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="4-Problem-42644-MATLAB-Basic-rounding-IV"><a href="#4-Problem-42644-MATLAB-Basic-rounding-IV" class="headerlink" title="4. Problem 42644. MATLAB Basic: rounding IV"></a>4. Problem 42644. MATLAB Basic: rounding IV</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">round_x</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">ceil</span>(x);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="5-Problem-2559-Check-that-number-is-whole-number"><a href="#5-Problem-2559-Check-that-number-is-whole-number" class="headerlink" title="5. Problem 2559. Check that number is whole number"></a>5. Problem 2559. Check that number is whole number</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">your_fcn_name</span><span class="params">(x)</span></span></span><br><span class="line">  y = (x==<span class="built_in">round</span>(x));</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="6-Problem-2866-Matlab-Basics-Rounding-II"><a href="#6-Problem-2866-Matlab-Basics-Rounding-II" class="headerlink" title="6. Problem 2866. Matlab Basics - Rounding II"></a>6. Problem 2866. Matlab Basics - Rounding II</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">round_3_d_p</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">round</span>(x,<span class="number">3</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="7-Problem-2867-Matlab-Basics-Rounding-III"><a href="#7-Problem-2867-Matlab-Basics-Rounding-III" class="headerlink" title="7. Problem 2867. Matlab Basics - Rounding III"></a>7. Problem 2867. Matlab Basics - Rounding III</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">round_ten_thou</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">round</span>(x,<span class="number">-4</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="8-Problem-2120-Rounding-off-numbers-to-n-decimals"><a href="#8-Problem-2120-Rounding-off-numbers-to-n-decimals" class="headerlink" title="8. Problem 2120. Rounding off numbers to n decimals"></a>8. Problem 2120. Rounding off numbers to n decimals</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">myround</span><span class="params">(x,n)</span></span></span><br><span class="line">  y = <span class="built_in">round</span>(x,n);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="9-Problem-43278-Make-roundn-function"><a href="#9-Problem-43278-Make-roundn-function" class="headerlink" title="9. Problem 43278. Make roundn function"></a>9. Problem 43278. Make roundn function</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">myroundn</span><span class="params">(x,n)</span></span></span><br><span class="line">   y = <span class="built_in">round</span>(x,n<span class="number">-1</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="10-Problem-713-Find-the-maximum-number-of-decimal-places-in-a-set-of-numbers"><a href="#10-Problem-713-Find-the-maximum-number-of-decimal-places-in-a-set-of-numbers" class="headerlink" title="10. Problem 713. Find the maximum number of decimal places in a set of numbers"></a>10. Problem 713. Find the maximum number of decimal places in a set of numbers</h2><p>题目意思：给定一个向量或值矩阵，计算输入中的最大小数位数。尾随零不算有效。没有有效数字将导致答案为 0。<br>题解：没有找到一个优雅的写法，所有先放空。<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/" rel="tag">代码打卡</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-Matlab Cody/Matlab Cody——Basics on Vectors题解"
   class="article article-type-post"
   itemscope
@@ -929,64 +989,6 @@ $$L_{opt2}$$在指数粗糙面和分形粗糙面时表现为$$\eqref{1}$$这类�
     
     <footer class="article-footer">
        
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-matlab编码规范学习"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/12/16/matlab%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0/"
-    >matlab编码规范学习</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/12/16/matlab%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0/" class="article-date">
-  <time datetime="2022-12-16T11:57:50.000Z" itemprop="datePublished">2022-12-16</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="命名约定"><a href="#命名约定" class="headerlink" title="命名约定"></a>命名约定</h1><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>变量名应该记录它们的含义或用途。<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wage = hourlyRate * nHours</span><br></pre></td></tr></table></figure></p>
-<h4 id="从小写开始用混合大小写命名变量名"><a href="#从小写开始用混合大小写命名变量名" class="headerlink" title="从小写开始用混合大小写命名变量名"></a>从小写开始用混合大小写命名变量名</h4><p>以大写开头的名称通常是为类型或者结构体保留的。</p>
-<p>很短的变量名可以是大写的，如果它们在常规用法中是大写的，并且不太可能成为复合变量名的一部分。</p>
-<p>例如在特定领域，杨氏模量的E，可能会被误导为e。</p>
-<p>有些程序员喜欢用下划线来分隔复合变量名的各个部分。</p>
-<p>这种方式虽然易于阅读，但在其他语言中并不常用来命名变量。</p>
-<p>在图形标题、标签和图例的变量名中使用下划线的另一个考虑因素是，MATLAB中的Tex解释器将把下划线转换为下标来读取，因此需要为每个文本字符串应用参数/值对进行设置，即‘Interpreter’,’none’。</p>
-<h4 id="具有大作用域的变量应该具有有意义的命名，作用域小的变量可以有简短的命名"><a href="#具有大作用域的变量应该具有有意义的命名，作用域小的变量可以有简短的命名" class="headerlink" title="具有大作用域的变量应该具有有意义的命名，作用域小的变量可以有简短的命名"></a>具有大作用域的变量应该具有有意义的命名，作用域小的变量可以有简短的命名</h4><p>在实践中，大多数变量都应该具有有意义的名字。</p>
-<p>在某些条件下，应保留使用简短的命名，以澄清陈述的结构或与预期的通用性相一致。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/" rel="tag">小技巧</a></li></ul>
-
     </footer>
   </div>
 
