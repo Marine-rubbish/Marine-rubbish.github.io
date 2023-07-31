@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-07-22T15:04:53.950Z</updated>
+  <updated>2023-07-29T09:18:13.615Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Matlab Cody——CUP Challenge 题解</title>
+    <link href="http://example.com/2023/07/29/Matlab-Cody%E2%80%94%E2%80%94CUP-Challenge-%E9%A2%98%E8%A7%A3/"/>
+    <id>http://example.com/2023/07/29/Matlab-Cody%E2%80%94%E2%80%94CUP-Challenge-%E9%A2%98%E8%A7%A3/</id>
+    <published>2023-07-29T08:36:53.000Z</published>
+    <updated>2023-07-29T09:18:13.615Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-Problem-1974-Length-of-a-short-side&quot;&gt;&lt;a href=&quot;#1-Problem-1974-Length-of-a-short-side&quot; class=&quot;headerlink&quot; title=&quot;1. Problem 1974.</summary>
+        
+      
+    
+    
+    
+    
+    <category term="代码打卡" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>Matlab Cody——Basics Rounding 题解</title>
@@ -422,29 +445,6 @@
         
     <summary type="html">&lt;h2 id=&quot;契机&quot;&gt;&lt;a href=&quot;#契机&quot; class=&quot;headerlink&quot; title=&quot;契机&quot;&gt;&lt;/a&gt;契机&lt;/h2&gt;&lt;p&gt;在做导弹拦截这题的时候发现自己不太会用lower_bound和upper_bound,所以写一篇文章备忘。  &lt;/p&gt;
 &lt;h2</summary>
-        
-      
-    
-    
-    
-    
-    <category term="杂谈" scheme="http://example.com/tags/%E6%9D%82%E8%B0%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>蓝桥杯复盘</title>
-    <link href="http://example.com/2022/05/04/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%8D%E7%9B%98/"/>
-    <id>http://example.com/2022/05/04/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%8D%E7%9B%98/</id>
-    <published>2022-05-04T11:44:27.000Z</published>
-    <updated>2022-05-04T12:18:49.043Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;之前一直考虑复盘一下今年的蓝桥杯，但是苦于没有时间（摸鱼摸掉了）。所以拖到现在才写。&lt;br&gt;我参加的是C++</summary>
         
       
     
