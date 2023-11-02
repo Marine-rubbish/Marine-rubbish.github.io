@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-07-29T09:18:13.615Z</updated>
+  <updated>2023-11-01T11:17:49.323Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,65 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1/f随机过程</title>
+    <link href="http://example.com/2023/10/31/1%E6%AF%94f%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/"/>
+    <id>http://example.com/2023/10/31/1%E6%AF%94f%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/</id>
+    <published>2023-10-31T15:43:53.000Z</published>
+    <updated>2023-11-01T11:17:49.323Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0. 前言&quot;&gt;&lt;/a&gt;0. 前言&lt;/h2&gt;&lt;p&gt;在看《Backscattering Properties of MultiScale Rough</summary>
+        
+      
+    
+    
+    
+    
+    <category term="科研项目系列" scheme="http://example.com/tags/%E7%A7%91%E7%A0%94%E9%A1%B9%E7%9B%AE%E7%B3%BB%E5%88%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Effective C++学习</title>
+    <link href="http://example.com/2023/08/05/Effective-C-%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2023/08/05/Effective-C-%E5%AD%A6%E4%B9%A0/</id>
+    <published>2023-08-05T06:55:39.000Z</published>
+    <updated>2023-08-05T06:55:39.835Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ICESat-2 ATL07 数据说明</title>
+    <link href="http://example.com/2023/08/03/%E7%A7%91%E7%A0%94%E9%A1%B9%E7%9B%AE%E7%B3%BB%E5%88%97/%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E%E6%95%B4%E7%90%86/ICESat-2-ATL07-%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E/"/>
+    <id>http://example.com/2023/08/03/%E7%A7%91%E7%A0%94%E9%A1%B9%E7%9B%AE%E7%B3%BB%E5%88%97/%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E%E6%95%B4%E7%90%86/ICESat-2-ATL07-%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E/</id>
+    <published>2023-08-03T14:49:17.000Z</published>
+    <updated>2023-08-05T06:54:23.528Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-数据描述&quot;&gt;&lt;a href=&quot;#1-数据描述&quot; class=&quot;headerlink&quot; title=&quot;1 数据描述&quot;&gt;&lt;/a&gt;1 数据描述&lt;/h1&gt;&lt;h2 id=&quot;1-1-参数&quot;&gt;&lt;a href=&quot;#1-1-参数&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="数据说明" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E/"/>
+    
+  </entry>
   
   <entry>
     <title>Matlab Cody——CUP Challenge 题解</title>
@@ -378,80 +437,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2022/05/26/rmarkdown%E6%B5%8B%E8%AF%95/"/>
-    <id>http://example.com/2022/05/26/rmarkdown%E6%B5%8B%E8%AF%95/</id>
-    <published>2022-05-26T11:21:52.203Z</published>
-    <updated>2022-05-26T11:45:14.383Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;!DOCTYPE html&gt;
-
-&lt;html&gt;
-
-&lt;head&gt;
-
-&lt;meta charset=&quot;utf-8&quot; /&gt;
-&lt;meta name=&quot;generator&quot; content=&quot;pandoc&quot; /&gt;
-&lt;meta http-equiv=&quot;X-UA-Compatible&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2022/05/26/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/"/>
-    <id>http://example.com/2022/05/26/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/</id>
-    <published>2022-05-26T08:35:55.557Z</published>
-    <updated>2022-05-26T09:03:34.974Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;figure class=&quot;highlight matlab&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>lower_bound的小技巧</title>
-    <link href="http://example.com/2022/05/21/%E5%B0%8F%E6%8A%80%E5%B7%A7/lower-bound%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
-    <id>http://example.com/2022/05/21/%E5%B0%8F%E6%8A%80%E5%B7%A7/lower-bound%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7/</id>
-    <published>2022-05-21T09:32:29.000Z</published>
-    <updated>2022-05-21T09:45:34.466Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;契机&quot;&gt;&lt;a href=&quot;#契机&quot; class=&quot;headerlink&quot; title=&quot;契机&quot;&gt;&lt;/a&gt;契机&lt;/h2&gt;&lt;p&gt;在做导弹拦截这题的时候发现自己不太会用lower_bound和upper_bound,所以写一篇文章备忘。  &lt;/p&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    
-    <category term="杂谈" scheme="http://example.com/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
