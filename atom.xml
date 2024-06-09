@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-06-09T15:08:20.554Z</updated>
+  <updated>2024-06-09T16:16:08.821Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第2节 数据库操作</title>
+    <link href="http://example.com/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC2%E8%8A%82-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/"/>
+    <id>http://example.com/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC2%E8%8A%82-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/</id>
+    <published>2024-06-09T15:30:08.000Z</published>
+    <updated>2024-06-09T16:16:08.821Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;0-SQL通用语法分类&quot;&gt;&lt;a href=&quot;#0-SQL通用语法分类&quot; class=&quot;headerlink&quot; title=&quot;0. SQL通用语法分类&quot;&gt;&lt;/a&gt;0. SQL通用语法分类&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;DDL:</summary>
+        
+      
+    
+    
+    
+    
+    <category term="MySQL学习" scheme="http://example.com/tags/MySQL%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>第1节 Linux下MySQL Workbench环境配置</title>
@@ -423,27 +447,6 @@
 
 	&lt;div class=&quot;row&quot;&gt;
     &lt;embed src=&quot;/pdf/ocean_wave_spectrum.pdf&quot; width=&quot;100%&quot; height=&quot;550&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>latex 测试</title>
-    <link href="http://example.com/2023/02/19/latex-%E6%B5%8B%E8%AF%95/"/>
-    <id>http://example.com/2023/02/19/latex-%E6%B5%8B%E8%AF%95/</id>
-    <published>2023-02-19T13:29:56.000Z</published>
-    <updated>2023-02-19T13:59:19.349Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;高斯粗糙面的均方根斜率&lt;script type=&quot;math/tex&quot;&gt;&#92;sigma_{s}&lt;/script&gt;可以表示为均方根高度&lt;script type=&quot;math/tex&quot;&gt;&#92;sigma&lt;/script&gt;和相关长度&lt;script</summary>
         
       
     

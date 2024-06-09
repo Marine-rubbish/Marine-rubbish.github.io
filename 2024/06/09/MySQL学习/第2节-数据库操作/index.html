@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>第1节 Linux下MySQL Workbench环境配置 |  My Blog</title>
+      <title>第2节 数据库操作 |  My Blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -56,7 +56,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-MySQL学习/第1节-Linux下MySQL-Workbench环境配置"
+  id="post-MySQL学习/第2节-数据库操作"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -67,7 +67,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  第1节 Linux下MySQL Workbench环境配置
+  第2节 数据库操作
 </h1>
  
 
@@ -75,15 +75,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC1%E8%8A%82-Linux%E4%B8%8BMySQL-Workbench%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2024-06-09T09:08:01.000Z" itemprop="datePublished">2024-06-09</time>
+      <a href="/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC2%E8%8A%82-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/" class="article-date">
+  <time datetime="2024-06-09T15:30:08.000Z" itemprop="datePublished">2024-06-09</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">196</span>
+            <span class="post-count">294</span>
         </span>
     </span>
 
@@ -107,16 +107,25 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="0-前置内容"><a href="#0-前置内容" class="headerlink" title="0. 前置内容"></a>0. 前置内容</h2><ol>
-<li>上一节文章地址: <a target="_blank" rel="noopener" href="https://marine-rubbish.github.io/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC0%E8%8A%82-Linux%E4%B8%8BMySQL%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">https://marine-rubbish.github.io/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC0%E8%8A%82-Linux%E4%B8%8BMySQL%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</a></li>
-<li>本来想配置 MySQL Administrator 和 MySQL Query Browser 的。但是据说过时了，于是配 Workbench 。</li>
-</ol>
-<h2 id="1-安装-Unfinished"><a href="#1-安装-Unfinished" class="headerlink" title="1. 安装 (Unfinished)"></a>1. 安装 (Unfinished)</h2><p>访问安装包下载地址: <a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/workbench/">https://dev.mysql.com/downloads/workbench/</a></p>
-<p>这里选择下载Ubuntu 23.10版本的:<br><img src="./img1_1.jpg" alt="Workbench 官网" title="Workbench 官网"></p>
-<p>通过 <code>dpkg</code> 命令下载 <code>.deb</code> 安装包:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i ~/下载/mysql-workbench-community_8.0.36-1ubuntu23.10_amd64.deb</span><br></pre></td></tr></table></figure></p>
-<p>如果中间有依赖报错，可以用以下命令安装依赖:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt -f install <span class="comment"># -f 参数代表 --fix-broken，尝试修复依赖导致的问题</span></span><br></pre></td></tr></table></figure></p>
-<p>因为Ubuntu版本太新了，没有对应24.04版本的workbench，只能咕咕咕了。</p>
-<h2 id="2-使用-Unfinished"><a href="#2-使用-Unfinished" class="headerlink" title="2. 使用 (Unfinished)"></a>2. 使用 (Unfinished)</h2> 
+  <h2 id="0-SQL通用语法分类"><a href="#0-SQL通用语法分类" class="headerlink" title="0. SQL通用语法分类"></a>0. SQL通用语法分类</h2><ul>
+<li>DDL: 数据定义语言，用来定义数据库对象（数据库、表、字段）</li>
+<li>DML: 数据操作语言，用来对数据库表中的数据进行增删改</li>
+<li>DQL: 数据查询语言，用来查询数据库中表的记录</li>
+<li>DCL: 数据控制语言，用来创建数据库用户、控制数据库的控制权限</li>
+</ul>
+<h2 id="1-查询所有数据库"><a href="#1-查询所有数据库" class="headerlink" title="1. 查询所有数据库"></a>1. 查询所有数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> DATABASES;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">--------------------+</span></span><br><span class="line"><span class="operator">|</span> Database           <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+</span></span><br><span class="line"><span class="operator">|</span> information_schema <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql              <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> performance_schema <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> sys                <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+</span></span><br><span class="line"><span class="number">4</span> <span class="keyword">rows</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.02</span> sec)</span><br></pre></td></tr></table></figure>
+<h2 id="2-创建数据库"><a href="#2-创建数据库" class="headerlink" title="2. 创建数据库"></a>2. 创建数据库</h2><p>如果 <code>mydb</code> 数据库不存在，就创建一个名为 <code>mydb</code> 的数据库。</p>
+<p>字符集指定为 <code>utf8mb4</code>，排序方式指定为 <code>utf8mb4_general_ci</code>。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> DATABASE IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> mydb <span class="keyword">DEFAULT</span> CHARSET utf8mb4 <span class="keyword">COLLATE</span> utf8mb4_general_ci;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Query OK, <span class="number">1</span> <span class="type">row</span> affected (<span class="number">0.07</span> sec)</span><br></pre></td></tr></table></figure>
+<h2 id="3-使用数据库"><a href="#3-使用数据库" class="headerlink" title="3. 使用数据库"></a>3. 使用数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE mydb;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Database changed</span><br></pre></td></tr></table></figure>
+<h2 id="4-查询当前数据库"><a href="#4-查询当前数据库" class="headerlink" title="4. 查询当前数据库"></a>4. 查询当前数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DATABASE();</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">------------+</span></span><br><span class="line"><span class="operator">|</span> DATABASE() <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------+</span></span><br><span class="line"><span class="operator">|</span> mydb       <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------+</span></span><br><span class="line"><span class="number">1</span> <span class="type">row</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
+<h2 id="5-删除数据库"><a href="#5-删除数据库" class="headerlink" title="5. 删除数据库"></a>5. 删除数据库</h2><p>删除之前执行 <code>SHOW DATABASES</code> 命令的结果:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">--------------------+</span></span><br><span class="line"><span class="operator">|</span> Database           <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+</span></span><br><span class="line"><span class="operator">|</span> information_schema <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mydb               <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql              <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> performance_schema <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> sys                <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+</span></span><br><span class="line"><span class="number">5</span> <span class="keyword">rows</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.04</span> sec)</span><br></pre></td></tr></table></figure><br>删除命令<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> DATABASE IF <span class="keyword">EXISTS</span> mydb;</span><br></pre></td></tr></table></figure></p>
+<p>删除后的结果:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Query OK, <span class="number">0</span> <span class="keyword">rows</span> affected (<span class="number">0.07</span> sec)</span><br></pre></td></tr></table></figure></p>
+<p>删除后再执行 <code>SHOW DATABASES</code> 命令的结果:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">--------------------+</span></span><br><span class="line"><span class="operator">|</span> Database           <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+</span></span><br><span class="line"><span class="operator">|</span> information_schema <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql              <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> performance_schema <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> sys                <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+</span></span><br><span class="line"><span class="number">4</span> <span class="keyword">rows</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure></p>
+ 
       <!-- reward -->
       
       <div id="reword-out">
@@ -186,7 +195,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC1%E8%8A%82-Linux%E4%B8%8BMySQL-Workbench%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC2%E8%8A%82-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -199,19 +208,10 @@
    
   <nav class="article-nav">
     
-      <a href="/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC2%E8%8A%82-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            第2节 数据库操作
-          
-        </div>
-      </a>
     
-    
-      <a href="/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC0%E8%8A%82-Linux%E4%B8%8BMySQL%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="article-nav-link">
+      <a href="/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC1%E8%8A%82-Linux%E4%B8%8BMySQL-Workbench%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">第0节 Linux下MySQL环境配置</div>
+        <div class="article-nav-title">第1节 Linux下MySQL Workbench环境配置</div>
       </a>
     
   </nav>
