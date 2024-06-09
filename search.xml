@@ -423,7 +423,7 @@ s_x(\omega) \sim \frac{\sigma_x^2}{\vert \omega \vert^\gamma}</script><p>其中 
 <li>学习行业内部黑话：最基本的比如需求、流程、提测、黑盒测试、白盒测试、冒烟测试等。</li>
 <li>学习工作技能：（这块可能以后不干测试的话不太重要）学习编写设备测试环境、根据最小用例检查点编写最小用例、提出测试需求、提出测试计划、提交缺陷、编写测试报告等。</li>
 </ol>
-<h2 id="upd1-最新情况-2023-12-31"><a href="#upd1-最新情况-2023-12-31" class="headerlink" title="upd1 最新情况 (2023/12/31)"></a>upd1 最新情况 (2023/12/31)</h2><p>上司在这周五已经拿n+1离职了（感觉大概率是被优化了，不然拿不到n+1）。我也准备跑路了。</p>
+<h2 id="upd1-最新情况-2023-12-31"><a href="#upd1-最新情况-2023-12-31" class="headerlink" title="upd1 最新情况 (2023/12/31)"></a>upd1 最新情况 (2023/12/31)</h2><p>上司在这周五已经拿N+1离职了（感觉大概率是被优化了，不然拿不到N+1）。我也准备跑路了。</p>
 ]]></content>
       <tags>
         <tag>实习经历</tag>
@@ -1570,5 +1570,41 @@ $(document).ready(function () {
 </body>
 </html>
 ]]></content>
+  </entry>
+  <entry>
+    <title>第0节_Linux下MySQL环境配置</title>
+    <url>/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC0%E8%8A%82-Linux%E4%B8%8BMySQL%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>作者采用的Linux为Ubuntu 24.04版。</p>
+<h2 id="1-Linux下MySQL安装"><a href="#1-Linux下MySQL安装" class="headerlink" title="1. Linux下MySQL安装"></a>1. Linux下MySQL安装</h2><p>可以先用rpm命令检查是否已经安装MySQL:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">rpm -qa | grep mysql</span><br></pre></td></tr></table></figure></p>
+<p>如果没有安装的话可以采用apt安装:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo apt install mysql-server</span><br></pre></td></tr></table></figure></p>
+<p>安装完成后可以用以下命令验证是否安装成功<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">mysql --version </span><br><span class="line"><span class="comment"># mysql  Ver 8.0.36-2ubuntu3 for Linux on x86_64 ((Ubuntu))</span></span><br></pre></td></tr></table></figure></p>
+<p>启动MySQL并查看MySQL状态:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">systemctl start mysql</span><br><span class="line">systemctl <span class="built_in">enable</span> mariadb  <span class="comment">#设置开机启动</span></span><br><span class="line">systemctl status mysql</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-配置MySQL"><a href="#2-配置MySQL" class="headerlink" title="2. 配置MySQL"></a>2. 配置MySQL</h2><p>mysql8.0，root 用户默认通过 auth_socket 插件授权，而 auth_socket 插件通过 Unix socket 文件来验证所有连接到 localhost 的用户。</p>
+<p>这意味着身份验证是基于操作系统用户的，而不是基于用户密码的，你不能以用户–密码的方式，登录root账户。</p>
+<p>通过指令以root身份登录：<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo mysql</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <tags>
+        <tag>MySQL学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Chap2</title>
+    <url>/2024/03/24/The%20Missing%20Semester/Chap2/</url>
+    <content><![CDATA[<h2 id="1-作业答案"><a href="#1-作业答案" class="headerlink" title="1. 作业答案"></a>1. 作业答案</h2><p>Q1: 阅读 man ls ，然后使用ls 命令进行如下操作：</p>
+<ul>
+<li>列出所有文件信息：-l</li>
+<li>所有文件（包括隐藏文件） ：-a</li>
+<li>文件打印以人类可以理解的格式输出 (例如，使用454M 而不是 454279954) : -h</li>
+<li>文件以最近访问顺序排序：-t</li>
+<li>以彩色文本显示输出结果：—color=auto</li>
+</ul>
+<p>典型输出如下：<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-rw-r--r--   1 user group 1.1M Jan 14 09:53 baz</span><br><span class="line">drwxr-xr-x   5 user group  160 Jan 14 09:53 .</span><br><span class="line">-rw-r--r--   1 user group  514 Jan 14 06:42 bar</span><br><span class="line">-rw-r--r--   1 user group 106M Jan 13 12:12 foo</span><br><span class="line">drwx------+ 47 user group 1.5K Jan 12 18:08 ..</span><br></pre></td></tr></table></figure></p>
+<p>A:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> -lhat --color=auto</span><br></pre></td></tr></table></figure></p>
+<p>Q2: 编写两个bash函数 marco 和 polo 执行下面的操作。每当你执行 marco 时，当前的工作目录应当以某种形式保存，当执行 polo 时，无论现在处在什么目录下，都应当 cd 回到当时执行 marco 的目录。为了方便debug，你可以把代码写在单独的文件 marco.sh 中，并通过 source marco.sh命令，（重新）加载函数。</p>
+<p>A:</p>
+]]></content>
+      <tags>
+        <tag>The Missing Semester</tag>
+      </tags>
   </entry>
 </search>
