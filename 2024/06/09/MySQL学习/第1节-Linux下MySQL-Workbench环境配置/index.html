@@ -112,7 +112,7 @@
 <li>本来想配置 MySQL Administrator 和 MySQL Query Browser 的。但是据说过时了，于是配 Workbench 。</li>
 </ol>
 <h2 id="1-安装-Unfinished"><a href="#1-安装-Unfinished" class="headerlink" title="1. 安装 (Unfinished)"></a>1. 安装 (Unfinished)</h2><p>访问安装包下载地址: <a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/workbench/">https://dev.mysql.com/downloads/workbench/</a></p>
-<p>这里选择下载Ubuntu 23.10版本的:<br><!-- ![Workbench 官网](./第1节-Linux下MySQL-Workbench环境配置/img1_1.jpg "Workbench 官网") --><br></p>
+<p>这里选择下载Ubuntu 23.10版本的:<br><img src="./第1节-Linux下MySQL-Workbench环境配置/img1_1.jpg" alt="Workbench 官网" title="Workbench 官网"></p>
 <p>通过 <code>dpkg</code> 命令下载 <code>.deb</code> 安装包:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i ~/下载/mysql-workbench-community_8.0.36-1ubuntu23.10_amd64.deb</span><br></pre></td></tr></table></figure></p>
 <p>如果中间有依赖报错，可以用以下命令安装依赖:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt -f install <span class="comment"># -f 参数代表 --fix-broken，尝试修复依赖导致的问题</span></span><br></pre></td></tr></table></figure></p>
 <p>因为Ubuntu版本太新了，没有对应24.04版本的workbench，只能咕咕咕了。</p>
