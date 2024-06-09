@@ -1572,13 +1572,13 @@ $(document).ready(function () {
 ]]></content>
   </entry>
   <entry>
-    <title>第0节_Linux下MySQL环境配置</title>
+    <title>第0节 Linux下MySQL环境配置</title>
     <url>/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC0%E8%8A%82-Linux%E4%B8%8BMySQL%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>作者采用的Linux为Ubuntu 24.04版。</p>
 <h2 id="1-Linux下MySQL安装"><a href="#1-Linux下MySQL安装" class="headerlink" title="1. Linux下MySQL安装"></a>1. Linux下MySQL安装</h2><p>可以先用rpm命令检查是否已经安装MySQL:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">rpm -qa | grep mysql</span><br></pre></td></tr></table></figure></p>
 <p>如果没有安装的话可以采用apt安装:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo apt install mysql-server</span><br></pre></td></tr></table></figure></p>
 <p>安装完成后可以用以下命令验证是否安装成功<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">mysql --version </span><br><span class="line"><span class="comment"># mysql  Ver 8.0.36-2ubuntu3 for Linux on x86_64 ((Ubuntu))</span></span><br></pre></td></tr></table></figure></p>
-<p>启动MySQL并查看MySQL状态:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">systemctl start mysql</span><br><span class="line">systemctl <span class="built_in">enable</span> mariadb  <span class="comment">#设置开机启动</span></span><br><span class="line">systemctl status mysql</span><br></pre></td></tr></table></figure></p>
+<p>启动MySQL并查看MySQL状态:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">systemctl start mysql</span><br><span class="line">systemctl <span class="built_in">enable</span> mariadb  <span class="comment"># 设置开机启动</span></span><br><span class="line">systemctl status mysql</span><br></pre></td></tr></table></figure></p>
 <h2 id="2-配置MySQL"><a href="#2-配置MySQL" class="headerlink" title="2. 配置MySQL"></a>2. 配置MySQL</h2><p>mysql8.0，root 用户默认通过 auth_socket 插件授权，而 auth_socket 插件通过 Unix socket 文件来验证所有连接到 localhost 的用户。</p>
 <p>这意味着身份验证是基于操作系统用户的，而不是基于用户密码的，你不能以用户–密码的方式，登录root账户。</p>
 <p>通过指令以root身份登录：<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo mysql</span><br></pre></td></tr></table></figure></p>
