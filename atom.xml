@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-06-09T05:28:33.694Z</updated>
+  <updated>2024-06-09T07:32:20.754Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>第1节 Linux下MySQL Workbench环境配置</title>
+    <link href="http://example.com/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC1%E8%8A%82-Linux%E4%B8%8BMySQL-Workbench%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>http://example.com/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC1%E8%8A%82-Linux%E4%B8%8BMySQL-Workbench%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
+    <published>2024-06-09T05:57:35.000Z</published>
+    <updated>2024-06-09T07:32:20.754Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;0-前置内容&quot;&gt;&lt;a href=&quot;#0-前置内容&quot; class=&quot;headerlink&quot; title=&quot;0. 前置内容&quot;&gt;&lt;/a&gt;0. 前置内容&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;上一节文章地址: &lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="MySQL学习" scheme="http://example.com/tags/MySQL%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>第0节 Linux下MySQL环境配置</title>
     <link href="http://example.com/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC0%E8%8A%82-Linux%E4%B8%8BMySQL%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     <id>http://example.com/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC0%E8%8A%82-Linux%E4%B8%8BMySQL%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
     <published>2024-06-08T16:18:21.000Z</published>
-    <updated>2024-06-09T05:28:33.694Z</updated>
+    <updated>2024-06-09T05:49:05.694Z</updated>
     
     
       
@@ -425,29 +449,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>matlab编码规范学习</title>
-    <link href="http://example.com/2022/12/16/matlab%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://example.com/2022/12/16/matlab%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0/</id>
-    <published>2022-12-16T11:57:50.000Z</published>
-    <updated>2022-12-16T13:46:18.073Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;命名约定&quot;&gt;&lt;a href=&quot;#命名约定&quot; class=&quot;headerlink&quot; title=&quot;命名约定&quot;&gt;&lt;/a&gt;命名约定&lt;/h1&gt;&lt;h3 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="小技巧" scheme="http://example.com/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   

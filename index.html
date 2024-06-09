@@ -173,6 +173,64 @@
     
     
     <article
+  id="post-MySQL学习/第1节-Linux下MySQL-Workbench环境配置"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC1%E8%8A%82-Linux%E4%B8%8BMySQL-Workbench%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"
+    >第1节 Linux下MySQL Workbench环境配置</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC1%E8%8A%82-Linux%E4%B8%8BMySQL-Workbench%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2024-06-09T05:57:35.000Z" itemprop="datePublished">2024-06-09</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="0-前置内容"><a href="#0-前置内容" class="headerlink" title="0. 前置内容"></a>0. 前置内容</h2><ol>
+<li>上一节文章地址: <a target="_blank" rel="noopener" href="https://marine-rubbish.github.io/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC0%E8%8A%82-Linux%E4%B8%8BMySQL%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">https://marine-rubbish.github.io/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC0%E8%8A%82-Linux%E4%B8%8BMySQL%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</a></li>
+<li>本来想配置 MySQL Administrator 和 MySQL Query Browser 的。但是据说过时了，于是配 Workbench 。</li>
+</ol>
+<h2 id="1-安装-Unfinished"><a href="#1-安装-Unfinished" class="headerlink" title="1. 安装 (Unfinished)"></a>1. 安装 (Unfinished)</h2><p>访问安装包下载地址: <a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/workbench/">https://dev.mysql.com/downloads/workbench/</a></p>
+<p>这里选择下载Ubuntu 23.10版本的:<br><img src="./images/img1_1.jpg" alt="Workbench 官网" title="Workbench 官网"></p>
+<p>通过 <code>dpkg</code> 命令下载 <code>.deb</code> 安装包:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i ~/下载/mysql-workbench-community_8.0.36-1ubuntu23.10_amd64.deb</span><br></pre></td></tr></table></figure></p>
+<p>如果中间有依赖报错，可以用以下命令安装依赖:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt -f install <span class="comment"># -f 参数代表 --fix-broken，尝试修复依赖导致的问题</span></span><br></pre></td></tr></table></figure></p>
+<p>因为Ubuntu版本太新了，没有对应24.04版本的workbench，只能咕咕咕了。</p>
+<h2 id="2-使用-Unfinished"><a href="#2-使用-Unfinished" class="headerlink" title="2. 使用 (Unfinished)"></a>2. 使用 (Unfinished)</h2> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL%E5%AD%A6%E4%B9%A0/" rel="tag">MySQL学习</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-MySQL学习/第0节-Linux下MySQL环境配置"
   class="article article-type-post"
   itemscope
@@ -213,7 +271,12 @@
 <p>将 <code>root</code> 对应的plugin由 <code>auth_socket</code> 改为 <code>mysql_native_password</code><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">user</span> <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> identified <span class="keyword">with</span> mysql_native_password <span class="keyword">by</span> <span class="string">&#x27;密码&#x27;</span>;</span><br><span class="line">flush privileges; <span class="comment">-- 重新加载权限表</span></span><br></pre></td></tr></table></figure></p>
 <p>再次从user中选择user、host、plugin 这三列，发现最后一行plugin变成 <code>mysql_native_password</code> 就成功了:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">------------------+-----------+-----------------------+</span></span><br><span class="line"><span class="operator">|</span> <span class="keyword">user</span>             <span class="operator">|</span> host      <span class="operator">|</span> plugin                <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------------+-----------+-----------------------+</span></span><br><span class="line"><span class="operator">|</span> debian<span class="operator">-</span>sys<span class="operator">-</span>maint <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql.infoschema <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql.session    <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql.sys        <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> root             <span class="operator">|</span> localhost <span class="operator">|</span> mysql_native_password <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------------+-----------+-----------------------+</span></span><br><span class="line"><span class="number">5</span> <span class="keyword">rows</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure></p>
 <p>退出后可以通过密码的方式登录数据库:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit; <span class="comment">-- 退出</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p <span class="comment"># 以root身份用密码登录mysql</span></span><br></pre></td></tr></table></figure> 
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p <span class="comment"># 以root身份用密码登录mysql</span></span><br></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/LogosTR_/article/details/125602116">https://blog.csdn.net/LogosTR_/article/details/125602116</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/mysql/mysql-install.html">https://www.runoob.com/mysql/mysql-install.html</a></li>
+</ol>
+ 
       <!-- reward -->
       
     </div>
@@ -707,66 +770,6 @@ s_x(\omega) \sim \frac{\sigma_x^2}{\vert \omega \vert^\gamma}</script><p>其中 
 <h2 id="5-Problem-2021-Is-this-triangle-right-angled"><a href="#5-Problem-2021-Is-this-triangle-right-angled" class="headerlink" title="5. Problem 2021. Is this triangle right-angled?"></a>5. Problem 2021. Is this triangle right-angled?</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">flag</span> = <span class="title">isRightAngled</span><span class="params">(a, b, c)</span></span></span><br><span class="line">  tol = <span class="number">1e-5</span>;</span><br><span class="line">  <span class="keyword">if</span> <span class="built_in">abs</span>(a^<span class="number">2</span>+b^<span class="number">2</span>-c^<span class="number">2</span>)&lt;tol</span><br><span class="line">      flag = <span class="built_in">true</span>;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">      flag = <span class="built_in">false</span>;</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 <h2 id="6-Problem-2020-Area-of-an-Isoceles-Triangle"><a href="#6-Problem-2020-Area-of-an-Isoceles-Triangle" class="headerlink" title="6. Problem 2020. Area of an Isoceles Triangle"></a>6. Problem 2020. Area of an Isoceles Triangle</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">A</span> = <span class="title">isocelesArea</span><span class="params">(x,y)</span></span></span><br><span class="line">  w = y/<span class="number">2</span>;</span><br><span class="line">  h = <span class="built_in">sqrt</span>(x^<span class="number">2</span>-w^<span class="number">2</span>);</span><br><span class="line">  A = w*h;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 <h2 id="7-Problem-2018-Side-of-a-rhombus"><a href="#7-Problem-2018-Side-of-a-rhombus" class="headerlink" title="7. Problem 2018. Side of a rhombus"></a>7. Problem 2018. Side of a rhombus</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">rhombus_side</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">sqrt</span>(x.^<span class="number">2</span> + (x+<span class="number">1</span>).^<span class="number">2</span>)/<span class="number">2</span>;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/" rel="tag">代码打卡</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-Matlab Cody/Matlab-Cody——Basics Rounding题解"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/07/22/Matlab%20Cody/Matlab-Cody%E2%80%94%E2%80%94Basics%20Rounding%E9%A2%98%E8%A7%A3/"
-    >Matlab Cody——Basics Rounding 题解</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/07/22/Matlab%20Cody/Matlab-Cody%E2%80%94%E2%80%94Basics%20Rounding%E9%A2%98%E8%A7%A3/" class="article-date">
-  <time datetime="2023-07-22T11:21:38.000Z" itemprop="datePublished">2023-07-22</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="1-Problem-42641-MATLAB-Basic-rounding"><a href="#1-Problem-42641-MATLAB-Basic-rounding" class="headerlink" title="1. Problem 42641. MATLAB Basic: rounding"></a>1. Problem 42641. MATLAB Basic: rounding</h2><p>错误写法：<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">round_zero</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">round</span>(x,TieBreaker=<span class="string">&quot;tozero&quot;</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
-<p>正确写法：<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">round_zero</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">fix</span>(x);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="2-Problem-42642-MATLAB-Basic-rounding-II"><a href="#2-Problem-42642-MATLAB-Basic-rounding-II" class="headerlink" title="2. Problem 42642. MATLAB Basic: rounding II"></a>2. Problem 42642. MATLAB Basic: rounding II</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">round_x</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">round</span>(x);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="3-Problem-42643-MATLAB-Basic-rounding-III"><a href="#3-Problem-42643-MATLAB-Basic-rounding-III" class="headerlink" title="3. Problem 42643. MATLAB Basic: rounding III"></a>3. Problem 42643. MATLAB Basic: rounding III</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">round_x</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">floor</span>(x);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="4-Problem-42644-MATLAB-Basic-rounding-IV"><a href="#4-Problem-42644-MATLAB-Basic-rounding-IV" class="headerlink" title="4. Problem 42644. MATLAB Basic: rounding IV"></a>4. Problem 42644. MATLAB Basic: rounding IV</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">round_x</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">ceil</span>(x);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="5-Problem-2559-Check-that-number-is-whole-number"><a href="#5-Problem-2559-Check-that-number-is-whole-number" class="headerlink" title="5. Problem 2559. Check that number is whole number"></a>5. Problem 2559. Check that number is whole number</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">your_fcn_name</span><span class="params">(x)</span></span></span><br><span class="line">  y = (x==<span class="built_in">round</span>(x));</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="6-Problem-2866-Matlab-Basics-Rounding-II"><a href="#6-Problem-2866-Matlab-Basics-Rounding-II" class="headerlink" title="6. Problem 2866. Matlab Basics - Rounding II"></a>6. Problem 2866. Matlab Basics - Rounding II</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">round_3_d_p</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">round</span>(x,<span class="number">3</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="7-Problem-2867-Matlab-Basics-Rounding-III"><a href="#7-Problem-2867-Matlab-Basics-Rounding-III" class="headerlink" title="7. Problem 2867. Matlab Basics - Rounding III"></a>7. Problem 2867. Matlab Basics - Rounding III</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">round_ten_thou</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">round</span>(x,<span class="number">-4</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="8-Problem-2120-Rounding-off-numbers-to-n-decimals"><a href="#8-Problem-2120-Rounding-off-numbers-to-n-decimals" class="headerlink" title="8. Problem 2120. Rounding off numbers to n decimals"></a>8. Problem 2120. Rounding off numbers to n decimals</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">myround</span><span class="params">(x,n)</span></span></span><br><span class="line">  y = <span class="built_in">round</span>(x,n);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="9-Problem-43278-Make-roundn-function"><a href="#9-Problem-43278-Make-roundn-function" class="headerlink" title="9. Problem 43278. Make roundn function"></a>9. Problem 43278. Make roundn function</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">myroundn</span><span class="params">(x,n)</span></span></span><br><span class="line">   y = <span class="built_in">round</span>(x,n<span class="number">-1</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="10-Problem-713-Find-the-maximum-number-of-decimal-places-in-a-set-of-numbers"><a href="#10-Problem-713-Find-the-maximum-number-of-decimal-places-in-a-set-of-numbers" class="headerlink" title="10. Problem 713. Find the maximum number of decimal places in a set of numbers"></a>10. Problem 713. Find the maximum number of decimal places in a set of numbers</h2><p>题目意思：给定一个向量或值矩阵，计算输入中的最大小数位数。尾随零不算有效。没有有效数字将导致答案为 0。<br>题解：没有找到一个优雅的写法，所有先放空。<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></p>
- 
       <!-- reward -->
       
     </div>
