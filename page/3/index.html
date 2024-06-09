@@ -173,6 +173,61 @@
     
     
     <article
+  id="post-pdf-test"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/02/19/pdf-test/"
+    >pdf test</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/02/19/pdf-test/" class="article-date">
+  <time datetime="2023-02-19T14:09:25.000Z" itemprop="datePublished">2023-02-19</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  
+
+	<div class="row">
+    <embed src="/pdf/ocean_wave_spectrum.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-latex-测试"
   class="article article-type-post"
   itemscope
@@ -789,58 +844,6 @@
   <h2 id="契机"><a href="#契机" class="headerlink" title="契机"></a>契机</h2><p>在做导弹拦截这题的时候发现自己不太会用lower_bound和upper_bound,所以写一篇文章备忘。  </p>
 <h2 id="常规用法"><a href="#常规用法" class="headerlink" title="常规用法"></a>常规用法</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//以下都需要在不下降序列中用</span></span><br><span class="line"><span class="built_in">lower_bound</span>(f,f+n,a[i]); <span class="comment">//返回f中大于等于a[i]的第一个数</span></span><br><span class="line"><span class="built_in">upper_bound</span>(f,f+n,a[i]); <span class="comment">//返回f中大于a[i]的第一个数</span></span><br></pre></td></tr></table></figure>
 <h2 id="在不上升序列中用"><a href="#在不上升序列中用" class="headerlink" title="在不上升序列中用"></a>在不上升序列中用</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">lower_bound</span>(f,f+n,a[i],<span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;()); <span class="comment">//返回f中大于等于a[i]的第一个数</span></span><br><span class="line"><span class="built_in">upper_bound</span>(f,f+n,a[i]，<span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;()); <span class="comment">//返回f中大于a[i]的第一个数</span></span><br><span class="line"><span class="comment">//当然greater也可以换成自己写的比较函数</span></span><br></pre></td></tr></table></figure> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-蓝桥杯复盘"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/05/04/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%8D%E7%9B%98/"
-    >蓝桥杯复盘</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/05/04/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%8D%E7%9B%98/" class="article-date">
-  <time datetime="2022-05-04T11:44:27.000Z" itemprop="datePublished">2022-05-04</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前一直考虑复盘一下今年的蓝桥杯，但是苦于没有时间（摸鱼摸掉了）。所以拖到现在才写。<br>我参加的是C++ B组，最后省一中等偏上。<br>由于我语文不太好，行文整体偏向于流水账。</p>
-<h2 id="Day0"><a href="#Day0" class="headerlink" title="Day0"></a>Day0</h2><p>敲了一些常用的数据结构，比如线段树、树状数组、ST表、倍增LCA等等。还写了一下图论最短路的模板题（dijkstra、SPFA、Floyd）。<br>晚上吃完饭突然发现不能用无线鼠标，于是去买了一个有线鼠标，手感一般（和机房的类似）。买完鼠标后晚上写了一些数论的板子（线性筛、exgcd、线性求逆元等等）。最后看了一些洛谷上一些经典的线性dp（但是没有看递推题单，结果G题推错方程当场炸掉20分）。看完发现也十二点多了，遂睡觉。<br>晚上比较紧张睡不着，三点钟看了一次手机，大概四点才睡的。</p>
-<h2 id="Day1-上午"><a href="#Day1-上午" class="headerlink" title="Day1 上午"></a>Day1 上午</h2><p>早上起的比较晚，于是没吃早饭直接开打了。<br>开考后没几分钟就收到了5张黄牌，吓得我都不敢在动了。但是好在监考老师说没事。于是开始写题。以下是考试的时间线（不准确）：<br>9:05 写掉A<br>9:06 看到B和日期有关，遂不写，开始看C<br>9:14 发现C是模拟，于是切掉<br>9:15-9:20 开始看D，把玩了一些小案例。发现就是对于每个元素在2<em>(n-i)和2</em>(i-1)之间取最大值。<br>9:31 写掉D，开始看E<br>9:40 E看不懂，开始看F，一眼看出暴力前缀和可以得到70。于是直接开始写。<br>9:50 码出了F的二维前缀和，放着开始看G<br>9:55 发现G好像有点像原题，通过分析小样例可以一眼看出边界条件，于是开始重点突破递推方程。<br>10:10 感觉递推方程的f[i][j]意义不明，遂放着，开H<br>10:15 看完H感觉是搜索，但是又怕爆复杂度，想着重新优化一下降到O(nlogn)以下。开始犯困了。</p>
- 
       <!-- reward -->
       
     </div>
