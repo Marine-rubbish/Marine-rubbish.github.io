@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Archives: 2022/4 |  My Blog</title>
+      <title>matlab编码规范学习 |  My Blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -55,257 +55,227 @@
       
     <main class="content on">
       <section class="outer">
-  
-  <ul class="ads">
+  <article
+  id="post-matlab编码规范学习"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
     
-        <li>
-            <a target="_blank" rel="noopener" href="https://curl.qcloud.com/kvO7hb43">
-                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5ccc.jpg" width="300" alt="云服务器限时秒杀">
-            </a>
-        </li>
-    
-        <li>
-            <a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8630075">
-                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5cd7.png" width="300" alt="vultr优惠vps">
-            </a>
-        </li>
-    
-</ul>
-  
-  
-  <article class="articles">
-    
-    
-    <h1 class="page-type-title">2022/4</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2022" class="archive-year">2022</a>
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  matlab编码规范学习
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/12/16/matlab%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2022-12-16T11:57:50.000Z" itemprop="datePublished">2022-12-16</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">338</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">1 min</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
-    <div class="archives">
       
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/23/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E4%B8%8E%E5%BA%94%E7%94%A8%E4%B9%A0%E9%A2%98/%E7%AC%AC%E4%B8%89%E7%AB%A0/" class="archive-article-date">
-  <time datetime="2022-04-23T15:04:13.215Z" itemprop="datePublished">04/23</time>
-</a>
-      
+    <div class="tocbot"></div>
 
-    </header>
-    
-    
-  </div>
-</article>
-      
+
+
+
   
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/23/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E4%B8%8E%E5%BA%94%E7%94%A8%E4%B9%A0%E9%A2%98/%E7%AC%AC%E4%BA%8C%E7%AB%A0/" class="archive-article-date">
-  <time datetime="2022-04-23T15:00:00.000Z" itemprop="datePublished">04/23</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2022/04/23/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E4%B8%8E%E5%BA%94%E7%94%A8%E4%B9%A0%E9%A2%98/%E7%AC%AC%E4%BA%8C%E7%AB%A0/"
-    >第二章</a> 
-</h2>
+  <h1 id="命名约定"><a href="#命名约定" class="headerlink" title="命名约定"></a>命名约定</h1><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>变量名应该记录它们的含义或用途。<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wage = hourlyRate * nHours</span><br></pre></td></tr></table></figure></p>
+<h4 id="从小写开始用混合大小写命名变量名"><a href="#从小写开始用混合大小写命名变量名" class="headerlink" title="从小写开始用混合大小写命名变量名"></a>从小写开始用混合大小写命名变量名</h4><p>以大写开头的名称通常是为类型或者结构体保留的。</p>
+<p>很短的变量名可以是大写的，如果它们在常规用法中是大写的，并且不太可能成为复合变量名的一部分。</p>
+<p>例如在特定领域，杨氏模量的E，可能会被误导为e。</p>
+<p>有些程序员喜欢用下划线来分隔复合变量名的各个部分。</p>
+<p>这种方式虽然易于阅读，但在其他语言中并不常用来命名变量。</p>
+<p>在图形标题、标签和图例的变量名中使用下划线的另一个考虑因素是，MATLAB中的Tex解释器将把下划线转换为下标来读取，因此需要为每个文本字符串应用参数/值对进行设置，即‘Interpreter’,’none’。</p>
+<h4 id="具有大作用域的变量应该具有有意义的命名，作用域小的变量可以有简短的命名"><a href="#具有大作用域的变量应该具有有意义的命名，作用域小的变量可以有简短的命名" class="headerlink" title="具有大作用域的变量应该具有有意义的命名，作用域小的变量可以有简短的命名"></a>具有大作用域的变量应该具有有意义的命名，作用域小的变量可以有简短的命名</h4><p>在实践中，大多数变量都应该具有有意义的名字。</p>
+<p>在某些条件下，应保留使用简短的命名，以澄清陈述的结构或与预期的通用性相一致。</p>
  
-
-    </header>
-    
-    
-  </div>
-</article>
+      <!-- reward -->
       
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/23/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E4%B8%8E%E5%BA%94%E7%94%A8%E4%B9%A0%E9%A2%98/%E7%AC%AC%E4%B8%80%E7%AB%A0/" class="archive-article-date">
-  <time datetime="2022-04-23T06:34:09.000Z" itemprop="datePublished">04/23</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2022/04/23/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E4%B8%8E%E5%BA%94%E7%94%A8%E4%B9%A0%E9%A2%98/%E7%AC%AC%E4%B8%80%E7%AB%A0/"
-    >第一章</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/22/GUI%E5%85%A5%E9%97%A8%E5%AE%9E%E4%BE%8B/0%EF%BC%9AGUI%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  <time datetime="2022-04-22T15:05:53.000Z" itemprop="datePublished">04/22</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2022/04/22/GUI%E5%85%A5%E9%97%A8%E5%AE%9E%E4%BE%8B/0%EF%BC%9AGUI%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"
-    >0：GUI中的基本操作</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/20/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/97.%20%E7%BA%A6%E6%95%B0%E4%B9%8B%E5%92%8C/" class="archive-article-date">
-  <time datetime="2022-04-20T13:15:29.000Z" itemprop="datePublished">04/20</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2022/04/20/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/97.%20%E7%BA%A6%E6%95%B0%E4%B9%8B%E5%92%8C/"
-    >97. 约数之和</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/18/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/243-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B4%E6%95%B0%E9%97%AE%E9%A2%982/" class="archive-article-date">
-  <time datetime="2022-04-18T14:49:04.000Z" itemprop="datePublished">04/18</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2022/04/18/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/243-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B4%E6%95%B0%E9%97%AE%E9%A2%982/"
-    >243. 一个简单的整数问题2</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/18/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/242-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B4%E6%95%B0%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  <time datetime="2022-04-18T14:47:38.000Z" itemprop="datePublished">04/18</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2022/04/18/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/242-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B4%E6%95%B0%E9%97%AE%E9%A2%98/"
-    >242. 一个简单的整数问题</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/18/to-do-list/" class="archive-article-date">
-  <time datetime="2022-04-18T06:27:35.000Z" itemprop="datePublished">04/18</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2022/04/18/to-do-list/"
-    >to-do-list</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/17/Matlab%E4%B8%AD%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  <time datetime="2022-04-17T14:10:20.000Z" itemprop="datePublished">04/17</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2022/04/17/Matlab%E4%B8%AD%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/"
-    >Matlab中的随机数生成函数</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/17/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/96-%E5%A5%87%E6%80%AA%E7%9A%84%E6%B1%89%E8%AF%BA%E5%A1%94/" class="archive-article-date">
-  <time datetime="2022-04-17T09:03:12.000Z" itemprop="datePublished">04/17</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2022/04/17/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/96-%E5%A5%87%E6%80%AA%E7%9A%84%E6%B1%89%E8%AF%BA%E5%A1%94/"
-    >96. 奇怪的汉诺塔</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
       
     </div>
-  </div>
-  
-  
-
-  
-  <nav class="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2022/04/page/2/">2</a><a class="page-number" href="/archives/2022/04/page/3/">3</a><a class="extend next" rel="next" href="/archives/2022/04/page/2/">下一页</a>
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/12/16/matlab%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  <!-- 
+  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/" rel="tag">小技巧</a></li></ul>
+ -->
+
+
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/" rel="tag">小技巧</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/02/19/latex-%E6%B5%8B%E8%AF%95/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            latex 测试
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2022/12/14/python%E9%A3%8E%E6%A0%BC%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">python风格规范学习</div>
+      </a>
+    
   </nav>
-  
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "zzhfP9YbIpDie8vP7ZtDUIn4-gzGzoHsz",
+    app_key: "uZx1tMW5rSoktGR9ABqmu4gA",
+    path: window.location.pathname,
+    // avatar: "mp",
+    placeholder: "欢迎交流讨论...",
+    // recordIP: true,
+    // enableQQ: true,
+    // boolean: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -446,6 +416,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
