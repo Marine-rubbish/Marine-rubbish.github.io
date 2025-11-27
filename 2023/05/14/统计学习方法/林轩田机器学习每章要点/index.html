@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN（简体中文） ; en（English） ; zh-TW（繁體中文） ; ja（日本語） ; es（Español） ; de（Deutsch） ; fr（Français） ; ru（Русский） ; ko（한국어） ; vi（Tiếng Việt） ; nl（Nederlands） ; no（norsk） ; pt（Português）">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>林轩田机器学习每章要点 |  My Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="My Blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-统计学习方法/林轩田机器学习每章要点"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  林轩田机器学习每章要点
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/05/14/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/%E6%9E%97%E8%BD%A9%E7%94%B0%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%AF%8F%E7%AB%A0%E8%A6%81%E7%82%B9/" class="article-date">
+  <time datetime="2023-05-14T15:33:59.000Z" itemprop="datePublished">2023-05-14</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">3.8k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">16 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="0-符号假设"><a href="#0-符号假设" class="headerlink" title="0. 符号假设"></a>0. 符号假设</h1><h1 id="1-When-Can-Machine-Learn"><a href="#1-When-Can-Machine-Learn" class="headerlink" title="1. When Can Machine Learn?"></a>1. When Can Machine Learn?</h1><h2 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h2><h2 id="1-2-Learning-to-Answer-Yes-­No"><a href="#1-2-Learning-to-Answer-Yes-­No" class="headerlink" title="1.2 Learning to Answer Yes-­No"></a>1.2 Learning to Answer Yes-­No</h2><p>本节主要介绍了感知机算法，它在一定条件下可以使得 $\textbf{E}_{in} \approx 0$ (在数据集上的误差近似为0)。</p>
+<p>感知机学习算法 $\mathcal{A}$ 通过线性可分的数据 $\mathcal{D}$ 以及感知机 $\mathcal{H}$ 获得假设 $g$ </p>
+<ul>
+<li>感知机的假设空间：定义在 $\mathbb{R}^d$ 上的一条直线或超平面</li>
+<li>感知机算法可以不断纠正错误并改进</li>
+<li>感知机的分类正确性保证：数据是线性可分的</li>
+<li>无法分类的数据：存储效果最好的直线</li>
+</ul>
+<h2 id="1-3-Types-of-Learning"><a href="#1-3-Types-of-Learning" class="headerlink" title="1.3 Types of Learning"></a>1.3 Types of Learning</h2><p>本节主要介绍机器学习的分类</p>
+<ul>
+<li>按输出空间 $\mathcal{Y}$ 分类：分类、回归、结构化学习</li>
+<li>按数据标签 $y_n$ 分类：监督学习、半监督学习、无监督学习、强化学习</li>
+<li>按不同的学习方式分类：批量学习、在线学习、主动学习</li>
+<li>按输入空间 $\mathcal{X}$ 分类：具体意义的数据、原始数据、抽象数据</li>
+</ul>
+<h2 id="1-4-Feasibility-of-Learning"><a href="#1-4-Feasibility-of-Learning" class="headerlink" title="1.4 Feasibility of Learning"></a>1.4 Feasibility of Learning</h2><p>本节主要介绍机器学习的可能性 </p>
+<ul>
+<li>NFL定理：面对所有的问题，没有一种算法能说比另一种算法更好</li>
+<li><p>验证一个固定假设 $h$ 的 $E_{in}$ 和 $E_{out}$ 是否PAC</p>
+<ul>
+<li><p>机器能够学习的必要条件：样本满足独立同分布假设 (每次抽样之间相互独立，样本服从同一分布)</p>
+</li>
+<li><p>$E_{in}$ 为抽样样本（数据集）内所有数据中 $h(\vec{x}) = f(\vec{x})$ 的概率，<br>$E_{out}$ 为抽样样本外所有数据中 $h(\vec{x}) = f(\vec{x})$ 的概率</p>
+<p> ($E_{in}(h) = \frac{1}{N} \sum\limits_{n=1}^{N} \mathbb{I}[h(\vec{x}) \neq y_n]$、<br> $E_{out} = \mathop{\varepsilon}\limits_{\vec{x} \sim{P}} \mathbb{I}[h(\vec{x}) \neq f(\vec{x})]$)</p>
+</li>
+<li><p>Hoeffding 不等式：$P[\lvert E_{in} - E_{out} \rvert &gt; \epsilon] \leq 2exp(-2 \epsilon^2 N)$</p>
+<p> (说明了只要样本数 $N$ 够大，$E_{in}$ 和 $E_{out}$ 相差的很大概率会很小，也就可以用 $E_{in}$ 来估计 $E_{out}$)</p>
+</li>
+<li>上述 Hoeffding 不等式说明了 $E_{in}$ 和 $E_{out}$ 是 PAC(概率近似相等) 的</li>
+</ul>
+</li>
+<li><p>在 $E_{in}(h)$ 足够小且 $\lvert \mathcal{H} \rvert$ 有限的情况下，学习有可能能实现了</p>
+<ul>
+<li>坏数据集 (BAD $\mathcal{D}$)：使得假设 $h$ 的 $E_{in}$ 和 $E_{out}$ 相差很大的数据集</li>
+<li><p>$P_{\mathcal{D}}(BAD \; \mathcal{D}) \leq P(BAD \; \mathcal{D} \; for \; h_1) + … + P(BAD \; \mathcal{D} \; for \; h_M)$</p>
+<p> $P_{\mathcal{D}}(BAD \; \mathcal{D}) \leq 2exp(-2 \epsilon^2 N) + … + 2exp(-2 \epsilon^2 N)$</p>
+<p> $P_{\mathcal{D}}(BAD \; \mathcal{D}) \leq 2Mexp(-2 \epsilon^2 N)$ </p>
+<p> 也就是说只要 $N$ 足够大，$\lvert \mathcal{H} \rvert$ 有限的情况下。<br> 不管使用什么算法 $\mathcal{A}$ 都能够使得 $E_{in}$ 和 $E_{out}$ PAC，</p>
+<p> 如果 $\mathcal{A}$ 可以找到 $g$ 使 $E_{in}(g) \approx 0$ 那么PAC可以保证 $E_{out}(g) \approx 0$</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-Why-Can-Machines-Learn"><a href="#2-Why-Can-Machines-Learn" class="headerlink" title="2. Why Can Machines Learn?"></a>2. Why Can Machines Learn?</h1><h2 id="2-1-Training-VS-Testing"><a href="#2-1-Training-VS-Testing" class="headerlink" title="2.1 Training VS Testing"></a>2.1 Training VS Testing</h2><p>本节主要介绍假设数量 $M = \infty$ 时，机器学习是否有可能性</p>
+<ul>
+<li>$M$ 过小 $E_{in}(g) \approx 0$ 难以实现(选择过少)，$M$ 过大出现坏样本的概率又显著增加，<br>导致 $E_{in}(g)$ 和 $E_{out}(g)$ 无法PAC</li>
+<li>按照对数据集中样本点的分类结果可以将无穷种假设分成 $effective(N)$ 种，<br>如果 $effective(N) &lt;&lt; 2^N$ ，机器学习是有可能的</li>
+<li>成长函数 $m_{\mathcal{H}}(N)$ 是含N个数据点的数据集最多的假设种类数<br>($m_{\mathcal{H}}(N) = \mathop{max}\limits_{\vec{x_1},…,\vec{x_N} \in \mathcal{X}} \lvert \mathcal{H}(x_1,…,x_N) \rvert$)</li>
+<li>$m_{\mathcal{H}}(N) = O(N^{k-1})$ ($k$ 是break point，也就是 $k$ 个样本点类别的 $2^k$ 种情况<br>都能被 $\mathcal{H}$ 中其中一个假设全部正确分类)   </li>
+</ul>
+<h2 id="2-2-Theory-of-Generalization"><a href="#2-2-Theory-of-Generalization" class="headerlink" title="2.2 Theory of Generalization"></a>2.2 Theory of Generalization</h2><ul>
+<li>$N &gt; k$ 时，$m_{\mathcal{H}}(N)$ 会比 $2^N$ 小的多</li>
+<li><p>Bounding Function $B(N,k)$ 是 $m_{\mathcal{H}}(N)$ 的上限，以下是它的一些性质:</p>
+<ul>
+<li><p>$k = 1$ 时，$B(N,1) = 1$</p>
+</li>
+<li><p>$N &lt; k$ 时，$B(N,k) = 2^N$ (相当于没有限制)</p>
+</li>
+<li><p>$N = k$ 时，$B(N,k) = 2^k - 1$ (刚出现不能被覆盖的分类情况)</p>
+</li>
+</ul>
+</li>
+<li><p>通过递推得到 $B(N,k)$ 其他情况下的一些性质:</p>
+<ul>
+<li><p>把 $N$ 个样本可以被覆盖的二分情况再分为两类：第一类每两种情况的 $x_1$ 到 $x_{k-1}$ 的类别完全相同，$x_k$ 的类别不同且成对，其他为第二类</p>
+</li>
+<li><p>第一类情况个数记为 $\alpha$，第二类为 $\beta$，存在以下关系：$B(N,k) = 2\alpha + \beta$、<br>$\alpha + \beta \leq B(N-1,k)$、$\alpha \leq B(N-1,k-1)$</p>
+</li>
+<li><p>因此可以得到 $B(N,k) = B(N-1,k) + B(N-1,k-1)$ (取等证明略)</p>
+</li>
+<li><p>因此 $B(N,k) = \sum\limits_{i=0}^{k-1} C_i^N$，最高次项为 $N^{k-1}$，所以成长函数 $m_{\mathcal{H}}(N)$ 是 $poly(N)$ 的</p>
+</li>
+</ul>
+</li>
+<li><p>用成长函数 $m_{\mathcal{H}}(N)$ 替代 $M$ 证明 $E_{in}$ 和 $E_{out}$ 是PAC的</p>
+<ul>
+<li><p>证明略</p>
+</li>
+<li><p>VC bound：$P_{\mathcal{D}}(\lvert E_{in} - E_{out} \rvert &gt; \epsilon) \leq 4m_{\mathcal{H}}(N)exp(-\frac{1}{8} \epsilon^2 N)$</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-The-VC-Dimension"><a href="#2-3-The-VC-Dimension" class="headerlink" title="2.3 The VC Dimension"></a>2.3 The VC Dimension</h2><p>本节介绍VC维的意义及其与泛化能力的关系</p>
+<ul>
+<li><p>VC维的定义：使得 $m_{\mathcal{H}}(N) = 2^N$ 成立的最大N，记为 $d_{VC}$</p>
+<ul>
+<li><p>机器学习的条件：1、$m_{\mathcal{H}}(N)$ 有间断点k；2、样本数N足够大(这两点保证 $E_{out}$ 和 $E_{in}$ PAC)；<br>3、合适的算法 $\mathcal{A}$ (保证 $E_{in} \approx 0$)</p>
+</li>
+<li><p>$d_{VC}$ 有限时，$E_{out}$ 和 $E_{in}$ 是PAC的</p>
+</li>
+</ul>
+</li>
+<li><p>$d_{VC} = d+1$ </p>
+<ul>
+<li><p>先证明 $d_{VC} \geq d+1$，由于 $X\vec{w}_{d+1} = \vec{y}_{d+1}$ 可得 $\vec{w} = X^{-1}\vec{y}$<br> (X有 $d+1$ 个维度和 $d+1$ 个样本).</p>
+<p> 因此对每一种 $\vec{y}$，$\vec{w}$ 唯一确定. $\vec{w}$ 的所有情况也就可以覆盖 $\vec{y}$ 的所有情况</p>
+</li>
+<li><p>再证明 $d_{VC} \leq d+1$，也就是对 $d+2$ 个样本 $\vec{w}$ 的所有情况不可以覆盖 $\vec{y}$ 的所有情况</p>
+<p> 由于 $\vec{x}_{d+2}$ (第 $d+2$ 个样本) 能被表示成前 $d+1$ 个样本的线性组合. </p>
+<p> 也就是：$\vec{x}_{d+2} = a_1\vec{x}_{1} + … + a_{d+1}\vec{x}_{d+1}$ </p>
+<p> 因此存在 $\vec{w}$ 使得 $\vec{x}_{d+2}<em>\vec{w} = a_1\vec{x}_{1}</em>\vec{w} + … + a_{d+1}\vec{x}_{d+1}*\vec{w}&gt;0$</p>
+<p> 这种情况下 $\vec{x}_{d+2}$ 一定是正类. $\vec{w}$ 的所有情况不能覆盖 $\vec{y}$ 的所有情况</p>
+</li>
+</ul>
+</li>
+<li>$d_{VC}$ 的物理意义：假设空间的自由度。所以 $M$ 和 $d_{VC}$ 是成正比的</li>
+<li><p>$d_{VC}$ 和泛化能力、样本复杂度以及模型复杂度的关系</p>
+<ul>
+<li><p>$E_{out}(g) \leq E_{in}(g) + \sqrt{\dfrac{8}{N} \ln{\dfrac{4(2N)^{d_{VC}}}{\delta}}}$</p>
+</li>
+<li><p>$\Omega(N,\mathcal{H},\delta) = \sqrt{\dfrac{8}{N} \ln{\dfrac{4(2N)^{d_{VC}}}{\delta}}}$ 称为模型复杂度的惩罚项</p>
+</li>
+<li><p>随着 $d_{VC}$ 增加，$E_{in}$ 下降，但是 $\Omega$ 上升。所以 $E_{out}$ 随 $d_{VC}$ 先下降后上升</p>
+</li>
+<li><p>样本复杂度：$d_{VC}$ 固定的情况下，$N$ 的合理取值(理论上 $N \approx 10000d_{VC}$ 实际上只需要 $N \approx 10d_{VC}$)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-4-Noise-and-Error"><a href="#2-4-Noise-and-Error" class="headerlink" title="2.4  Noise and Error"></a>2.4  Noise and Error</h2><p>本节主要说了在数据集有噪声的情况下，VC维依然是成立的，机器学习依然是可能的</p>
+<ul>
+<li>样本由 $P(y|\vec{x})$ (也就是 $f(\vec{x}) + noise$ ) 产生<ul>
+<li>只要 $\vec{x} \stackrel{\text{i.i.d}}{\sim}{P(\vec{x})}$ 和 $y \stackrel{\text{i.i.d}}{\sim}{P(y)}$，VC维理论依然成立</li>
+</ul>
+</li>
+<li><p>误差的度量方式</p>
+<ul>
+<li><p>误差度量的特点：1、只考虑样本外的未知数据，2、分别考虑每个数据点的误差(不一定满足，但本课程只考虑这个)</p>
+</li>
+<li><p>常用误差有：0-1误差和平均平方误差(MSE)，前者用于分类，后者用于回归</p>
+</li>
+<li><p>0-1误差下的 $f(\vec{x}) = \mathop{\arg\max}\limits_{y \in \mathcal{Y}} P(y|\vec{x})$，使得翻转噪声最小</p>
+</li>
+<li><p>MSE下的 $f(\vec{x}) = \sum\limits_{y \in \mathcal{Y}} yP(y|\vec{x})$，使得高斯噪声最小</p>
+</li>
+</ul>
+</li>
+<li>错误衡量设计的两种方式：有意义的或者易于设计算法</li>
+<li>通过”虚拟复制”某类错误对应的标签的样本w次的方法，可以计算 $E_{in}^w$ (w为某类错误的权重)</li>
+</ul>
+<h1 id="3-How-Can-Machines-Learn"><a href="#3-How-Can-Machines-Learn" class="headerlink" title="3. How Can Machines Learn?"></a>3. How Can Machines Learn?</h1><h2 id="3-1-Linear-Regression"><a href="#3-1-Linear-Regression" class="headerlink" title="3.1 Linear Regression"></a>3.1 Linear Regression</h2><ul>
+<li>线性回归使用超平面 $h(\vec{x}) = \vec{w}^T\vec{x}$ 估计真实值</li>
+<li><p>线性回归存在用伪逆表示的解析解 $\vec{w}_{LIN} = X^{\dagger}\vec{y}$</p>
+<ul>
+<li><p>MSE误差最小等价于：$\min\limits_{\vec{w}} E_{in}(\vec{w}) = \frac{1}{N} \Vert X\vec{w} - \vec{y} \Vert^2$</p>
+</li>
+<li><p>因为MSE损失函数为凸函数，所以 $\nabla E_{in}(\vec{w}) = 0$ 处即为最小值点</p>
+</li>
+</ul>
+</li>
+<li><p>线性回归相当于使 $\vec{y}$ 投影到由 $X$ 的特征张成的平面内，其中 $y - \hat{y}$ 是误差</p>
+<ul>
+<li><p>$trace(I - H) = N-(d+1)$ 表示$\vec{y}$ 投影到由 $X$ 的特征张成的平面内损失的自由度</p>
+</li>
+<li><p>如果有真实值来自于$f(X) \in span{X}$，那么对 <strong>noise</strong> 进行投影即 $I-H$ 操作可得：</p>
+<p>  $\overline{E_{in}} = \frac{1}{N}\Vert y - \hat{y} \Vert^2 = \frac{1}{N}\Vert (I-H)\textbf{noise} \Vert^2 =<br>  \textbf{noise} (1-\frac{d+1}{N})$</p>
+</li>
+<li><p>$\overline{E_{out}} = \textbf{noise} (1+\frac{d+1}{N})$，随着 $N$ 逐渐增大 $\overline{E_{in}} \approx \overline{E_{out}}$</p>
+</li>
+</ul>
+</li>
+<li>用回归器进行分类的代价是更松的上界，因为 $err_{0/1} \leq err_{sqr}$，所以 $E_{out} \leq 分类E_{in} + 复杂度 \leq 回归E_{in} + 复杂度$</li>
+</ul>
+<h2 id="3-2-Logistic-Regression"><a href="#3-2-Logistic-Regression" class="headerlink" title="3.2  Logistic Regression"></a>3.2  Logistic Regression</h2><ul>
+<li>Logistic 回归的目标函数是 $P(+1|x)$，其假设为 $h(x) = \theta(\vec{w}^T x)$(其中 $\theta = \dfrac{1}{1+e^{-s}}$)</li>
+<li>Logistic 回归的损失函数是交叉熵函数(似然函数的负对数 $L(\vec{w}) = \frac{1}{N}\sum\limits_{n=1}^{N} -\ln \theta(y_n \vec{w}^T \vec{x}_n)$)</li>
+<li>Logistic 回归的损失函数是凸函数，因此其最小值在<br>$\nabla E_{in}(\vec{w}) = \frac{1}{N} \sum\limits_{n=1}^{N} \theta(-y_n \vec{w}^T \vec{x}_n) (-y_n \vec{x}_n) = 0$ 处取得</li>
+<li>Logistic 回归可以用梯度下降法求得 $L(\vec{w})$ 最小值<ul>
+<li>$\vec{w}$ 更新方式：$\vec{w}_{t+1} = \vec{w}_{t} + \eta \vec{v}$</li>
+<li>$\eta$ 很小的时候可以泰勒展开近似，$E_{in}(\vec{w}_{t+1}) \approx E_{in}(\vec{w}_{t} + \eta \vec{v}^T \nabla E_{in}(\vec{w}_t))$</li>
+<li>当 $\vec{v}$ 与 $\nabla E_{in}(\vec{w}_t)$ 方向相反时(即 $\vec{v} = -\dfrac{\nabla E_{in}(\vec{w}_t)}{\Vert \nabla E_{in}(\vec{w}_t) \Vert}$)<br>$E_{in}$ 下降最快</li>
+<li>我们希望 $\eta$ 与 $\Vert \nabla E_{in}(\vec{w}_t) \Vert$ 正相关，因此更新的式子可以改为:<br>$\vec{w}_{t+1} = \vec{w}_{t} - \eta \nabla E_{in}(\vec{w}_t)$</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-Linear-Models-for-Classification"><a href="#3-3-Linear-Models-for-Classification" class="headerlink" title="3.3 Linear Models for Classification"></a>3.3 Linear Models for Classification</h2><ul>
+<li>线性回归和Logistic 回归都可以解决线性分类问题</li>
+<li>随机梯度下降(SGD)可以简化更新操作到 $\mathcal{O}(1)$ 复杂度<br>简化后的更新操作：$\vec{w}_{t+1} = \vec{w}_{t} - \eta \theta(-y_n \vec{w}_t^T \vec{x}_n) (-y_n \vec{x}_n)$</li>
+<li>多分类问题<ul>
+<li>OVA：对每一类和所有其他类别数据做二分类，分别计算 $P(k|\vec{x})$<ul>
+<li>优点：高效，可以和所有类似Logistic 回归的算法结合</li>
+<li>缺点：K较大时容易类别不平衡</li>
+</ul>
+</li>
+<li>OVO：对每一类和每种其他类别数据做二分类<ul>
+<li>优点：可以和所有二分类算法结合</li>
+<li>缺点：时空复杂度高，预测速度慢</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-4-Nonlinear-Transformation"><a href="#3-4-Nonlinear-Transformation" class="headerlink" title="3.4 Nonlinear Transformation"></a>3.4 Nonlinear Transformation</h2><ul>
+<li>可以用一非线性函数 $\Phi$ 将非线性函数映射到线性空间中，实现x域到z域特征转换</li>
+<li>z域特征维度 $\tilde{d} = C_{Q+d}^{Q} = C_{Q+d}^{d} = \mathcal{O}(Q^d)$ 较大，<br>会导致模型泛化能力差，时空复杂度高</li>
+<li>优先选择 $Q$ 较小的假设，如果 $E_{in}$ 太高在考虑复杂假设</li>
+</ul>
+<h1 id="4-How-Can-Machines-Learn-Better"><a href="#4-How-Can-Machines-Learn-Better" class="headerlink" title="4. How Can Machines Learn Better?"></a>4. How Can Machines Learn Better?</h1><h2 id="4-1-Hazard-of-Overfitting"><a href="#4-1-Hazard-of-Overfitting" class="headerlink" title="4.1  Hazard of Overfitting"></a>4.1  Hazard of Overfitting</h2><ul>
+<li>过拟合：$E_{in}$ 变小但是 $E_{out}$ 变大的过程。以下是过拟合常见原因：<ul>
+<li>VC Dimension太大</li>
+<li>随机噪声或系统性噪声过强</li>
+<li>训练样本数 $N$ 不够</li>
+</ul>
+</li>
+<li>避免过拟合的措施:<ul>
+<li>从简单的模型开始</li>
+<li>数据清理(修正明显错误的label或者删除错误样本点)</li>
+<li>数据增强(注意新增的数据可能和原来数据不是 $i.i.d.$ 的，尽量保证新数据内的样本是 $i.i.d.$ 的)</li>
+<li>正则化</li>
+<li>验证</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-2-Regularization"><a href="#4-2-Regularization" class="headerlink" title="4.2 Regularization"></a>4.2 Regularization</h2><ul>
+<li>正则化约束条件：$\Vert \vec{w} \Vert^2 \leq C$，$H_n \subset H(C) \subset H_m$ ($n&lt;m$)</li>
+<li>最优解需要满足 $-\nabla E_{in}(w_{reg})$ 与 $w^Tw = C$ 的法向量平行，<br>即 $\nabla E_{in}(w_{reg}) + \frac{2\lambda}{N}w_{reg}=0$<ul>
+<li>求解 $w_{reg}$ 等价于最小化 $E_{aug} = E_{in} + \frac{\lambda}{N} w_{reg}^Tw_{reg}$</li>
+<li>多项式变换除了可以用朴素的 $x^n$，也可以用勒让德多项式</li>
+</ul>
+</li>
+<li>$E_{aug}$ 可以看成 $E_{out}$ 的代理<ul>
+<li>$E_{aug} = E_{in} + \frac{\lambda}{N} w^Tw$ 中的 $w^Tw$ 是单个假设的复杂度，记为 $\Omega(w)$。<br>整个 $H$ 的复杂度为 $\Omega(H)$，$\Omega(w)$ 包含在 $\Omega(H)$ 中</li>
+<li>整个 $H$ 的VC维是 $d_{VC} = \tilde{d} + 1$，引入正则化限定条件 $H(C)$ 后的VC维记为 $d_{EFF}(H,A)$.<br>则有 $d_{EFF}(H,A) \leq d_{VC}$</li>
+</ul>
+</li>
+<li>正则化项选择方法<ul>
+<li>基于目标特性，比如目标具有对称性则考虑用 $\sum\mathbb{I}(q \% 2==0)w^2_q$ 作为正则化项</li>
+<li>接近真实(曲线平滑、简单)，如L1正则化 $\sum \vert w_q \vert$</li>
+<li>易于实现，如L2正则化 $\sum w^2_q$</li>
+<li>噪音越大，$\lambda$ 也要越大</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-3-Validation"><a href="#4-3-Validation" class="headerlink" title="4.3 Validation"></a>4.3 Validation</h2><p>模型选择指的是在 $M$ 个假设空间 $H_m$ 对应 $M$ 种算法 $A_m$ 中选择最优假设空间 $H_{m^*}$ </p>
+<p>使得 $g_{m^<em>} = A_{m^</em>}(D)$，$E_{out}(g_{m^*})$ 最小</p>
+<ul>
+<li>用验证集选择模型<ul>
+<li>用 $E_{in}$ 选择模型是危险的(因为即用 $D$ 训练模型又用它选择模型)</li>
+<li>用 $E_{test}$ 选择模型是作弊且无法实现的(难以获得测试数据)</li>
+</ul>
+</li>
+<li>验证集模型选择原理：$E_{out}(g) \mathop{\approx}\limits_{small K} E_{out}(g^-) \mathop{\approx}\limits_{large K} E_{val}(g^-)$<ul>
+<li>验证集大小 $K$ 越大，$g^-$ 越不如 $g$，但是 $E_{val}$ 越接近 $E_{out}$ (学习曲线)</li>
+<li>验证集大小 $K$ 越小，$g^-$ 越接近 $g$，但是 $E_{val}$ 越不如 $E_{out}$ (学习曲线)</li>
+</ul>
+</li>
+<li>留一法交叉验证(LOOCV) 的期望 $\mathop{\varepsilon}\limits_{D} E_{LOOCV}(H,A) = \overline{E_{out}}(N-1)$<br>是对 $\overline{E_{out}}$的近似无偏估计<ul>
+<li>$E_{LOOCV} = \frac{1}{N} \sum\limits_{n=1}^{N} err(g_m^-(\vec{x}_n),y_n)$ ($K = 1$ 的特殊情况)</li>
+<li>LOOCV的缺点：计算量大、结果不稳定</li>
+</ul>
+</li>
+<li>V折交叉验证公式：$E_{CV} = \frac{1}{V} \sum\limits_{v=1}^{V} E_{val}^{(v)}(g_v^-)$</li>
+</ul>
+<h2 id="4-4-Three-Learning-Principles"><a href="#4-4-Three-Learning-Principles" class="headerlink" title="4.4 Three Learning Principles"></a>4.4 Three Learning Principles</h2><ul>
+<li>奥卡姆剃刀原则：适合数据的最简单的模型是最合适的</li>
+<li>抽样误差：数据要匹配测试环境</li>
+<li>偷窥数据：容易造成过拟合。应当避免通过数据进行决策，并且对别人的研究成果保持警惕</li>
+<li>power of three<ul>
+<li>机器学习相关的三个领域：数据挖掘、机器学习、统计</li>
+<li>三个理论保证：霍夫丁不等式、多假设霍夫丁不等式、VC维</li>
+<li>三种线性模型：感知机、线性回归、Logistic回归</li>
+<li>三种重要的工具：特征转换、正则化、验证</li>
+<li>三个锦囊妙计：奥卡姆剃刀、防止抽样误差、谨慎偷窥数据</li>
+<li>机器学习未来方向：更多转换、更多正则化、更少标签</li>
+</ul>
+</li>
+</ul>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/05/14/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/%E6%9E%97%E8%BD%A9%E7%94%B0%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%AF%8F%E7%AB%A0%E8%A6%81%E7%82%B9/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  <!-- 
+  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" rel="tag">统计学习方法</a></li></ul>
+ -->
+
+
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" rel="tag">统计学习方法</a></li></ul>
+
+
+<!-- 
+ -->
+<!-- 
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" rel="tag">统计学习方法</a></li></ul>
+ -->
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/05/21/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80/%E8%BE%90%E5%B0%84%E5%9F%BA%E7%A1%80/%E8%BE%90%E5%B0%84%E5%9F%BA%E7%A1%801/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            辐射基础1
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/05/13/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/chap4%20%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%A8%A1%E5%9E%8B%E7%AE%80%E6%B4%81%E6%80%BB%E7%BB%93/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">chap4 朴素贝叶斯模型简洁总结</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "3sExmnHSP8xsctFDELFYe5Ny-MdYXbMMI",
+    app_key: "V2tweHokXenM2d5HRYAHRsRK",
+    path: window.location.pathname,
+    // avatar: "mp",
+    placeholder: "欢迎交流讨论...",
+    // recordIP: true,
+    // enableQQ: true,
+    // boolean: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2022-2025
+        <i class="ri-heart-fill heart_icon"></i> CPY
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="My Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+ 
+    
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.15.1/katex.min.css">
+        <script src="https://cdn.staticfile.org/KaTeX/0.15.1/katex.min.js"></script>
+        <script src="https://cdn.staticfile.org/KaTeX/0.15.1/contrib/auto-render.min.js"></script>
+        
+    
+ 
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

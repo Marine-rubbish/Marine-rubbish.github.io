@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN（简体中文） ; en（English） ; zh-TW（繁體中文） ; ja（日本語） ; es（Español） ; de（Deutsch） ; fr（Français） ; ru（Русский） ; ko（한국어） ; vi（Tiếng Việt） ; nl（Nederlands） ; no（norsk） ; pt（Português）">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>The Missing Semester-Chap1 |  My Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="My Blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-The Missing Semester/Chap1"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  The Missing Semester-Chap1
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/12/12/The%20Missing%20Semester/Chap1/" class="article-date">
+  <time datetime="2023-12-12T00:20:37.000Z" itemprop="datePublished">2023-12-12</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2.2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">8 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="1-shell命令的实质"><a href="#1-shell命令的实质" class="headerlink" title="1. shell命令的实质"></a>1. shell命令的实质</h2><p>当你在 shell 中执行命令时，本质是在执行一段 shell 可以解释执行的简短代码。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打印当前的日期和时间</span></span><br><span class="line"><span class="built_in">date</span></span><br><span class="line"><span class="comment"># 2023年 12月 12日 星期二 08:30:09 CST</span></span><br></pre></td></tr></table></figure><br>可以向程序传递参数。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 把hello传给echo，打印到终端</span></span><br><span class="line"><span class="built_in">echo</span> hello</span><br><span class="line"><span class="comment"># hello</span></span><br></pre></td></tr></table></figure><br>如果你要求 shell 执行某个指令，但是该指令并不是 shell 所了解的编程关键字，<br>那么它会在 环境变量 $PATH 中查找该指令对应的程序。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span></span><br><span class="line"><span class="comment"># /usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/cpy/.local/bin:/home/cpy/bin</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找echo位置</span></span><br><span class="line"><span class="built_in">which</span> <span class="built_in">echo</span></span><br><span class="line"><span class="comment"># /usr/bin/echo</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 与echo $PATH等价</span></span><br><span class="line">/bin/echo <span class="variable">$PATH</span></span><br><span class="line"><span class="comment"># /usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/cpy/.local/bin:/home/cpy/bin</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="2-shell-中的路径"><a href="#2-shell-中的路径" class="headerlink" title="2. shell 中的路径"></a>2. shell 中的路径</h2><p>shell 中的路径是一组被分割的目录，在 Linux 和 macOS 上使用 / 分割，<br>而在Windows上是 \。路径 / 代表的是系统的根目录，所有的文件夹都包括在这个路径之下。</p>
+<p>如果某个路径以 / 开头，那么它是一个绝对路径，其他的都是相对路径。</p>
+<p>相对路径是指相对于当前工作目录的路径，当前工作目录可以使用 pwd 命令来获取。</p>
+<p>此外，切换目录需要使用 cd 命令。在路径中，. 表示的是当前目录，而 .. 表示上级目录：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">pwd</span></span><br><span class="line"><span class="comment"># /home/cpy</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /home</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line"><span class="built_in">pwd</span></span><br><span class="line"><span class="comment"># /</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> ./home</span><br><span class="line">/../bin/echo hello</span><br><span class="line"><span class="comment"># hello</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="3-一些常用的命令及常用用法"><a href="#3-一些常用的命令及常用用法" class="headerlink" title="3. 一些常用的命令及常用用法"></a>3. 一些常用的命令及常用用法</h2><h3 id="3-1-cd"><a href="#3-1-cd" class="headerlink" title="3.1 cd"></a>3.1 cd</h3><p>cd：改变当前工作目录到指定路径<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 切换到home</span></span><br><span class="line"><span class="built_in">cd</span> /home</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到当且目录下的cpy子目录</span></span><br><span class="line"><span class="built_in">cd</span> ./cpy</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到父目录</span></span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切切换至用户家目录</span></span><br><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到上一次的工作目录</span></span><br><span class="line"><span class="built_in">cd</span> -</span><br><span class="line"><span class="built_in">pwd</span></span><br><span class="line"><span class="comment"># /</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="3-2-ls"><a href="#3-2-ls" class="headerlink" title="3.2 ls"></a>3.2 ls</h3><p>ls：显示指定工作目录下之内容<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line"><span class="comment"># 打印当前目录下的内容</span></span><br><span class="line"><span class="built_in">ls</span></span><br><span class="line"><span class="comment"># code               missing_semi  模板  图片  下载  桌面</span></span><br><span class="line"><span class="comment"># last-modified.txt  公共          视频  文档  音乐</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示指定工作目录下之内容</span></span><br><span class="line"><span class="built_in">ls</span> /</span><br><span class="line"><span class="comment"># bin   dev  home  lib64  mnt  proc  run   srv  tmp  var</span></span><br><span class="line"><span class="comment"># boot  etc  lib   media  opt  root  sbin  sys  usr  文档</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出所有文件信息，包括权限，所有者，大小和修改日期：</span></span><br><span class="line"><span class="built_in">ls</span> -l</span><br><span class="line"><span class="comment"># 总用量 4</span></span><br><span class="line"><span class="comment"># drwxr-xr-x. 4 cpy cpy 36 11月 12 23:45 code</span></span><br><span class="line"><span class="comment"># -rw-rw-r--. 1 cpy cpy 37 12月 12 00:21 last-modified.txt</span></span><br><span class="line"><span class="comment"># drwxrwxr-x. 2 cpy cpy 41 12月 11 22:15 missing_semi</span></span><br><span class="line"><span class="comment"># drwxr-xr-x. 2 cpy cpy  6 9月  20 2022 公共</span></span><br><span class="line"><span class="comment"># drwxr-xr-x. 2 cpy cpy  6 9月  20 2022 模板</span></span><br><span class="line"><span class="comment"># drwxr-xr-x. 2 cpy cpy  6 9月  20 2022 视频</span></span><br><span class="line"><span class="comment"># drwxr-xr-x. 2 cpy cpy  6 9月  20 2022 图片</span></span><br><span class="line"><span class="comment"># drwxr-xr-x. 2 cpy cpy  6 10月  4 2022 文档</span></span><br><span class="line"><span class="comment"># drwxr-xr-x. 2 cpy cpy  6 9月  20 2022 下载</span></span><br><span class="line"><span class="comment"># drwxr-xr-x. 2 cpy cpy  6 9月  20 2022 音乐</span></span><br><span class="line"><span class="comment"># drwxr-xr-x. 2 cpy cpy  6 9月  20 2022 桌面</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出所有隐藏文件信息</span></span><br><span class="line"><span class="built_in">ls</span> -a</span><br><span class="line"><span class="comment"># .              .bashrc  .esd_auth          .mozilla         公共  下载</span></span><br><span class="line"><span class="comment"># ..             .cache   .ICEauthority      .pki             模板  音乐</span></span><br><span class="line"><span class="comment"># .bash_history  code     last-modified.txt  .python_history  视频  桌面</span></span><br><span class="line"><span class="comment"># .bash_logout   .config  .local             .viminfo         图片</span></span><br><span class="line"><span class="comment"># .bash_profile  .dbus    missing_semi       .vscode          文档</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数组合</span></span><br><span class="line"><span class="built_in">ls</span> -la</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过管道符( | )配合tail命令获取最后一行的信息</span></span><br><span class="line"><span class="built_in">ls</span> -l | <span class="built_in">tail</span> -n1</span><br><span class="line"><span class="comment"># drwxr-xr-x.  2 cpy  cpy     6 9月  20 2022 桌面</span></span><br></pre></td></tr></table></figure><br>ls -l 命令显示的每行的前10个字符表示文件权限。<br>第一个字符如果是”d”表示是文件夹，如果是”-“表示是文件。</p>
+<p>接下来的九个字符，每三个字符构成一组（rwx）。<br>它们分别代表了文件所有者（missing），用户组（users）以及其他所有人具有的权限。<br>“-“代表没有某种权限。</p>
+<p>对文件来说，”r”代表可以读取文件，”w”代表可以向文件中写入，”x”表示这个文件可以被执行。</p>
+<p>对文件夹来说，”r”代表可以查看文件夹中的内容，”w”代表可以在文件夹中创建、删除、重命名文件和文件夹，<br>“x”表示可以访问文件夹中的内容或进入该文件夹.</p>
+<p>通过 cd 命令进入某文件夹，需要它和它各级父目录的”x”权限。</p>
+<h3 id="3-3-mv"><a href="#3-3-mv" class="headerlink" title="3.3 mv"></a>3.3 mv</h3><p>mv：移动文件到任意位置<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 移动文件到任意位置（如果文件夹名称相同则和重命名效果一样）</span></span><br><span class="line"><span class="built_in">mv</span> 路径/到/来源 路径/到/目标</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-4-cp"><a href="#3-4-cp" class="headerlink" title="3.4 cp"></a>3.4 cp</h3><p>cp：复制文件到任意位置<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 复制一个文件到另外一个地方：</span></span><br><span class="line"><span class="built_in">cp</span> 文件的原始路径 文件的目标路径</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制一个文件到另外一个目录, 保持文件名不变：</span></span><br><span class="line"><span class="built_in">cp</span> 文件的原始路径 目标目录路径</span><br><span class="line"></span><br><span class="line"><span class="comment"># 递归的复制一个目录内的内容到另外一个地方（如果目标目录存在，目录被复制到目标目标内部）：</span></span><br><span class="line"><span class="built_in">cp</span> -r 目录的原始路径 目标目录路径</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-5-mkdir"><a href="#3-5-mkdir" class="headerlink" title="3.5 mkdir"></a>3.5 mkdir</h3><p>mkdir：创建一个空文件夹<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建文件夹</span></span><br><span class="line"><span class="built_in">mkdir</span> ./test</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-6-rmdir"><a href="#3-6-rmdir" class="headerlink" title="3.6 rmdir"></a>3.6 rmdir</h3><p>rmdir：删除空文件夹<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除指定文件夹</span></span><br><span class="line"><span class="built_in">rmdir</span> ./test </span><br></pre></td></tr></table></figure></p>
+<h3 id="3-7-rm"><a href="#3-7-rm" class="headerlink" title="3.7 rm"></a>3.7 rm</h3><p>rm：删除指定文件<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除指定文件</span></span><br><span class="line"><span class="built_in">rm</span> last-modified.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 递归删除某文件夹里的文件</span></span><br><span class="line"><span class="built_in">rm</span> -r ./missing_semi</span><br></pre></td></tr></table></figure></p>
+<h2 id="4-在程序间创建连接"><a href="#4-在程序间创建连接" class="headerlink" title="4. 在程序间创建连接"></a>4. 在程序间创建连接</h2><p>在 shell 中，程序有两个主要的“流”：它们的输入流和输出流。 </p>
+<p>当程序尝试读取信息时，它们会从输入流中进行读取，当程序打印信息时，它们会将信息输出到输出流中。</p>
+<p>通常，一个程序的输入输出流都是您的终端。也就是，您的键盘作为输入，显示器作为输出。但是，我们也可以重定向这些流！</p>
+<p>最简单的重定向是 &lt; file 和 &gt; file。这两个命令可以将程序的输入输出流分别重定向到文件：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 把hello输出到hello.txt</span></span><br><span class="line"><span class="built_in">echo</span> hello &gt; hello.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从hello.txt读取数据输出到hello2.txt</span></span><br><span class="line"><span class="built_in">cat</span> &lt; hello.txt &gt; hello2.txt</span><br></pre></td></tr></table></figure></p>
+<p>使用 &gt;&gt; 来向一个文件追加内容。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> &lt; hello.txt &gt;&gt; hello2.txt</span><br><span class="line"><span class="built_in">cat</span> hello2.txt</span><br><span class="line"><span class="comment"># hello</span></span><br><span class="line"><span class="comment"># hello</span></span><br></pre></td></tr></table></figure></p>
+<p>使用管道（pipes），我们能够更好的利用文件重定向。| 操作符允许我们将一个程序的输出和另外一个程序的输入连接起来：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 把ls的输出和tail的输入链接起来</span></span><br><span class="line"><span class="built_in">ls</span> -l / | <span class="built_in">tail</span> -n1</span><br></pre></td></tr></table></figure></p>
+<h2 id="5-作业答案"><a href="#5-作业答案" class="headerlink" title="5. 作业答案"></a>5. 作业答案</h2><p>Q1: 本课程需要使用类Unix shell，例如 Bash 或 ZSH。如果您在 Linux 或者 MacOS 上面完成本课程的练习，则不需要做任何特殊的操作。<br>如果您使用的是 Windows，则您不应该使用 cmd 或是 Powershell；您可以使用Windows Subsystem for Linux或者是 Linux 虚拟机。<br>使用echo $SHELL命令可以查看您的 shell 是否满足要求。如果打印结果为/bin/bash或/usr/bin/zsh则是可以的。</p>
+<p>按要求输入echo $SHELL命令即可。</p>
+<p>Q2: 在 /tmp 下新建一个名为 missing 的文件夹。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> /tmp/missing</span><br></pre></td></tr></table></figure></p>
+<p>Q3：用 man 查看程序 touch 的使用手册。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man <span class="built_in">touch</span></span><br></pre></td></tr></table></figure></p>
+<p>Q4：用 touch 在 missing 文件夹中新建一个叫 semester 的文件。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /tmp/missing</span><br><span class="line"><span class="built_in">touch</span> semester</span><br></pre></td></tr></table></figure></p>
+<p>Q5：将以下内容一行一行地写入 semester 文件：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">curl --<span class="built_in">head</span> --silent https://missing.csail.mit.edu</span><br></pre></td></tr></table></figure><br>第一行可能有点棘手，# 在Bash中表示注释，而 ! 即使被双引号（”）包裹也具有特殊的含义。<br>单引号（’）则不一样，此处利用这一点解决输入问题。更多信息请参考 Bash quoting 手册</p>
+<p>因为访问不上这个网址，于是我改成了访问百度。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 注意字符串需要用单引号包裹</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;#!/bin/sh&#x27;</span> &gt; semester</span><br><span class="line"><span class="comment"># 注意追加是用&gt;&gt;号在文件最后添加语句</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;curl --head --silent www.baidu.com&#x27;</span> &gt;&gt; semester</span><br></pre></td></tr></table></figure>
+<p>Q6：尝试执行这个文件。例如，将该脚本的路径（./semester）输入到您的shell中并回车。如果程序无法执行，请使用 ls 命令来获取信息并理解其不能执行的原因。</p>
+<p>输入ls -l查看文件权限发现，semester没有执行（x）权限<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -l</span><br><span class="line"><span class="comment"># -rw-rw-r--. 1 cpy cpy 49 12月 12 00:04 semester</span></span><br></pre></td></tr></table></figure></p>
+<p>Q7：查看 chmod 的手册(例如，使用 man chmod 命令)</p>
+<p>输入man chmod 命令即可</p>
+<p>Q8：使用 chmod 命令改变权限，使 ./semester 能够成功执行，不要使用 sh semester 来执行该程序。<br>您的 shell 是如何知晓这个文件需要使用 sh 来解析呢？更多信息请参考：shebang<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 给所有用户都增加执行权限</span></span><br><span class="line"><span class="built_in">chmod</span> +x ./semester</span><br><span class="line"><span class="comment"># 执行代码</span></span><br><span class="line">./semester</span><br></pre></td></tr></table></figure></p>
+<p>Q9：使用 | 和 &gt; ，将 semester 文件输出的最后更改日期信息，写入主目录下的 last-modified.txt 的文件中<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建文件</span></span><br><span class="line"><span class="built_in">touch</span> ~/last-modified.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从 semester 文件输出筛选最后更改日期信息</span></span><br><span class="line"><span class="comment"># 重定向输出流到last-modified.txt</span></span><br><span class="line">./semester | grep -i <span class="string">&quot;Date&quot;</span> &gt; /home/last-modified.txt</span><br></pre></td></tr></table></figure></p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/12/12/The%20Missing%20Semester/Chap1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  <!-- 
+  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/The-Missing-Semester/" rel="tag">The Missing Semester</a></li></ul>
+ -->
+
+
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/The-Missing-Semester/" rel="tag">The Missing Semester</a></li></ul>
+
+
+<!-- 
+ -->
+<!-- 
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/The-Missing-Semester/" rel="tag">The Missing Semester</a></li></ul>
+ -->
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/12/12/tldr%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%BF%E6%8D%A2/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            tldr镜像源替换
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/10/31/1%E6%AF%94f%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">1/f随机过程</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "3sExmnHSP8xsctFDELFYe5Ny-MdYXbMMI",
+    app_key: "V2tweHokXenM2d5HRYAHRsRK",
+    path: window.location.pathname,
+    // avatar: "mp",
+    placeholder: "欢迎交流讨论...",
+    // recordIP: true,
+    // enableQQ: true,
+    // boolean: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2022-2025
+        <i class="ri-heart-fill heart_icon"></i> CPY
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="My Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+ 
+    
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.15.1/katex.min.css">
+        <script src="https://cdn.staticfile.org/KaTeX/0.15.1/katex.min.js"></script>
+        <script src="https://cdn.staticfile.org/KaTeX/0.15.1/contrib/auto-render.min.js"></script>
+        
+    
+ 
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>
