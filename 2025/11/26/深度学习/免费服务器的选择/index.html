@@ -83,7 +83,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">898</span>
+            <span class="post-count">945</span>
         </span>
     </span>
 
@@ -138,6 +138,10 @@
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">import</span> torch_npu</span><br><span class="line">    <span class="keyword">from</span> torch_npu.contrib <span class="keyword">import</span> transfer_to_npu</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 1. 修复 get_device_capability 返回 None 的问题</span></span><br><span class="line">    <span class="comment"># NPU 不支持这个概念，我们伪造一个返回值 (比如 8.0，代表 Ampere 架构，骗过 Lightning)</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">hasattr</span>(torch.cuda, <span class="string">&#x27;get_device_capability&#x27;</span>):</span><br><span class="line">        torch.cuda.get_device_capability = <span class="keyword">lambda</span> device=<span class="literal">None</span>: (<span class="number">8</span>, <span class="number">0</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># 如果已经存在但返回 None (transfer_to_npu 的副作用)，则覆盖它</span></span><br><span class="line">        original_get_cap = torch.cuda.get_device_capability</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">patched_get_cap</span>(<span class="params">device=<span class="literal">None</span></span>):</span><br><span class="line">            cap = original_get_cap(device)</span><br><span class="line">            <span class="keyword">if</span> cap <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">                <span class="keyword">return</span> (<span class="number">8</span>, <span class="number">0</span>) <span class="comment"># 伪造一个支持 TF32 的架构</span></span><br><span class="line">            <span class="keyword">return</span> cap</span><br><span class="line">        torch.cuda.get_device_capability = patched_get_cap</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Info: 成功启用 NPU 自动迁移 (transfer_to_npu)。&quot;</span>)</span><br><span class="line">    <span class="comment"># 2. 禁用 Lightning 的 TF32 精度检查 (NPU 不需要这个)</span></span><br><span class="line">    torch.set_float32_matmul_precision(<span class="string">&#x27;medium&#x27;</span>) </span><br><span class="line"><span class="keyword">except</span> ImportError:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Info: 未检测到 torch_npu，将使用标准 CPU/GPU 模式。&quot;</span>)</span><br></pre></td></tr></table></figure>
 <h2 id="2-Kaggle"><a href="#2-Kaggle" class="headerlink" title="2. Kaggle"></a>2. Kaggle</h2><p><a target="_blank" rel="noopener" href="https://www.kaggle.com/">Kaggle</a> 是一个数据科学竞赛平台，提供免费的GPU资源（NVIDIA Tesla P100）。用户可以创建Notebook并使用这些资源进行深度学习模型的训练和测试。Kaggle 每周提供30小时的GPU使用时间，适合中小型项目，且使用方便。</p>
 <h2 id="2-1-创建Notebook"><a href="#2-1-创建Notebook" class="headerlink" title="2.1 创建Notebook"></a>2.1 创建Notebook</h2><p>在Kaggle主页，点击右上角的“New Notebook”按钮，选择“Notebook”选项。然后在Notebook界面，点击右侧的“Settings”图标，选择“Accelerator”为GPU。注意需要手机验证后才能使用GPU资源。</p>
+<h2 id="2-2-tricks"><a href="#2-2-tricks" class="headerlink" title="2.2 tricks"></a>2.2 tricks</h2><ul>
+<li>Kaggle的GPU资源是按周计算的，每周重置30小时的使用时间。</li>
+<li>Notebook中的数据和代码会自动保存到Kaggle云端，方便随时访问。</li>
+</ul>
  
       <!-- reward -->
       
@@ -674,6 +678,23 @@
 </script>
 
 
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
     
     
 

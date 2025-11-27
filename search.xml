@@ -354,17 +354,6 @@ s_x(\omega) \sim \frac{\sigma_x^2}{\vert \omega \vert^\gamma}</script><p>其中 
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>随机好句摘抄</title>
-    <url>/2022/05/02/%E9%9A%8F%E6%9C%BA%E5%A5%BD%E5%8F%A5%E6%91%98%E6%8A%84/</url>
-    <content><![CDATA[<p>在你最冷的时候，有人不顾自己寒冷抱着你，这就是幸福。  </p>
-<p>所谓辉煌的人生，不过是欲望的囚徒。  </p>
-<p>我有故人抱剑去，斩尽春风未肯归。</p>
-]]></content>
-      <tags>
-        <tag>杂谈</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>软件测试岗入职两个月的心得体会</title>
     <url>/2023/12/23/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B2%97%E5%85%A5%E8%81%8C%E4%B8%A4%E4%B8%AA%E6%9C%88%E7%9A%84%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</url>
     <content><![CDATA[<h2 id="1-个人基本情况"><a href="#1-个人基本情况" class="headerlink" title="1. 个人基本情况"></a>1. 个人基本情况</h2><ul>
@@ -923,6 +912,10 @@ Markdown 应用程序在处理单词或短语中间添加的下划线上并不�
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">import</span> torch_npu</span><br><span class="line">    <span class="keyword">from</span> torch_npu.contrib <span class="keyword">import</span> transfer_to_npu</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 1. 修复 get_device_capability 返回 None 的问题</span></span><br><span class="line">    <span class="comment"># NPU 不支持这个概念，我们伪造一个返回值 (比如 8.0，代表 Ampere 架构，骗过 Lightning)</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">hasattr</span>(torch.cuda, <span class="string">&#x27;get_device_capability&#x27;</span>):</span><br><span class="line">        torch.cuda.get_device_capability = <span class="keyword">lambda</span> device=<span class="literal">None</span>: (<span class="number">8</span>, <span class="number">0</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># 如果已经存在但返回 None (transfer_to_npu 的副作用)，则覆盖它</span></span><br><span class="line">        original_get_cap = torch.cuda.get_device_capability</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">patched_get_cap</span>(<span class="params">device=<span class="literal">None</span></span>):</span><br><span class="line">            cap = original_get_cap(device)</span><br><span class="line">            <span class="keyword">if</span> cap <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">                <span class="keyword">return</span> (<span class="number">8</span>, <span class="number">0</span>) <span class="comment"># 伪造一个支持 TF32 的架构</span></span><br><span class="line">            <span class="keyword">return</span> cap</span><br><span class="line">        torch.cuda.get_device_capability = patched_get_cap</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Info: 成功启用 NPU 自动迁移 (transfer_to_npu)。&quot;</span>)</span><br><span class="line">    <span class="comment"># 2. 禁用 Lightning 的 TF32 精度检查 (NPU 不需要这个)</span></span><br><span class="line">    torch.set_float32_matmul_precision(<span class="string">&#x27;medium&#x27;</span>) </span><br><span class="line"><span class="keyword">except</span> ImportError:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Info: 未检测到 torch_npu，将使用标准 CPU/GPU 模式。&quot;</span>)</span><br></pre></td></tr></table></figure>
 <h2 id="2-Kaggle"><a href="#2-Kaggle" class="headerlink" title="2. Kaggle"></a>2. Kaggle</h2><p><a href="https://www.kaggle.com/">Kaggle</a> 是一个数据科学竞赛平台，提供免费的GPU资源（NVIDIA Tesla P100）。用户可以创建Notebook并使用这些资源进行深度学习模型的训练和测试。Kaggle 每周提供30小时的GPU使用时间，适合中小型项目，且使用方便。</p>
 <h2 id="2-1-创建Notebook"><a href="#2-1-创建Notebook" class="headerlink" title="2.1 创建Notebook"></a>2.1 创建Notebook</h2><p>在Kaggle主页，点击右上角的“New Notebook”按钮，选择“Notebook”选项。然后在Notebook界面，点击右侧的“Settings”图标，选择“Accelerator”为GPU。注意需要手机验证后才能使用GPU资源。</p>
+<h2 id="2-2-tricks"><a href="#2-2-tricks" class="headerlink" title="2.2 tricks"></a>2.2 tricks</h2><ul>
+<li>Kaggle的GPU资源是按周计算的，每周重置30小时的使用时间。</li>
+<li>Notebook中的数据和代码会自动保存到Kaggle云端，方便随时访问。</li>
+</ul>
 ]]></content>
       <tags>
         <tag>深度学习</tag>
