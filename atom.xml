@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>My Blog</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2025-11-27T13:21:58.312Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>CPY</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>免费服务器的选择</title>
+    <link href="http://example.com/2025/11/26/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E5%85%8D%E8%B4%B9%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E6%8B%A9/"/>
+    <id>http://example.com/2025/11/26/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E5%85%8D%E8%B4%B9%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E6%8B%A9/</id>
+    <published>2025-11-26T15:00:00.000Z</published>
+    <updated>2025-11-27T13:21:58.312Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;深度学习模型的训练和部署通常需要强大的计算资源，尤其是GPU加速。对于个人用户或小型项目来说，购买高性能服务器可能成本较高，因此选择免费的服务器资源成为一个不错的选择。以下是我用过的一些免费服务器选项：&lt;/p&gt;
+&lt;h1 id=&quot;1-启智协作平台&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="深度学习" scheme="http://example.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VIIRS各等级产品及其预处理方式简介</title>
+    <link href="http://example.com/2024/12/26/VIIRS%E5%90%84%E7%AD%89%E7%BA%A7%E4%BA%A7%E5%93%81%E5%8F%8A%E5%85%B6%E9%A2%84%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F%E7%AE%80%E4%BB%8B/"/>
+    <id>http://example.com/2024/12/26/VIIRS%E5%90%84%E7%AD%89%E7%BA%A7%E4%BA%A7%E5%93%81%E5%8F%8A%E5%85%B6%E9%A2%84%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F%E7%AE%80%E4%BB%8B/</id>
+    <published>2024-12-25T18:37:32.000Z</published>
+    <updated>2024-12-25T18:39:22.768Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-VIIRS-数据等级简介&quot;&gt;&lt;a href=&quot;#1-VIIRS-数据等级简介&quot; class=&quot;headerlink&quot; title=&quot;1. VIIRS 数据等级简介&quot;&gt;&lt;/a&gt;1. VIIRS</summary>
+        
+      
+    
+    
+    
+    
+    <category term="遥感数据介绍" scheme="http://example.com/tags/%E9%81%A5%E6%84%9F%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lesson2 C语言拾遗 编程实践</title>
+    <link href="http://example.com/2024/07/12/NJU_ICS/Lesson2-C%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97-%E7%BC%96%E7%A8%8B%E5%AE%9E%E8%B7%B5/"/>
+    <id>http://example.com/2024/07/12/NJU_ICS/Lesson2-C%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97-%E7%BC%96%E7%A8%8B%E5%AE%9E%E8%B7%B5/</id>
+    <published>2024-07-11T16:11:23.000Z</published>
+    <updated>2024-07-11T16:11:57.634Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1&quot;&gt;&lt;a href=&quot;#1&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="NJU_ICS" scheme="http://example.com/tags/NJU-ICS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lesson1 C语言拾遗:机制</title>
+    <link href="http://example.com/2024/06/28/NJU_ICS/Lesson1-C%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97-%E6%9C%BA%E5%88%B6/"/>
+    <id>http://example.com/2024/06/28/NJU_ICS/Lesson1-C%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97-%E6%9C%BA%E5%88%B6/</id>
+    <published>2024-06-28T14:27:25.000Z</published>
+    <updated>2024-07-11T14:33:32.341Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-预编译&quot;&gt;&lt;a href=&quot;#1-预编译&quot; class=&quot;headerlink&quot; title=&quot;1. 预编译&quot;&gt;&lt;/a&gt;1. 预编译&lt;/h2&gt;&lt;h2 id=&quot;2-编译&quot;&gt;&lt;a href=&quot;#2-编译&quot; class=&quot;headerlink&quot; title=&quot;2.</summary>
+        
+      
+    
+    
+    
+    
+    <category term="NJU_ICS" scheme="http://example.com/tags/NJU-ICS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第4节-数据类型</title>
+    <link href="http://example.com/2024/06/10/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC4%E8%8A%82-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://example.com/2024/06/10/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC4%E8%8A%82-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
+    <published>2024-06-10T06:54:07.000Z</published>
+    <updated>2024-06-10T07:40:48.215Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-数值类型&quot;&gt;&lt;a href=&quot;#1-数值类型&quot; class=&quot;headerlink&quot; title=&quot;1. 数值类型&quot;&gt;&lt;/a&gt;1. 数值类型&lt;/h2&gt;&lt;p&gt;整形分为</summary>
+        
+      
+    
+    
+    
+    
+    <category term="MySQL学习" scheme="http://example.com/tags/MySQL%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第3节-表的创建和查询</title>
+    <link href="http://example.com/2024/06/10/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC3%E8%8A%82-%E8%A1%A8%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E6%9F%A5%E8%AF%A2/"/>
+    <id>http://example.com/2024/06/10/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC3%E8%8A%82-%E8%A1%A8%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E6%9F%A5%E8%AF%A2/</id>
+    <published>2024-06-09T16:31:35.000Z</published>
+    <updated>2024-06-09T16:52:05.189Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-查询表&quot;&gt;&lt;a href=&quot;#1-查询表&quot; class=&quot;headerlink&quot; title=&quot;1. 查询表&quot;&gt;&lt;/a&gt;1. 查询表&lt;/h2&gt;&lt;p&gt;查询 &lt;code&gt;sys&lt;/code&gt; 数据库里的表:&lt;br&gt;&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    
+    <category term="MySQL学习" scheme="http://example.com/tags/MySQL%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第2节 数据库操作</title>
+    <link href="http://example.com/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC2%E8%8A%82-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/"/>
+    <id>http://example.com/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC2%E8%8A%82-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/</id>
+    <published>2024-06-09T15:30:08.000Z</published>
+    <updated>2024-06-09T16:29:58.636Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;0-SQL通用语法分类&quot;&gt;&lt;a href=&quot;#0-SQL通用语法分类&quot; class=&quot;headerlink&quot; title=&quot;0. SQL通用语法分类&quot;&gt;&lt;/a&gt;0. SQL通用语法分类&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;DDL:</summary>
+        
+      
+    
+    
+    
+    
+    <category term="MySQL学习" scheme="http://example.com/tags/MySQL%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第1节 Linux下MySQL Workbench环境配置</title>
+    <link href="http://example.com/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC1%E8%8A%82-Linux%E4%B8%8BMySQL-Workbench%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>http://example.com/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC1%E8%8A%82-Linux%E4%B8%8BMySQL-Workbench%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
+    <published>2024-06-09T09:08:01.000Z</published>
+    <updated>2024-06-09T15:08:20.554Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;0-前置内容&quot;&gt;&lt;a href=&quot;#0-前置内容&quot; class=&quot;headerlink&quot; title=&quot;0. 前置内容&quot;&gt;&lt;/a&gt;0. 前置内容&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;上一节文章地址: &lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="MySQL学习" scheme="http://example.com/tags/MySQL%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第0节 Linux下MySQL环境配置</title>
+    <link href="http://example.com/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC0%E8%8A%82-Linux%E4%B8%8BMySQL%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>http://example.com/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC0%E8%8A%82-Linux%E4%B8%8BMySQL%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
+    <published>2024-06-08T16:18:21.000Z</published>
+    <updated>2024-06-09T05:49:05.694Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0. 前言&quot;&gt;&lt;/a&gt;0. 前言&lt;/h2&gt;&lt;p&gt;作者采用的Linux为Ubuntu 24.04版。&lt;/p&gt;
+&lt;h2 id=&quot;1-Linux下MySQL安装&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="MySQL学习" scheme="http://example.com/tags/MySQL%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Chap2</title>
+    <link href="http://example.com/2024/03/24/The%20Missing%20Semester/Chap2/"/>
+    <id>http://example.com/2024/03/24/The%20Missing%20Semester/Chap2/</id>
+    <published>2024-03-24T12:35:20.000Z</published>
+    <updated>2024-03-24T12:44:56.158Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-作业答案&quot;&gt;&lt;a href=&quot;#1-作业答案&quot; class=&quot;headerlink&quot; title=&quot;1. 作业答案&quot;&gt;&lt;/a&gt;1. 作业答案&lt;/h2&gt;&lt;p&gt;Q1: 阅读 man ls ，然后使用ls</summary>
+        
+      
+    
+    
+    
+    
+    <category term="The Missing Semester" scheme="http://example.com/tags/The-Missing-Semester/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>软件测试岗入职两个月的心得体会</title>
+    <link href="http://example.com/2023/12/23/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B2%97%E5%85%A5%E8%81%8C%E4%B8%A4%E4%B8%AA%E6%9C%88%E7%9A%84%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
+    <id>http://example.com/2023/12/23/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B2%97%E5%85%A5%E8%81%8C%E4%B8%A4%E4%B8%AA%E6%9C%88%E7%9A%84%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</id>
+    <published>2023-12-23T13:40:44.000Z</published>
+    <updated>2024-06-08T16:19:33.517Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-个人基本情况&quot;&gt;&lt;a href=&quot;#1-个人基本情况&quot; class=&quot;headerlink&quot; title=&quot;1. 个人基本情况&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    
+    <category term="实习经历" scheme="http://example.com/tags/%E5%AE%9E%E4%B9%A0%E7%BB%8F%E5%8E%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>tldr镜像源替换</title>
+    <link href="http://example.com/2023/12/12/tldr%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%BF%E6%8D%A2/"/>
+    <id>http://example.com/2023/12/12/tldr%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%BF%E6%8D%A2/</id>
+    <published>2023-12-12T14:52:09.000Z</published>
+    <updated>2023-12-13T07:56:04.129Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-缘起&quot;&gt;&lt;a href=&quot;#1-缘起&quot; class=&quot;headerlink&quot; title=&quot;1. 缘起&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>The Missing Semester-Chap1</title>
+    <link href="http://example.com/2023/12/12/The%20Missing%20Semester/Chap1/"/>
+    <id>http://example.com/2023/12/12/The%20Missing%20Semester/Chap1/</id>
+    <published>2023-12-12T00:20:37.000Z</published>
+    <updated>2023-12-12T06:24:06.505Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-shell命令的实质&quot;&gt;&lt;a href=&quot;#1-shell命令的实质&quot; class=&quot;headerlink&quot; title=&quot;1. shell命令的实质&quot;&gt;&lt;/a&gt;1. shell命令的实质&lt;/h2&gt;&lt;p&gt;当你在 shell 中执行命令时，本质是在执行一段</summary>
+        
+      
+    
+    
+    
+    
+    <category term="The Missing Semester" scheme="http://example.com/tags/The-Missing-Semester/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1/f随机过程</title>
+    <link href="http://example.com/2023/10/31/1%E6%AF%94f%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/"/>
+    <id>http://example.com/2023/10/31/1%E6%AF%94f%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/</id>
+    <published>2023-10-31T15:43:53.000Z</published>
+    <updated>2023-11-01T11:17:49.323Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0. 前言&quot;&gt;&lt;/a&gt;0. 前言&lt;/h2&gt;&lt;p&gt;在看《Backscattering Properties of MultiScale Rough</summary>
+        
+      
+    
+    
+    
+    
+    <category term="科研项目系列" scheme="http://example.com/tags/%E7%A7%91%E7%A0%94%E9%A1%B9%E7%9B%AE%E7%B3%BB%E5%88%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Effective C++学习</title>
+    <link href="http://example.com/2023/08/05/Effective-C-%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2023/08/05/Effective-C-%E5%AD%A6%E4%B9%A0/</id>
+    <published>2023-08-05T06:55:39.000Z</published>
+    <updated>2023-08-05T06:55:39.835Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ICESat-2 ATL07 数据说明</title>
+    <link href="http://example.com/2023/08/03/%E7%A7%91%E7%A0%94%E9%A1%B9%E7%9B%AE%E7%B3%BB%E5%88%97/%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E%E6%95%B4%E7%90%86/ICESat-2-ATL07-%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E/"/>
+    <id>http://example.com/2023/08/03/%E7%A7%91%E7%A0%94%E9%A1%B9%E7%9B%AE%E7%B3%BB%E5%88%97/%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E%E6%95%B4%E7%90%86/ICESat-2-ATL07-%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E/</id>
+    <published>2023-08-03T14:49:17.000Z</published>
+    <updated>2023-08-05T06:54:23.528Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-数据描述&quot;&gt;&lt;a href=&quot;#1-数据描述&quot; class=&quot;headerlink&quot; title=&quot;1 数据描述&quot;&gt;&lt;/a&gt;1 数据描述&lt;/h1&gt;&lt;h2 id=&quot;1-1-参数&quot;&gt;&lt;a href=&quot;#1-1-参数&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="数据说明" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab Cody——CUP Challenge 题解</title>
+    <link href="http://example.com/2023/07/29/Matlab-Cody%E2%80%94%E2%80%94CUP-Challenge-%E9%A2%98%E8%A7%A3/"/>
+    <id>http://example.com/2023/07/29/Matlab-Cody%E2%80%94%E2%80%94CUP-Challenge-%E9%A2%98%E8%A7%A3/</id>
+    <published>2023-07-29T08:36:53.000Z</published>
+    <updated>2023-07-29T09:18:13.615Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-Problem-1974-Length-of-a-short-side&quot;&gt;&lt;a href=&quot;#1-Problem-1974-Length-of-a-short-side&quot; class=&quot;headerlink&quot; title=&quot;1. Problem 1974.</summary>
+        
+      
+    
+    
+    
+    
+    <category term="代码打卡" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab Cody——Basics Rounding 题解</title>
+    <link href="http://example.com/2023/07/22/Matlab%20Cody/Matlab-Cody%E2%80%94%E2%80%94Basics%20Rounding%E9%A2%98%E8%A7%A3/"/>
+    <id>http://example.com/2023/07/22/Matlab%20Cody/Matlab-Cody%E2%80%94%E2%80%94Basics%20Rounding%E9%A2%98%E8%A7%A3/</id>
+    <published>2023-07-22T11:21:38.000Z</published>
+    <updated>2023-07-22T15:04:53.950Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-Problem-42641-MATLAB-Basic-rounding&quot;&gt;&lt;a href=&quot;#1-Problem-42641-MATLAB-Basic-rounding&quot; class=&quot;headerlink&quot; title=&quot;1. Problem 42641.</summary>
+        
+      
+    
+    
+    
+    
+    <category term="代码打卡" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab Cody——Basics on Vectors题解</title>
+    <link href="http://example.com/2023/07/22/Matlab%20Cody/Matlab%20Cody%E2%80%94%E2%80%94Basics%20on%20Vectors%E9%A2%98%E8%A7%A3/"/>
+    <id>http://example.com/2023/07/22/Matlab%20Cody/Matlab%20Cody%E2%80%94%E2%80%94Basics%20on%20Vectors%E9%A2%98%E8%A7%A3/</id>
+    <published>2023-07-22T03:27:48.000Z</published>
+    <updated>2023-07-22T11:16:33.862Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;0-Matlab-Cody-简介&quot;&gt;&lt;a href=&quot;#0-Matlab-Cody-简介&quot; class=&quot;headerlink&quot; title=&quot;0. Matlab Cody 简介&quot;&gt;&lt;/a&gt;0. Matlab Cody 简介&lt;/h2&gt;&lt;p&gt;Matlab</summary>
+        
+      
+    
+    
+    
+    
+    <category term="代码打卡" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>辐射基础1</title>
+    <link href="http://example.com/2023/05/21/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80/%E8%BE%90%E5%B0%84%E5%9F%BA%E7%A1%80/%E8%BE%90%E5%B0%84%E5%9F%BA%E7%A1%801/"/>
+    <id>http://example.com/2023/05/21/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80/%E8%BE%90%E5%B0%84%E5%9F%BA%E7%A1%80/%E8%BE%90%E5%B0%84%E5%9F%BA%E7%A1%801/</id>
+    <published>2023-05-21T14:01:08.000Z</published>
+    <updated>2023-05-21T14:05:01.870Z</updated>
+    
+    
+    
+    
+    
+    <category term="遥感基础" scheme="http://example.com/tags/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+</feed>
