@@ -173,6 +173,60 @@
     
     
     <article
+  id="post-Redis学习小记"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2025/11/29/Redis%E5%AD%A6%E4%B9%A0%E5%B0%8F%E8%AE%B0/"
+    >Redis学习小记</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2025/11/29/Redis%E5%AD%A6%E4%B9%A0%E5%B0%8F%E8%AE%B0/" class="article-date">
+  <time datetime="2025-11-29T14:48:41.000Z" itemprop="datePublished">2025-11-29</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h1> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       <!-- 
+  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+ -->
+
+
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-深度学习/免费服务器的选择"
   class="article article-type-post"
   itemscope
@@ -232,9 +286,32 @@
 <h2 id="2-Kaggle"><a href="#2-Kaggle" class="headerlink" title="2. Kaggle"></a>2. Kaggle</h2><p><a target="_blank" rel="noopener" href="https://www.kaggle.com/">Kaggle</a> 是一个数据科学竞赛平台，提供免费的GPU资源（NVIDIA Tesla P100）。用户可以创建Notebook并使用这些资源进行深度学习模型的训练和测试。Kaggle 每周提供30小时的GPU使用时间，适合中小型项目，且使用方便。</p>
 <h2 id="2-1-创建Notebook"><a href="#2-1-创建Notebook" class="headerlink" title="2.1 创建Notebook"></a>2.1 创建Notebook</h2><p>在Kaggle主页，点击右上角的“New Notebook”按钮，选择“Notebook”选项。然后在Notebook界面，点击右侧的“Settings”图标，选择“Accelerator”为GPU。注意需要手机验证后才能使用GPU资源。</p>
 <h2 id="2-2-tricks"><a href="#2-2-tricks" class="headerlink" title="2.2 tricks"></a>2.2 tricks</h2><ul>
-<li>Kaggle的GPU资源是按周计算的，每周重置30小时的使用时间。</li>
-<li>Notebook中的数据和代码会自动保存到Kaggle云端，方便随时访问。</li>
+<li>Kaggle的GPU资源是按周计算的，每周六重置30小时的使用时间。</li>
+<li>需要预先把数据上传到 <code>input</code> 里面，模型默认保存在 <code>output</code> 路径下</li>
+<li>如果在本地已经写好了训练代码，可以先上传到input，通过以下代码拷贝到工作区</li>
 </ul>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"></span><br><span class="line">src_dir = <span class="string">&#x27;/kaggle/input/openstl-hycom-code&#x27;</span></span><br><span class="line">dst_dir = <span class="string">&#x27;/kaggle/working/openstl-hycom-code&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果目标文件夹已存在，需先删除或用 dirs_exist_ok=True（Python 3.8+）</span></span><br><span class="line">shutil.copytree(src_dir, dst_dir, dirs_exist_ok=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>通过下面这个魔术命令可以修改在 kaggle路径下的代码内容：</li>
+</ul>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">%%writefile /kaggle/working/path/to/yourcode/myexp.py</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="comment"># ..new code..</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Notebook中代码在docker容器中运行，每次运行前都需要配置环境，配置环境代码如下所示：</li>
+</ul>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在训练代码入口添加</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.system(<span class="string">&#x27;pip install numpy&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Notebook运行结束后，可以从 <code>output</code> 路径下下载所需模型文件</li>
+<li>默认工作路径 <code>/kaggle/working</code> 限制大小为20G，可以考虑把模型工作路径迁移到 <code>/kaggle/tmp</code> 文件夹下：</li>
+</ul>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># notebook的魔术命令</span></span><br><span class="line">!mkdir /kaggle/tmp</span><br><span class="line">%cd /kaggle/tmp</span><br></pre></td></tr></table></figure>
+<ul>
+<li>可以把模型和训练日志等上传到模型托管平台（如huggingface（可免费存100G）），上传代码如下所示：</li>
+</ul>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">HuggingFaceSyncCallback</span>(<span class="title class_ inherited__">Callback</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, repo_id, token, src_dir, log_dir</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line">        <span class="variable language_">self</span>.repo_id = repo_id</span><br><span class="line">        <span class="variable language_">self</span>.token = token</span><br><span class="line">        <span class="variable language_">self</span>.src_dir = src_dir</span><br><span class="line">        <span class="variable language_">self</span>.log_dir = log_dir</span><br><span class="line">        <span class="variable language_">self</span>.api = HfApi(token=token)</span><br><span class="line">        <span class="variable language_">self</span>.current_epoch = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">on_train_epoch_end</span>(<span class="params">self, trainer, pl_module</span>):</span><br><span class="line">        <span class="variable language_">self</span>.current_epoch = trainer.current_epoch</span><br><span class="line">        <span class="variable language_">self</span>._upload()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_upload</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="comment"># 上传整个 checkpoints 文件夹</span></span><br><span class="line">            <span class="variable language_">self</span>.api.upload_large_folder(</span><br><span class="line">                folder_path=<span class="variable language_">self</span>.src_dir,</span><br><span class="line">                repo_id=<span class="variable language_">self</span>.repo_id,</span><br><span class="line">                repo_type=<span class="string">&quot;model&quot;</span>,</span><br><span class="line">                <span class="comment"># path_in_repo=&quot;checkpoints&quot;, # 在仓库中的路径</span></span><br><span class="line">                <span class="comment"># commit_message=f&quot;Upload checkpoints epoch &#123;self.current_epoch&#125;&quot;,</span></span><br><span class="line">                num_workers=<span class="number">4</span>,  <span class="comment"># 并发上传数</span></span><br><span class="line">                print_report=<span class="literal">True</span>,</span><br><span class="line">                print_report_every=<span class="number">60</span>,  <span class="comment"># 每60秒打印进度</span></span><br><span class="line">            )</span><br><span class="line">            </span><br><span class="line">            <span class="variable language_">self</span>.api.upload_folder(</span><br><span class="line">                folder_path=<span class="variable language_">self</span>.log_dir,</span><br><span class="line">                repo_id=<span class="variable language_">self</span>.repo_id,</span><br><span class="line">                repo_type=<span class="string">&quot;model&quot;</span>,</span><br><span class="line">                path_in_repo=<span class="string">&quot;lightning_logs&quot;</span>, <span class="comment"># 在仓库中的路径</span></span><br><span class="line">                commit_message=<span class="string">f&quot;Upload logs epoch <span class="subst">&#123;self.current_epoch&#125;</span>&quot;</span></span><br><span class="line">            )</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;Successfully uploaded checkpoints to HuggingFace Hub&quot;</span>)</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;Upload failed: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>可以从huggingface下载最新的checkpoint再次训练，代码如下：</li>
+</ul>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> huggingface_hub <span class="keyword">import</span> hf_hub_download</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载 last.ckpt 到本地</span></span><br><span class="line">model_path = hf_hub_download(</span><br><span class="line">    repo_id=<span class="string">&quot;marinerubbish/openstl-hycom-model&quot;</span>,</span><br><span class="line">    filename=<span class="string">&quot;./last.ckpt&quot;</span>,</span><br><span class="line">    local_dir=<span class="string">&quot;.&quot;</span>  <span class="comment"># 下载到哪个文件夹</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
       
@@ -751,72 +828,6 @@
 
 
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL%E5%AD%A6%E4%B9%A0/" rel="tag">MySQL学习</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-The Missing Semester/Chap2"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/24/The%20Missing%20Semester/Chap2/"
-    >Chap2</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/24/The%20Missing%20Semester/Chap2/" class="article-date">
-  <time datetime="2024-03-24T12:35:20.000Z" itemprop="datePublished">2024-03-24</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="1-作业答案"><a href="#1-作业答案" class="headerlink" title="1. 作业答案"></a>1. 作业答案</h2><p>Q1: 阅读 man ls ，然后使用ls 命令进行如下操作：</p>
-<ul>
-<li>列出所有文件信息：-l</li>
-<li>所有文件（包括隐藏文件） ：-a</li>
-<li>文件打印以人类可以理解的格式输出 (例如，使用454M 而不是 454279954) : -h</li>
-<li>文件以最近访问顺序排序：-t</li>
-<li>以彩色文本显示输出结果：—color=auto</li>
-</ul>
-<p>典型输出如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-rw-r--r--   1 user group 1.1M Jan 14 09:53 baz</span><br><span class="line">drwxr-xr-x   5 user group  160 Jan 14 09:53 .</span><br><span class="line">-rw-r--r--   1 user group  514 Jan 14 06:42 bar</span><br><span class="line">-rw-r--r--   1 user group 106M Jan 13 12:12 foo</span><br><span class="line">drwx------+ 47 user group 1.5K Jan 12 18:08 ..</span><br></pre></td></tr></table></figure></p>
-<p>A:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -lhat --color=auto</span><br></pre></td></tr></table></figure></p>
-<p>Q2: 编写两个bash函数 marco 和 polo 执行下面的操作。每当你执行 marco 时，当前的工作目录应当以某种形式保存，当执行 polo 时，无论现在处在什么目录下，都应当 cd 回到当时执行 marco 的目录。为了方便debug，你可以把代码写在单独的文件 marco.sh 中，并通过 source marco.sh命令，（重新）加载函数。</p>
-<p>A:</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       <!-- 
-  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/The-Missing-Semester/" rel="tag">The Missing Semester</a></li></ul>
- -->
-
-
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/The-Missing-Semester/" rel="tag">The Missing Semester</a></li></ul>
 
     </footer>
   </div>

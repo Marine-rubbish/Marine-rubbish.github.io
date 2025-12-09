@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-11-27T13:21:58.312Z</updated>
+  <updated>2025-11-29T14:50:25.307Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Redis学习小记</title>
+    <link href="http://example.com/2025/11/29/Redis%E5%AD%A6%E4%B9%A0%E5%B0%8F%E8%AE%B0/"/>
+    <id>http://example.com/2025/11/29/Redis%E5%AD%A6%E4%B9%A0%E5%B0%8F%E8%AE%B0/</id>
+    <published>2025-11-29T14:48:41.000Z</published>
+    <updated>2025-11-29T14:50:25.307Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1&quot;&gt;&lt;a href=&quot;#1&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="后端" scheme="http://example.com/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>免费服务器的选择</title>
     <link href="http://example.com/2025/11/26/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E5%85%8D%E8%B4%B9%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E6%8B%A9/"/>
     <id>http://example.com/2025/11/26/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E5%85%8D%E8%B4%B9%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E6%8B%A9/</id>
     <published>2025-11-26T15:00:00.000Z</published>
-    <updated>2025-11-27T13:21:58.312Z</updated>
+    <updated>2025-12-09T06:03:14.216Z</updated>
     
     
       
@@ -442,21 +465,6 @@
     
     
     <category term="代码打卡" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>辐射基础1</title>
-    <link href="http://example.com/2023/05/21/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80/%E8%BE%90%E5%B0%84%E5%9F%BA%E7%A1%80/%E8%BE%90%E5%B0%84%E5%9F%BA%E7%A1%801/"/>
-    <id>http://example.com/2023/05/21/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80/%E8%BE%90%E5%B0%84%E5%9F%BA%E7%A1%80/%E8%BE%90%E5%B0%84%E5%9F%BA%E7%A1%801/</id>
-    <published>2023-05-21T14:01:08.000Z</published>
-    <updated>2023-05-21T14:05:01.870Z</updated>
-    
-    
-    
-    
-    
-    <category term="遥感基础" scheme="http://example.com/tags/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   

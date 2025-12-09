@@ -173,6 +173,60 @@
     
     
     <article
+  id="post-遥感基础/辐射基础/辐射基础1"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/05/21/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80/%E8%BE%90%E5%B0%84%E5%9F%BA%E7%A1%80/%E8%BE%90%E5%B0%84%E5%9F%BA%E7%A1%801/"
+    >辐射基础1</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/05/21/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80/%E8%BE%90%E5%B0%84%E5%9F%BA%E7%A1%80/%E8%BE%90%E5%B0%84%E5%9F%BA%E7%A1%801/" class="article-date">
+  <time datetime="2023-05-21T14:01:08.000Z" itemprop="datePublished">2023-05-21</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+   
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       <!-- 
+  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80/" rel="tag">遥感基础</a></li></ul>
+ -->
+
+
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%81%A5%E6%84%9F%E5%9F%BA%E7%A1%80/" rel="tag">遥感基础</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-统计学习方法/林轩田机器学习每章要点"
   class="article article-type-post"
   itemscope
@@ -1143,73 +1197,6 @@ $$L_{opt2}$$在指数粗糙面和分形粗糙面时表现为$$\eqref{1}$$这类�
 
 
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/" rel="tag">小技巧</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-python语言规范学习"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/12/14/python%E8%AF%AD%E8%A8%80%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0/"
-    >python语言规范学习</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/12/14/python%E8%AF%AD%E8%A8%80%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0/" class="article-date">
-  <time datetime="2022-12-14T13:41:49.000Z" itemprop="datePublished">2022-12-14</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h1><h3 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h3><p>仅对包和模块使用导入,而不单独导入函数或者类。’typing’模块例外。</p>
-<p>导入时不要使用相对名称. 即使模块在同一个包中, 也要使用完整包名. </p>
-<p>这能帮助你避免无意间导入一个包两次.</p>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p>命名空间管理约定十分简单. 每个标识符的源都用一种一致的方式指示. </p>
-<p>x.Obj表示Obj对象定义在模块x中.</p>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p>模块名仍可能冲突. 有些模块名太长, 不太方便.</p>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.使用 import x 来导入包和模块.</span></span><br><span class="line"><span class="comment"># python自带的包一般使用这种方式</span></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.使用 from x import y </span></span><br><span class="line"><span class="comment"># 其中x是包前缀, y是不带前缀的模块名.</span></span><br><span class="line"><span class="keyword">from</span> mpl_toolkits.basemap <span class="keyword">import</span> Basemap</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3.使用 from x import y as z</span></span><br><span class="line"><span class="comment"># 如果两个要导入的模块都叫做y或者y太长了.</span></span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="comment"># 其实plt用第二种方式导入更多</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.仅当缩写 z 是通用缩写时才可使用 import y as z.</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
-<h1 id="包"><a href="#包" class="headerlink" title="包"></a>包</h1><h3 id="规则-1"><a href="#规则-1" class="headerlink" title="规则"></a>规则</h3><p>使用模块的全路径名来导入每个模块</p>
-<p>所有的新代码都应该用完整包名来导入每个模块.</p>
-<h3 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h3><p>避免模块名冲突或是因非预期的模块搜索路径导致导入错误. 查找包更容易.</p>
-<h3 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h3><p>部署代码变难, 因为你必须复制包层次.</p>
-<h3 id="实现样例"><a href="#实现样例" class="headerlink" title="实现样例"></a>实现样例</h3><p>正确样例1：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在代码中引用完整名称 absl.flags (详细情况).</span></span><br><span class="line"><span class="keyword">import</span> absl.flags</span><br><span class="line"><span class="keyword">from</span> doctor.who <span class="keyword">import</span> jodie</span><br><span class="line"></span><br><span class="line">FLAGS = absl.flags.FLAGS</span><br></pre></td></tr></table></figure></p>
-<p>正确样例2：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在代码中仅引用模块名 flags (常见情况).</span></span><br><span class="line"><span class="keyword">from</span> absl <span class="keyword">import</span> flags</span><br><span class="line"><span class="keyword">from</span> doctor.who <span class="keyword">import</span> jodie</span><br><span class="line"></span><br><span class="line">FLAGS = flags.FLAGS</span><br></pre></td></tr></table></figure></p>
-<p>错误样例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 没能清晰指示出作者想要导入的模块和最终被导入的模块.</span></span><br><span class="line"><span class="comment"># 实际导入的模块将取决于 sys.path.</span></span><br><span class="line"><span class="keyword">import</span> jodie</span><br></pre></td></tr></table></figure><br>不应假定主入口脚本所在的目录就在 sys.path 中，虽然这种情况是存在的。</p>
-<p>当主入口脚本所在目录不在 sys.path 中时，代码将假设 import jodie 是</p>
-<p>导入的一个第三方库或者是一个名为 jodie 的顶层包，而不是本地的 jodie.py</p>
-<h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><h3 id="规则-2"><a href="#规则-2" class="headerlink" title="规则"></a>规则</h3><p>异常是一种跳出代码块的正常控制流来处理错误或者其它异常条件的方式.</p>
-<p>允许使用异常, 但必须小心</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       <!--  -->
-
 
     </footer>
   </div>
