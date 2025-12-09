@@ -1787,4 +1787,24 @@ $(document).ready(function () {
 </html>
 ]]></content>
   </entry>
+  <entry>
+    <title>通过自定义域名中转api</title>
+    <url>/2025/12/09/%E9%80%9A%E8%BF%87%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E4%B8%AD%E8%BD%ACapi/</url>
+    <content><![CDATA[<h1 id="1-域名准备"><a href="#1-域名准备" class="headerlink" title="1. 域名准备"></a>1. 域名准备</h1><p>通过 <a href="https://dash.domain.digitalplat.org/">https://dash.domain.digitalplat.org/</a> 网站获取一个免费自定义域名<br>（注意最好申请 .dpdns.org 结尾的，.us.kg 结尾的需要key，而这个key是要钱的）</p>
+<p>注意自定义域名需要设置dns解析服务器，这里以cloudflare dns解析服务器为例进行配置：<br><img src="./image/domain_dns_setting.jpg" alt="域名DNS解析服务器设置"></p>
+<p>申请好后可以把域名托管到 cloudflare上，具体操作如下：</p>
+<ul>
+<li>登录 cloudflare 账号，点击 <code>onboard domain</code><br><img src="./image/onboard_domain.jpg" alt="onboard domain"></li>
+<li>填入申请好的域名后，剩下全默认，continue<br><img src="./image/dns_setting.jpg" alt="filling domain"></li>
+<li>收费计划选择免费即可<br><img src="./image/pay.jpg" alt="free plan"></li>
+</ul>
+<h1 id="2-启动中转项目"><a href="#2-启动中转项目" class="headerlink" title="2. 启动中转项目"></a>2. 启动中转项目</h1><p>将<a href="https://github.com/tech-shrimp/gemini-balance-lite">中转项目</a> fork到你个人的仓库，然后部署到vercel上<br>（注意不要部署到cloudflare上，否则会被分配到香港的边缘节点，无法访问gemini）</p>
+<p>在 Cloudflare 的 DNS记录 中添加vercel提供的DNS记录：<br><img src="./image/vercel_dns_record.jpg" alt="vercel dns record"></p>
+<p>过几分钟访问你申请的域名，看到proxy成功启动说明部署成功。<br><img src="./image/proxy_success.jpg" alt="proxy success"></p>
+<h1 id="3-在前端平台上使用"><a href="#3-在前端平台上使用" class="headerlink" title="3. 在前端平台上使用"></a>3. 在前端平台上使用</h1><p>可以在 <a href="https://lobechat.com/chat">lobechat</a> 平台上部署你的域名。<br><img src="./image/lobe_chat.jpg" alt="lobe chat"><br><img src="./image/lobe_setting.jpg" alt="lobe setting"></p>
+]]></content>
+      <tags>
+        <tag>后端</tag>
+      </tags>
+  </entry>
 </search>

@@ -173,6 +173,78 @@
     
     
     <article
+  id="post-MySQL学习/第0节-Linux下MySQL环境配置"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC0%E8%8A%82-Linux%E4%B8%8BMySQL%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"
+    >第0节 Linux下MySQL环境配置</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC0%E8%8A%82-Linux%E4%B8%8BMySQL%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2024-06-08T16:18:21.000Z" itemprop="datePublished">2024-06-09</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>作者采用的Linux为Ubuntu 24.04版。</p>
+<h2 id="1-Linux下MySQL安装"><a href="#1-Linux下MySQL安装" class="headerlink" title="1. Linux下MySQL安装"></a>1. Linux下MySQL安装</h2><p>可以先用rpm命令检查是否已经安装MySQL:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep mysql</span><br></pre></td></tr></table></figure></p>
+<p>如果没有安装的话可以采用apt安装:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install mysql-server</span><br></pre></td></tr></table></figure></p>
+<p>安装完成后可以用以下命令验证是否安装成功<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql --version </span><br><span class="line"><span class="comment"># mysql  Ver 8.0.36-2ubuntu3 for Linux on x86_64 ((Ubuntu))</span></span><br></pre></td></tr></table></figure></p>
+<p>启动MySQL并查看MySQL状态:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysql</span><br><span class="line">systemctl <span class="built_in">enable</span> mariadb  <span class="comment"># 设置开机启动</span></span><br><span class="line">systemctl status mysql</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-配置MySQL"><a href="#2-配置MySQL" class="headerlink" title="2. 配置MySQL"></a>2. 配置MySQL</h2><p>mysql8.0，root 用户默认通过 auth_socket 插件授权，而 auth_socket 插件通过 Unix socket 文件来验证所有连接到 localhost 的用户。</p>
+<p>这意味着身份验证是基于操作系统用户的，而不是基于用户密码的，你不能以用户–密码的方式，登录root账户。</p>
+<p>通过指令以root身份登录：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> mysql</span><br></pre></td></tr></table></figure></p>
+<p>修改MySQL数据库底下的user表，配置密码方式以root身份登录:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">use mysql; <span class="comment">-- 使用mysql数据库</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">user</span>, host, plugin <span class="keyword">from</span> <span class="keyword">user</span>; <span class="comment">-- 从user中选择user、host、plugin 这三列</span></span><br></pre></td></tr></table></figure></p>
+<p>正常的输出结果为:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">------------------+-----------+-----------------------+</span></span><br><span class="line"><span class="operator">|</span> <span class="keyword">user</span>             <span class="operator">|</span> host      <span class="operator">|</span> plugin                <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------------+-----------+-----------------------+</span></span><br><span class="line"><span class="operator">|</span> debian<span class="operator">-</span>sys<span class="operator">-</span>maint <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql.infoschema <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql.session    <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql.sys        <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> root             <span class="operator">|</span> localhost <span class="operator">|</span> auth_socket           <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------------+-----------+-----------------------+</span></span><br><span class="line"><span class="number">5</span> <span class="keyword">rows</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure><br>其中 <code>user</code> 列代表用户名、 <code>host</code> 列代表用户可以从哪些主机连接到数据库服务器、 <code>plugin</code> 代表用于该用户认证的插件</p>
+<p>将 <code>root</code> 对应的plugin由 <code>auth_socket</code> 改为 <code>mysql_native_password</code><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">user</span> <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> identified <span class="keyword">with</span> mysql_native_password <span class="keyword">by</span> <span class="string">&#x27;密码&#x27;</span>;</span><br><span class="line">flush privileges; <span class="comment">-- 重新加载权限表</span></span><br></pre></td></tr></table></figure></p>
+<p>再次从user中选择user、host、plugin 这三列，发现最后一行plugin变成 <code>mysql_native_password</code> 就成功了:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">------------------+-----------+-----------------------+</span></span><br><span class="line"><span class="operator">|</span> <span class="keyword">user</span>             <span class="operator">|</span> host      <span class="operator">|</span> plugin                <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------------+-----------+-----------------------+</span></span><br><span class="line"><span class="operator">|</span> debian<span class="operator">-</span>sys<span class="operator">-</span>maint <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql.infoschema <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql.session    <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql.sys        <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> root             <span class="operator">|</span> localhost <span class="operator">|</span> mysql_native_password <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------------+-----------+-----------------------+</span></span><br><span class="line"><span class="number">5</span> <span class="keyword">rows</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure></p>
+<p>退出后可以通过密码的方式登录数据库:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit; <span class="comment">-- 退出</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p <span class="comment"># 以root身份用密码登录mysql</span></span><br></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/LogosTR_/article/details/125602116">https://blog.csdn.net/LogosTR_/article/details/125602116</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/mysql/mysql-install.html">https://www.runoob.com/mysql/mysql-install.html</a></li>
+</ol>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       <!-- 
+  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL%E5%AD%A6%E4%B9%A0/" rel="tag">MySQL学习</a></li></ul>
+ -->
+
+
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL%E5%AD%A6%E4%B9%A0/" rel="tag">MySQL学习</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-The Missing Semester/Chap2"
   class="article article-type-post"
   itemscope
@@ -764,78 +836,13 @@ s_x(\omega) \sim \frac{\sigma_x^2}{\vert \omega \vert^\gamma}</script><p>其中 
 </article>
 
     
-    <article
-  id="post-Matlab Cody/Matlab Cody——Basics on Vectors题解"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/07/22/Matlab%20Cody/Matlab%20Cody%E2%80%94%E2%80%94Basics%20on%20Vectors%E9%A2%98%E8%A7%A3/"
-    >Matlab Cody——Basics on Vectors题解</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/07/22/Matlab%20Cody/Matlab%20Cody%E2%80%94%E2%80%94Basics%20on%20Vectors%E9%A2%98%E8%A7%A3/" class="article-date">
-  <time datetime="2023-07-22T03:27:48.000Z" itemprop="datePublished">2023-07-22</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="0-Matlab-Cody-简介"><a href="#0-Matlab-Cody-简介" class="headerlink" title="0. Matlab Cody 简介"></a>0. Matlab Cody 简介</h2><p>Matlab Cody是一个类似Leetcode的oj网站，网址：<a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/matlabcentral/cody">https://ww2.mathworks.cn/matlabcentral/cody</a></p>
-<h2 id="1-Problem-3-Find-the-sum-of-all-the-numbers-of-the-input-vector"><a href="#1-Problem-3-Find-the-sum-of-all-the-numbers-of-the-input-vector" class="headerlink" title="1. Problem 3. Find the sum of all the numbers of the input vector"></a>1. Problem 3. Find the sum of all the numbers of the input vector</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">vecsum</span><span class="params">(x)</span></span></span><br><span class="line">   y = sum(x,<span class="string">&#x27;all&#x27;</span>)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="2-Problem-6-Select-every-other-element-of-a-vector"><a href="#2-Problem-6-Select-every-other-element-of-a-vector" class="headerlink" title="2. Problem 6. Select every other element of a vector"></a>2. Problem 6. Select every other element of a vector</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">everyOther</span><span class="params">(x)</span></span></span><br><span class="line">  y = x(<span class="number">1</span>:<span class="number">2</span>:<span class="keyword">end</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="3-Problem-247-Arrange-Vector-in-descending-order"><a href="#3-Problem-247-Arrange-Vector-in-descending-order" class="headerlink" title="3. Problem 247. Arrange Vector in descending order"></a>3. Problem 247. Arrange Vector in descending order</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">desSort</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">sort</span>(x,<span class="string">&#x27;descend&#x27;</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="4-Problem-135-Inner-product-of-two-vectors"><a href="#4-Problem-135-Inner-product-of-two-vectors" class="headerlink" title="4. Problem 135. Inner product of two vectors"></a>4. Problem 135. Inner product of two vectors</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">z</span> = <span class="title">your_fcn_name</span><span class="params">(x,y)</span></span></span><br><span class="line">  z = <span class="built_in">dot</span>(x,y);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="5-Problem-624-Get-the-length-of-a-given-vector"><a href="#5-Problem-624-Get-the-length-of-a-given-vector" class="headerlink" title="5. Problem 624. Get the length of a given vector"></a>5. Problem 624. Get the length of a given vector</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">VectorLength</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">length</span>(x);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="6-Problem-1107-Find-max"><a href="#6-Problem-1107-Find-max" class="headerlink" title="6. Problem 1107. Find max"></a>6. Problem 1107. Find max</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">your_fcn_name</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="built_in">max</span>(x,[],<span class="string">&#x27;all&#x27;</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="7-Problem-605-Whether-the-input-is-vector"><a href="#7-Problem-605-Whether-the-input-is-vector" class="headerlink" title="7. Problem 605. Whether the input is vector?"></a>7. Problem 605. Whether the input is vector?</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">checkvector</span><span class="params">(x)</span></span></span><br><span class="line">  <span class="keyword">if</span> <span class="built_in">isvector</span>(x)</span><br><span class="line">      y = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">      y = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="8-Problem-2631-Flip-the-vector-from-right-to-left"><a href="#8-Problem-2631-Flip-the-vector-from-right-to-left" class="headerlink" title="8. Problem 2631. Flip the vector from right to left"></a>8. Problem 2631. Flip the vector from right to left</h2><p>题目要求不能直接使用函数，所以自己写<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">flip_vector</span><span class="params">(x)</span></span></span><br><span class="line">  y = x(<span class="keyword">end</span>:<span class="number">-1</span>:<span class="number">1</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="9-Problem-3076-Create-a-vector"><a href="#9-Problem-3076-Create-a-vector" class="headerlink" title="9. Problem 3076. Create a vector"></a>9. Problem 3076. Create a vector</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">zeroToNby2</span><span class="params">(n)</span></span></span><br><span class="line">  y = <span class="number">0</span>:<span class="number">2</span>:n;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="10-Problem-1024-Doubling-elements-in-a-vector"><a href="#10-Problem-1024-Doubling-elements-in-a-vector" class="headerlink" title="10. Problem 1024. Doubling elements in a vector"></a>10. Problem 1024. Doubling elements in a vector</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">B</span> = <span class="title">your_fcn_name</span><span class="params">(A)</span></span></span><br><span class="line">  B = <span class="built_in">zeros</span>(<span class="number">1</span>,<span class="number">2</span>*<span class="built_in">length</span>(A));</span><br><span class="line">  B(<span class="number">1</span>:<span class="number">2</span>:<span class="keyword">end</span><span class="number">-1</span>) = A;</span><br><span class="line">  B(<span class="number">2</span>:<span class="number">2</span>:<span class="keyword">end</span>) = A;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="11-Problem-42651-Vector-creation"><a href="#11-Problem-42651-Vector-creation" class="headerlink" title="11. Problem 42651. Vector creation"></a>11. Problem 42651. Vector creation</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">vector</span><span class="params">(x)</span></span></span><br><span class="line">  y = <span class="number">1</span>:x;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       <!-- 
-  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/" rel="tag">代码打卡</a></li></ul>
- -->
-
-
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/" rel="tag">代码打卡</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
   </nav>
   
 </section>

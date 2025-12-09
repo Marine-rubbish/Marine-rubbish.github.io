@@ -173,6 +173,72 @@
     
     
     <article
+  id="post-通过自定义域名中转api"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2025/12/09/%E9%80%9A%E8%BF%87%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E4%B8%AD%E8%BD%ACapi/"
+    >通过自定义域名中转api</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2025/12/09/%E9%80%9A%E8%BF%87%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E4%B8%AD%E8%BD%ACapi/" class="article-date">
+  <time datetime="2025-12-09T06:17:40.000Z" itemprop="datePublished">2025-12-09</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="1-域名准备"><a href="#1-域名准备" class="headerlink" title="1. 域名准备"></a>1. 域名准备</h1><p>通过 <a target="_blank" rel="noopener" href="https://dash.domain.digitalplat.org/">https://dash.domain.digitalplat.org/</a> 网站获取一个免费自定义域名<br>（注意最好申请 .dpdns.org 结尾的，.us.kg 结尾的需要key，而这个key是要钱的）</p>
+<p>注意自定义域名需要设置dns解析服务器，这里以cloudflare dns解析服务器为例进行配置：<br><img src="./image/domain_dns_setting.jpg" alt="域名DNS解析服务器设置"></p>
+<p>申请好后可以把域名托管到 cloudflare上，具体操作如下：</p>
+<ul>
+<li>登录 cloudflare 账号，点击 <code>onboard domain</code><br><img src="./image/onboard_domain.jpg" alt="onboard domain"></li>
+<li>填入申请好的域名后，剩下全默认，continue<br><img src="./image/dns_setting.jpg" alt="filling domain"></li>
+<li>收费计划选择免费即可<br><img src="./image/pay.jpg" alt="free plan"></li>
+</ul>
+<h1 id="2-启动中转项目"><a href="#2-启动中转项目" class="headerlink" title="2. 启动中转项目"></a>2. 启动中转项目</h1><p>将<a target="_blank" rel="noopener" href="https://github.com/tech-shrimp/gemini-balance-lite">中转项目</a> fork到你个人的仓库，然后部署到vercel上<br>（注意不要部署到cloudflare上，否则会被分配到香港的边缘节点，无法访问gemini）</p>
+<p>在 Cloudflare 的 DNS记录 中添加vercel提供的DNS记录：<br><img src="./image/vercel_dns_record.jpg" alt="vercel dns record"></p>
+<p>过几分钟访问你申请的域名，看到proxy成功启动说明部署成功。<br><img src="./image/proxy_success.jpg" alt="proxy success"></p>
+<h1 id="3-在前端平台上使用"><a href="#3-在前端平台上使用" class="headerlink" title="3. 在前端平台上使用"></a>3. 在前端平台上使用</h1><p>可以在 <a target="_blank" rel="noopener" href="https://lobechat.com/chat">lobechat</a> 平台上部署你的域名。<br><img src="./image/lobe_chat.jpg" alt="lobe chat"><br><img src="./image/lobe_setting.jpg" alt="lobe setting"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       <!-- 
+  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+ -->
+
+
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-Redis学习小记"
   class="article article-type-post"
   itemscope
@@ -766,85 +832,13 @@
 </article>
 
     
-    <article
-  id="post-MySQL学习/第0节-Linux下MySQL环境配置"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC0%E8%8A%82-Linux%E4%B8%8BMySQL%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"
-    >第0节 Linux下MySQL环境配置</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC0%E8%8A%82-Linux%E4%B8%8BMySQL%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2024-06-08T16:18:21.000Z" itemprop="datePublished">2024-06-09</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>作者采用的Linux为Ubuntu 24.04版。</p>
-<h2 id="1-Linux下MySQL安装"><a href="#1-Linux下MySQL安装" class="headerlink" title="1. Linux下MySQL安装"></a>1. Linux下MySQL安装</h2><p>可以先用rpm命令检查是否已经安装MySQL:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep mysql</span><br></pre></td></tr></table></figure></p>
-<p>如果没有安装的话可以采用apt安装:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install mysql-server</span><br></pre></td></tr></table></figure></p>
-<p>安装完成后可以用以下命令验证是否安装成功<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql --version </span><br><span class="line"><span class="comment"># mysql  Ver 8.0.36-2ubuntu3 for Linux on x86_64 ((Ubuntu))</span></span><br></pre></td></tr></table></figure></p>
-<p>启动MySQL并查看MySQL状态:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysql</span><br><span class="line">systemctl <span class="built_in">enable</span> mariadb  <span class="comment"># 设置开机启动</span></span><br><span class="line">systemctl status mysql</span><br></pre></td></tr></table></figure></p>
-<h2 id="2-配置MySQL"><a href="#2-配置MySQL" class="headerlink" title="2. 配置MySQL"></a>2. 配置MySQL</h2><p>mysql8.0，root 用户默认通过 auth_socket 插件授权，而 auth_socket 插件通过 Unix socket 文件来验证所有连接到 localhost 的用户。</p>
-<p>这意味着身份验证是基于操作系统用户的，而不是基于用户密码的，你不能以用户–密码的方式，登录root账户。</p>
-<p>通过指令以root身份登录：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> mysql</span><br></pre></td></tr></table></figure></p>
-<p>修改MySQL数据库底下的user表，配置密码方式以root身份登录:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">use mysql; <span class="comment">-- 使用mysql数据库</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">user</span>, host, plugin <span class="keyword">from</span> <span class="keyword">user</span>; <span class="comment">-- 从user中选择user、host、plugin 这三列</span></span><br></pre></td></tr></table></figure></p>
-<p>正常的输出结果为:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">------------------+-----------+-----------------------+</span></span><br><span class="line"><span class="operator">|</span> <span class="keyword">user</span>             <span class="operator">|</span> host      <span class="operator">|</span> plugin                <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------------+-----------+-----------------------+</span></span><br><span class="line"><span class="operator">|</span> debian<span class="operator">-</span>sys<span class="operator">-</span>maint <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql.infoschema <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql.session    <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql.sys        <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> root             <span class="operator">|</span> localhost <span class="operator">|</span> auth_socket           <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------------+-----------+-----------------------+</span></span><br><span class="line"><span class="number">5</span> <span class="keyword">rows</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure><br>其中 <code>user</code> 列代表用户名、 <code>host</code> 列代表用户可以从哪些主机连接到数据库服务器、 <code>plugin</code> 代表用于该用户认证的插件</p>
-<p>将 <code>root</code> 对应的plugin由 <code>auth_socket</code> 改为 <code>mysql_native_password</code><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">user</span> <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> identified <span class="keyword">with</span> mysql_native_password <span class="keyword">by</span> <span class="string">&#x27;密码&#x27;</span>;</span><br><span class="line">flush privileges; <span class="comment">-- 重新加载权限表</span></span><br></pre></td></tr></table></figure></p>
-<p>再次从user中选择user、host、plugin 这三列，发现最后一行plugin变成 <code>mysql_native_password</code> 就成功了:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">------------------+-----------+-----------------------+</span></span><br><span class="line"><span class="operator">|</span> <span class="keyword">user</span>             <span class="operator">|</span> host      <span class="operator">|</span> plugin                <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------------+-----------+-----------------------+</span></span><br><span class="line"><span class="operator">|</span> debian<span class="operator">-</span>sys<span class="operator">-</span>maint <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql.infoschema <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql.session    <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> mysql.sys        <span class="operator">|</span> localhost <span class="operator">|</span> caching_sha2_password <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> root             <span class="operator">|</span> localhost <span class="operator">|</span> mysql_native_password <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------------+-----------+-----------------------+</span></span><br><span class="line"><span class="number">5</span> <span class="keyword">rows</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure></p>
-<p>退出后可以通过密码的方式登录数据库:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit; <span class="comment">-- 退出</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p <span class="comment"># 以root身份用密码登录mysql</span></span><br></pre></td></tr></table></figure>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/LogosTR_/article/details/125602116">https://blog.csdn.net/LogosTR_/article/details/125602116</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.runoob.com/mysql/mysql-install.html">https://www.runoob.com/mysql/mysql-install.html</a></li>
-</ol>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       <!-- 
-  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL%E5%AD%A6%E4%B9%A0/" rel="tag">MySQL学习</a></li></ul>
- -->
-
-
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL%E5%AD%A6%E4%B9%A0/" rel="tag">MySQL学习</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
   </nav>
   
 </section>

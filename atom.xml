@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-11-29T14:50:25.307Z</updated>
+  <updated>2025-12-09T08:56:04.987Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>通过自定义域名中转api</title>
+    <link href="http://example.com/2025/12/09/%E9%80%9A%E8%BF%87%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E4%B8%AD%E8%BD%ACapi/"/>
+    <id>http://example.com/2025/12/09/%E9%80%9A%E8%BF%87%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E4%B8%AD%E8%BD%ACapi/</id>
+    <published>2025-12-09T06:17:40.000Z</published>
+    <updated>2025-12-09T08:56:04.987Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-域名准备&quot;&gt;&lt;a href=&quot;#1-域名准备&quot; class=&quot;headerlink&quot; title=&quot;1. 域名准备&quot;&gt;&lt;/a&gt;1. 域名准备&lt;/h1&gt;&lt;p&gt;通过 &lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="后端" scheme="http://example.com/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>Redis学习小记</title>
@@ -435,29 +458,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;1-Problem-42641-MATLAB-Basic-rounding&quot;&gt;&lt;a href=&quot;#1-Problem-42641-MATLAB-Basic-rounding&quot; class=&quot;headerlink&quot; title=&quot;1. Problem 42641.</summary>
-        
-      
-    
-    
-    
-    
-    <category term="代码打卡" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Matlab Cody——Basics on Vectors题解</title>
-    <link href="http://example.com/2023/07/22/Matlab%20Cody/Matlab%20Cody%E2%80%94%E2%80%94Basics%20on%20Vectors%E9%A2%98%E8%A7%A3/"/>
-    <id>http://example.com/2023/07/22/Matlab%20Cody/Matlab%20Cody%E2%80%94%E2%80%94Basics%20on%20Vectors%E9%A2%98%E8%A7%A3/</id>
-    <published>2023-07-22T03:27:48.000Z</published>
-    <updated>2023-07-22T11:16:33.862Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;0-Matlab-Cody-简介&quot;&gt;&lt;a href=&quot;#0-Matlab-Cody-简介&quot; class=&quot;headerlink&quot; title=&quot;0. Matlab Cody 简介&quot;&gt;&lt;/a&gt;0. Matlab Cody 简介&lt;/h2&gt;&lt;p&gt;Matlab</summary>
         
       
     
