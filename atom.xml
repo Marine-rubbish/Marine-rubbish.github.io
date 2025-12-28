@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-12-11T12:01:54.173Z</updated>
+  <updated>2025-12-28T18:29:14.809Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>上海柏楚笔试题</title>
+    <link href="http://example.com/2025/12/29/%E4%B8%8A%E6%B5%B7%E6%9F%8F%E6%A5%9A%E7%AC%94%E8%AF%95%E9%A2%98/"/>
+    <id>http://example.com/2025/12/29/%E4%B8%8A%E6%B5%B7%E6%9F%8F%E6%A5%9A%E7%AC%94%E8%AF%95%E9%A2%98/</id>
+    <published>2025-12-28T16:21:23.000Z</published>
+    <updated>2025-12-28T18:29:14.809Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;上海柏楚感知算法实习生-笔试题&quot;&gt;&lt;a href=&quot;#上海柏楚感知算法实习生-笔试题&quot; class=&quot;headerlink&quot; title=&quot;上海柏楚感知算法实习生 笔试题&quot;&gt;&lt;/a&gt;上海柏楚感知算法实习生</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>通过自定义域名中转api</title>
@@ -435,29 +456,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;1-Problem-1974-Length-of-a-short-side&quot;&gt;&lt;a href=&quot;#1-Problem-1974-Length-of-a-short-side&quot; class=&quot;headerlink&quot; title=&quot;1. Problem 1974.</summary>
-        
-      
-    
-    
-    
-    
-    <category term="代码打卡" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Matlab Cody——Basics Rounding 题解</title>
-    <link href="http://example.com/2023/07/22/Matlab%20Cody/Matlab-Cody%E2%80%94%E2%80%94Basics%20Rounding%E9%A2%98%E8%A7%A3/"/>
-    <id>http://example.com/2023/07/22/Matlab%20Cody/Matlab-Cody%E2%80%94%E2%80%94Basics%20Rounding%E9%A2%98%E8%A7%A3/</id>
-    <published>2023-07-22T11:21:38.000Z</published>
-    <updated>2023-07-22T15:04:53.950Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-Problem-42641-MATLAB-Basic-rounding&quot;&gt;&lt;a href=&quot;#1-Problem-42641-MATLAB-Basic-rounding&quot; class=&quot;headerlink&quot; title=&quot;1. Problem 42641.</summary>
         
       
     
