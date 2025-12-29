@@ -105,7 +105,7 @@
 
 
   
-    <div class="article-entry" itemprop="articleBody">
+    <!-- <div class="article-entry" itemprop="articleBody">
        
   <h2 id="1-作业答案"><a href="#1-作业答案" class="headerlink" title="1. 作业答案"></a>1. 作业答案</h2><p>Q1: 阅读 man ls ，然后使用ls 命令进行如下操作：</p>
 <ul>
@@ -120,13 +120,33 @@
 <p>Q2: 编写两个bash函数 marco 和 polo 执行下面的操作。每当你执行 marco 时，当前的工作目录应当以某种形式保存，当执行 polo 时，无论现在处在什么目录下，都应当 cd 回到当时执行 marco 的目录。为了方便debug，你可以把代码写在单独的文件 marco.sh 中，并通过 source marco.sh命令，（重新）加载函数。</p>
 <p>A:</p>
  
-      <!-- reward -->
+      reward
       
       <div id="reword-out">
         <div id="reward-btn">
           Donate
         </div>
       </div>
+      
+    </div> -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- 原有逻辑：显示摘要或内容 -->
+        
+          <h2 id="1-作业答案"><a href="#1-作业答案" class="headerlink" title="1. 作业答案"></a>1. 作业答案</h2><p>Q1: 阅读 man ls ，然后使用ls 命令进行如下操作：</p>
+<ul>
+<li>列出所有文件信息：-l</li>
+<li>所有文件（包括隐藏文件） ：-a</li>
+<li>文件打印以人类可以理解的格式输出 (例如，使用454M 而不是 454279954) : -h</li>
+<li>文件以最近访问顺序排序：-t</li>
+<li>以彩色文本显示输出结果：—color=auto</li>
+</ul>
+<p>典型输出如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-rw-r--r--   1 user group 1.1M Jan 14 09:53 baz</span><br><span class="line">drwxr-xr-x   5 user group  160 Jan 14 09:53 .</span><br><span class="line">-rw-r--r--   1 user group  514 Jan 14 06:42 bar</span><br><span class="line">-rw-r--r--   1 user group 106M Jan 13 12:12 foo</span><br><span class="line">drwx------+ 47 user group 1.5K Jan 12 18:08 ..</span><br></pre></td></tr></table></figure></p>
+<p>A:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -lhat --color=auto</span><br></pre></td></tr></table></figure></p>
+<p>Q2: 编写两个bash函数 marco 和 polo 执行下面的操作。每当你执行 marco 时，当前的工作目录应当以某种形式保存，当执行 polo 时，无论现在处在什么目录下，都应当 cd 回到当时执行 marco 的目录。为了方便debug，你可以把代码写在单独的文件 marco.sh 中，并通过 source marco.sh命令，（重新）加载函数。</p>
+<p>A:</p>
+
+        
       
     </div>
     
@@ -682,7 +702,8 @@
     }
 </style>
     
-    
+    <!--  -->
+
 
   </div>
 </body>

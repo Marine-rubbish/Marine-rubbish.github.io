@@ -105,7 +105,7 @@
 
 
   
-    <div class="article-entry" itemprop="articleBody">
+    <!-- <div class="article-entry" itemprop="articleBody">
        
   <h1 id="命名约定"><a href="#命名约定" class="headerlink" title="命名约定"></a>命名约定</h1><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>变量名应该记录它们的含义或用途。<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wage = hourlyRate * nHours</span><br></pre></td></tr></table></figure></p>
 <h4 id="从小写开始用混合大小写命名变量名"><a href="#从小写开始用混合大小写命名变量名" class="headerlink" title="从小写开始用混合大小写命名变量名"></a>从小写开始用混合大小写命名变量名</h4><p>以大写开头的名称通常是为类型或者结构体保留的。</p>
@@ -117,13 +117,30 @@
 <h4 id="具有大作用域的变量应该具有有意义的命名，作用域小的变量可以有简短的命名"><a href="#具有大作用域的变量应该具有有意义的命名，作用域小的变量可以有简短的命名" class="headerlink" title="具有大作用域的变量应该具有有意义的命名，作用域小的变量可以有简短的命名"></a>具有大作用域的变量应该具有有意义的命名，作用域小的变量可以有简短的命名</h4><p>在实践中，大多数变量都应该具有有意义的名字。</p>
 <p>在某些条件下，应保留使用简短的命名，以澄清陈述的结构或与预期的通用性相一致。</p>
  
-      <!-- reward -->
+      reward
       
       <div id="reword-out">
         <div id="reward-btn">
           Donate
         </div>
       </div>
+      
+    </div> -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- 原有逻辑：显示摘要或内容 -->
+        
+          <h1 id="命名约定"><a href="#命名约定" class="headerlink" title="命名约定"></a>命名约定</h1><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>变量名应该记录它们的含义或用途。<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wage = hourlyRate * nHours</span><br></pre></td></tr></table></figure></p>
+<h4 id="从小写开始用混合大小写命名变量名"><a href="#从小写开始用混合大小写命名变量名" class="headerlink" title="从小写开始用混合大小写命名变量名"></a>从小写开始用混合大小写命名变量名</h4><p>以大写开头的名称通常是为类型或者结构体保留的。</p>
+<p>很短的变量名可以是大写的，如果它们在常规用法中是大写的，并且不太可能成为复合变量名的一部分。</p>
+<p>例如在特定领域，杨氏模量的E，可能会被误导为e。</p>
+<p>有些程序员喜欢用下划线来分隔复合变量名的各个部分。</p>
+<p>这种方式虽然易于阅读，但在其他语言中并不常用来命名变量。</p>
+<p>在图形标题、标签和图例的变量名中使用下划线的另一个考虑因素是，MATLAB中的Tex解释器将把下划线转换为下标来读取，因此需要为每个文本字符串应用参数/值对进行设置，即‘Interpreter’,’none’。</p>
+<h4 id="具有大作用域的变量应该具有有意义的命名，作用域小的变量可以有简短的命名"><a href="#具有大作用域的变量应该具有有意义的命名，作用域小的变量可以有简短的命名" class="headerlink" title="具有大作用域的变量应该具有有意义的命名，作用域小的变量可以有简短的命名"></a>具有大作用域的变量应该具有有意义的命名，作用域小的变量可以有简短的命名</h4><p>在实践中，大多数变量都应该具有有意义的名字。</p>
+<p>在某些条件下，应保留使用简短的命名，以澄清陈述的结构或与预期的通用性相一致。</p>
+
+        
       
     </div>
     
@@ -679,7 +696,8 @@
     }
 </style>
     
-    
+    <!--  -->
+
 
   </div>
 </body>

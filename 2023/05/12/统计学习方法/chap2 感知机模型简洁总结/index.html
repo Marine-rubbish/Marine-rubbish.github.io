@@ -105,7 +105,7 @@
 
 
   
-    <div class="article-entry" itemprop="articleBody">
+    <!-- <div class="article-entry" itemprop="articleBody">
        
   <h2 id="1、感知机模型"><a href="#1、感知机模型" class="headerlink" title="1、感知机模型"></a>1、感知机模型</h2><p>输入空间：$\mathcal{X} \in \mathbb{R}^n$</p>
 <p>输出空间：$\mathcal{Y} = \{+1,-1\}$</p>
@@ -124,13 +124,37 @@
 <p>由第三节中提到的 $\vec{w}$ 和 $b$ 的更新方式，可以反推出 $\alpha$ 和 $b$ 的更新方式：</p>
 <p>$\alpha_i = \alpha_i + \eta$、$b = b + \eta y_i$</p>
  
-      <!-- reward -->
+      reward
       
       <div id="reword-out">
         <div id="reward-btn">
           Donate
         </div>
       </div>
+      
+    </div> -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- 原有逻辑：显示摘要或内容 -->
+        
+          <h2 id="1、感知机模型"><a href="#1、感知机模型" class="headerlink" title="1、感知机模型"></a>1、感知机模型</h2><p>输入空间：$\mathcal{X} \in \mathbb{R}^n$</p>
+<p>输出空间：$\mathcal{Y} = \{+1,-1\}$</p>
+<p>特征空间：$\{f|f(\vec{x}) = sign(\vec{w} \cdot \vec{x} + b)\}$<br>($sign$ 为符号函数)</p>
+<h2 id="2、学习策略"><a href="#2、学习策略" class="headerlink" title="2、学习策略"></a>2、学习策略</h2><p>$x_0$到超平面的距离：$\frac{1}{\Vert \vec{w} \Vert} \lvert \vec{w} \cdot \vec{x_0} + b \rvert$<br>($\Vert \vec{w} \Vert$ 是 $\vec{w}$ 的 $L_2$ 范数)</p>
+<p>由于误分类点实际类别$y_i$与预测类别$f(\vec{x_i}) = sign(\vec{w} \cdot \vec{x_i} + b)$正负相反</p>
+<p>因此误分类点到超平面的距离是：$-\frac{1}{\Vert \vec{w} \Vert} y_i (\vec{w} \cdot \vec{x_i} + b)$</p>
+<p>为了便于求导，损失函数可以定义为：$L(\vec{w},b) = -\sum\limits_{x_i \in M} y_i (\vec{w} \cdot \vec{x_i} + b)$</p>
+<h2 id="3、学习算法"><a href="#3、学习算法" class="headerlink" title="3、学习算法"></a>3、学习算法</h2><p>随机梯度下降：一次随机选取一个误分类点进行梯度下降</p>
+<p>损失函数$L$ 分别对 $\vec{w}$ 和 $b$ 求梯度得：<br>$\nabla_{\vec{w}} L(\vec{w},b) = -\sum\limits_{x_i \in M} y_i \vec{x_i}$、<br>$\nabla_{b} L(\vec{w},b) = -\sum\limits_{x_i \in M} y_i$</p>
+<p>参数更新方式：$\vec{w} = \vec{w} + \eta y_i x_i$、$b = b + \eta y_i$<br>($\eta \in (0,1]$ 为学习率)</p>
+<p>参数一直更新，直到样本点中没有误分类点为止。</p>
+<h2 id="4、对偶问题"><a href="#4、对偶问题" class="headerlink" title="4、对偶问题"></a>4、对偶问题</h2><p>由上文的学习算法可得，$\vec{w}$ 和 $b$ 是通过逐次随机选取一个误分类点更新而来</p>
+<p>因此可以设 $\vec{w}$ 的每个元素和 $b$ 都为0，参数总共更新 $n$ 次；</p>
+<p>最终学习到的 $\vec{w}$ 和 $b$ 可以表示为：<br>$\vec{w} = \sum\limits_{i=1}\limits^{N} \alpha_i y_i x_i$、<br>$b = \sum\limits_{i=1}\limits^{N} \alpha_i y_i$<br>($\alpha_i = n_i \eta$，其中 $n_i$ 为点i被选中用于更新的次数)</p>
+<p>由第三节中提到的 $\vec{w}$ 和 $b$ 的更新方式，可以反推出 $\alpha$ 和 $b$ 的更新方式：</p>
+<p>$\alpha_i = \alpha_i + \eta$、$b = b + \eta y_i$</p>
+
+        
       
     </div>
     
@@ -686,7 +710,8 @@
     }
 </style>
     
-    
+    <!--  -->
+
 
   </div>
 </body>
