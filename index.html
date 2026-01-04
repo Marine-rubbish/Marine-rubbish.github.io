@@ -201,38 +201,11 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h1 id="上海睿纵时机器人实习生-面试"><a href="#上海睿纵时机器人实习生-面试" class="headerlink" title="上海睿纵时机器人实习生 面试"></a>上海睿纵时机器人实习生 面试</h1><h2 id="公司介绍"><a href="#公司介绍" class="headerlink" title="公司介绍"></a>公司介绍</h2><p>一个初创公司，人数十分少，主要做机器人相关的业务。</p>
-<h2 id="面试问题"><a href="#面试问题" class="headerlink" title="面试问题"></a>面试问题</h2><ul>
-<li><ol>
-<li>Q：自我介绍</li>
-</ol>
-</li>
-<li><ol>
-<li>Q：介绍一下你做过的项目</li>
-</ol>
-</li>
-<li><ol>
-<li>Q：你这个模型的输入是什么，是纯图像输入还是激光雷达也有输入？</li>
-</ol>
-<ul>
-<li>A：既有图像输入也有激光雷达计算得到的</li>
-</ul>
-</li>
-<li><ol>
-<li>Q：你的模型效果怎么样？</li>
-</ol>
-<ul>
-<li>A：给面试官展示论文的真实性检验图</li>
-</ul>
-</li>
-<li><ol>
-<li></li>
-</ol>
-</li>
-</ul>
+<h2 id="面试问题"><a href="#面试问题" class="headerlink" title="面试问题"></a>面试问题</h2><p>面试没啥硬核的问题，主要就是问问简历情况。想看八股的可以直接叉掉了。</p>
 <details>
   <summary>1. Q: 自我介绍（点我展开）</summary>
 
-A: 
+A:
 
 </details>
 
@@ -243,6 +216,95 @@ A: 不认识
 
 </details>
 
+<details>
+  <summary>3. Q: 介绍你做过的项目？</summary>
+
+A: 对简历里的一篇论文（SAR + LiDAR，物理参数反演）、一个项目（某海域背景场全水深预报）进行介绍
+
+</details>
+
+<details>
+  <summary>4. Q: 你这个模型的输入是什么，是纯图像输入还是激光雷达也有输入？</summary>
+A: 既有图像像素值输入也有激光雷达计算得到的粗糙度，某个位置的粗糙度相当于图像上对应样本点的一个label
+</details>
+
+<details>
+  <summary>5. Q: 你的模型效果怎么样？</summary>
+A: 给面试官展示论文的真实性检验图
+</details>
+
+<details>
+  <summary>6. Q: 你的模型效果怎么样？</summary>
+A: 给面试官展示论文的真实性检验图
+</details>
+
+<details>
+  <summary>7. Q: 你的某海域背景场全水深预报这个项目是你导师指导你做的吗，还是你自己做的？</summary>
+A: 这个项目是导师给我做的，但他不怎么管我，都是我自己做的
+Q：你这个项目是语言用的是python吧？
+A：是的，主要用python
+</details>
+
+<details>
+  <summary>8. Q: 你这个项目的输入数据是什么？</summary>
+A: 主要是下载了20年的海洋学里一个叫HYCOM的数值模式数据，它有时间、深度、经纬度四个维度，通过20年的数据去训练一个 SimVPv2 模型。
+</details>
+
+<details>
+  <summary>9. Q: 你这个专业（海洋技术与工程）主要是什么方向？</summary>
+A: 浙大这个专业很杂，有做物理海洋的、机械的、控制的，我主要是做装备方向的。
+Q：你是地球科学学院的吗？
+A：我是海洋学院的。
+Q：那怪不得你不认识博士后，他是地科院的。
+</details>
+
+<details>
+  <summary>10. Q: 你cpp熟练吗（简历上有些会cpp）？</summary>
+A：cpp还可以，cpp11之前的都比较熟练
+Q：后面的一些特性就不怎么用了是吧
+A：是的
+</details>
+
+<details>
+  <summary>11. Q: 你了解transformer吗？</summary>
+A：transformer 我之前看过它的论文，但是没有实现过self-attention机制
+Q：简单介绍一下transformer模型架构
+A：八股
+</details>
+
+<details>
+  <summary>12. Q: 语义分割方面的模型你有了解吗？</summary>
+A：我之前有魔改过U-Net模型，主要是参照李晓峰的论文改的
+Q：介绍一下你是怎么魔改的
+A：我在U-Net的每一层增加了SE模块，这个SE模块具体干嘛过了太久有点忘了
+</details>
+
+<details>
+  <summary>13. Q: 目标检测这块的模型比如yolo这类你有了解吗？</summary>
+A：有看过yolo目标检测相关的论文，结果挺好的但是这块模型的原理没怎么了解
+</details>
+
+<details>
+  <summary>14. Q: 你目前有空来实习吗，你学校里没事了吗？</summary>
+A：我目前小论文已经录用了，学校里也没啥事，主要就是看导师愿不愿意放我出来实习，大论文我可以后面慢慢写，我工作量是做够了。
+</details>
+
+<h2 id="反问环节"><a href="#反问环节" class="headerlink" title="反问环节"></a>反问环节</h2><details>
+  <summary>15. Q: 你们公司这边的工作时间情况？需要加班吗？</summary>
+A：早上9点到9点半上班，晚上6点到6点半下班，周末双休，一般不加班，加班一般也都在7-8点就结束了。
+</details>
+
+<details>
+  <summary>16. Q: 公司业务？</summary>
+A：公司主要是做机器人业务的，辅助行人和自动驾驶方向。业务主要是有三块：一块是BEV感知，一块是语义分割（这个产品主要是出海），还有一块是目标识别。
+Q：这个出海的产品主要是做国外业务？
+A：是的，国内目前没有这种产品，但是国外有竞品，我可以把图发给你看看。
+Q：这个东西是一个实物啊？
+A：是的，是一个实物，重量大约5kg左右，用于给老人和残疾人提供避障服务。目前只有概念图，实物的话现在还没做。这块可能跟你的简历也不太相关了，因为这个东西纯视觉的一个东西，也没有激光雷达啥的。
+Q：我没有什么问题了
+</details>
+
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>直接offer了。</p>
  
       <!-- reward -->
       
