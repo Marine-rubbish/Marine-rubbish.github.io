@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2026-01-04T10:58:16.277Z</updated>
+  <updated>2026-01-09T09:59:01.244Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>惠每云科技一面凉经</title>
+    <link href="http://example.com/2026/01/09/%E6%83%A0%E6%AF%8F%E4%BA%91%E7%A7%91%E6%8A%80%E4%B8%80%E9%9D%A2%E5%87%89%E7%BB%8F/"/>
+    <id>http://example.com/2026/01/09/%E6%83%A0%E6%AF%8F%E4%BA%91%E7%A7%91%E6%8A%80%E4%B8%80%E9%9D%A2%E5%87%89%E7%BB%8F/</id>
+    <published>2026-01-09T09:42:36.000Z</published>
+    <updated>2026-01-09T09:59:01.244Z</updated>
+    
+    
+    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
+    
+    
+    
+    
+    <category term="面经" scheme="http://example.com/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>上海睿纵时面试</title>
@@ -44,10 +61,16 @@
     <link href="http://example.com/2025/12/29/%E4%B8%8A%E6%B5%B7%E6%9F%8F%E6%A5%9A%E7%AC%94%E8%AF%95%E9%A2%98/"/>
     <id>http://example.com/2025/12/29/%E4%B8%8A%E6%B5%B7%E6%9F%8F%E6%A5%9A%E7%AC%94%E8%AF%95%E9%A2%98/</id>
     <published>2025-12-28T16:21:23.000Z</published>
-    <updated>2026-01-03T12:50:42.588Z</updated>
+    <updated>2026-01-09T09:45:26.211Z</updated>
     
     
-    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;上海柏楚感知算法实习生-笔试题&quot;&gt;&lt;a href=&quot;#上海柏楚感知算法实习生-笔试题&quot; class=&quot;headerlink&quot; title=&quot;上海柏楚感知算法实习生 笔试题&quot;&gt;&lt;/a&gt;上海柏楚感知算法实习生</summary>
+        
+      
     
     
     
@@ -436,29 +459,6 @@
     
     
     <category term="数据说明" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Matlab Cody——CUP Challenge 题解</title>
-    <link href="http://example.com/2023/07/29/Matlab-Cody%E2%80%94%E2%80%94CUP-Challenge-%E9%A2%98%E8%A7%A3/"/>
-    <id>http://example.com/2023/07/29/Matlab-Cody%E2%80%94%E2%80%94CUP-Challenge-%E9%A2%98%E8%A7%A3/</id>
-    <published>2023-07-29T08:36:53.000Z</published>
-    <updated>2023-07-29T09:18:13.615Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-Problem-1974-Length-of-a-short-side&quot;&gt;&lt;a href=&quot;#1-Problem-1974-Length-of-a-short-side&quot; class=&quot;headerlink&quot; title=&quot;1. Problem 1974.</summary>
-        
-      
-    
-    
-    
-    
-    <category term="代码打卡" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%89%93%E5%8D%A1/"/>
     
   </entry>
   
