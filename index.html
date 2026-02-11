@@ -173,6 +173,101 @@
     
     
     <article
+  id="post-momenta一面凉经"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2026/02/11/momenta%E4%B8%80%E9%9D%A2%E5%87%89%E7%BB%8F/"
+    >momenta 一面面经</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2026/02/11/momenta%E4%B8%80%E9%9D%A2%E5%87%89%E7%BB%8F/" class="article-date">
+  <time datetime="2026-02-11T13:17:23.000Z" itemprop="datePublished">2026-02-11</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="momenta-一面面经"><a href="#momenta-一面面经" class="headerlink" title="momenta 一面面经"></a>momenta 一面面经</h1><p>面试总共一小时（不过一开始没说）。</p>
+<h2 id="1-业务方面（反问环节）"><a href="#1-业务方面（反问环节）" class="headerlink" title="1. 业务方面（反问环节）"></a>1. 业务方面（反问环节）</h2><p>因为个人简历里没有什么涉及自动驾驶方面的经历，所以面试官对这方面要求不太高。</p>
+<ol>
+<li><p>我：自动驾驶舒适性应该如何量化评测。<br>面试官：你觉得舒适性从感官上来说有哪些方面可以被量化？（面试官引导了几个方面：加速、转向、颠簸等）<br>我：针对每个方面，分别给出一些量化的指标（比如加速度的均值和方差，转向角度的均值和方差，颠簸程度可以用车辆的垂直加速度来衡量等）。最后总结一下，可以通过这些指标来综合评估自动驾驶系统的舒适性。</p>
+</li>
+<li><p>面试官：你有驾照吗？从开车的角度看，你觉得自动驾驶系统应该具备哪些功能除了安全性和舒适性？（这个问题感觉是想考察一下对自动驾驶系统的理解，或者说是想看看我对自动驾驶系统的功能需求分析能力）<br>我：没答出来。<br>面试官：自动驾驶系统除了安全性和舒适性之外，还应该具备通勤效率、智能性、以及对其他车的预判能力等。</p>
+</li>
+<li><p>面试官：我看你简历写的技术栈都是我们想要的，你要是进组可能需要承担一定的工程任务，入职以后可能要转golang做一些偏后端的东西，毕竟评测这块是一整个系统。（预感不妙）</p>
+</li>
+</ol>
+<h2 id="2-简历面（以下全是面试官问我答）"><a href="#2-简历面（以下全是面试官问我答）" class="headerlink" title="2. 简历面（以下全是面试官问我答）"></a>2. 简历面（以下全是面试官问我答）</h2><p>简历就一个软件测试的实习。</p>
+<ol>
+<li><p>Q：你有没有找到过一些比较难发现的bug？<br>A：阿巴阿巴（感觉回答的不太好，那段实习过了比较久了，对那个bug也不是很熟悉了，面试官也没有继续追问）</p>
+</li>
+<li><p>Q：我看你简历的实习经历中涉及具体业务的部分比较多？实习经历中有没有跟岗位比较相关的部分？<br>A：我在实习中有写过一些脚本进行自动化测试，虽然不是直接的自动驾驶系统开发，但也涉及到一些自动化和测试方面的技能。首先在技术选型方面，我调研了三种python框架 (pywinauto、pyautogui、selenium)，最终选择了pywinauto，因为它更适合桌面应用的自动化测试，并且不像pyautogui那样依赖于图像识别，可能会不准，他可以直接对控件（如按钮等）进行控制，模拟人点击的操作。然后selenium主要是用于web自动化的，所以也不合适。因为师傅当时没给多少时间给我做这个自动化测试脚本，所以只实现了最基本的自动测量、自动结束测量的功能。这个脚本可以帮助测试人员节省一些重复性的操作，提高测试效率，给冒烟测试等测试方式能打下技术基础吧。</p>
+</li>
+</ol>
+<h2 id="3-语法基础"><a href="#3-语法基础" class="headerlink" title="3. 语法基础"></a>3. 语法基础</h2><ol>
+<li><p>python的深拷贝和浅拷贝？<br>A：浅拷贝是只复制外面的对象，里面的元素不复制；深拷贝是复制外面和里面的对象，完全独立。<br>标准答案：浅拷贝是指创建一个新的对象，但其中的元素仍然是对原对象中元素的引用；深拷贝则是创建一个新的对象，并且递归地复制原对象中的所有元素，使得新对象与原对象完全独立。</p>
+</li>
+<li><p>Q：cpp 的 list和一个master（读音近似，问了两遍都是这个读音）的区别？（后面想了下应该是vector或者map吧）<br>A：只回答了 list 是通过链表实现的。xxx</p>
+</li>
+<li><p>Q：用过cpp智能指针吗？说说 shared_ptr 和 weak_ptr 的区别。<br>A：把 shared_ptr 的作用说成 unique_ptr 了，感觉回答的很烂，面试官也没有继续追问。<br>标准答案：shared_ptr 是一种智能指针，它使用引用计数来管理对象的生命周期。当最后一个 shared_ptr 被销毁时，所管理的对象也会被销毁。weak_ptr 是一种弱引用智能指针，它不拥有对象的所有权，不会增加引用计数。weak_ptr 主要用于解决 shared_ptr 之间的循环引用问题。当一个 shared_ptr 和一个 weak_ptr 互相引用时，weak_ptr 不会增加 shared_ptr 的引用计数，从而避免了循环引用导致的内存泄漏问题。</p>
+</li>
+<li><p>Q：python 的迭代器有了解吗？<br>A：迭代器可以用于遍历容器（如列表、元组、字典等）中的元素。平时没咋写，都是直接用的写好的迭代器<br>标准答案：迭代器是一个对象，它实现了迭代协议，即包含 <strong>iter</strong>() 方法和 <strong>next</strong>() 方法。迭代器可以用于遍历容器中的元素，每次调用 <strong>next</strong>() 方法会返回下一个元素，当没有更多元素时会抛出 StopIteration 异常。迭代器可以通过 iter() 函数从可迭代对象（如列表、元组、字典等）创建。</p>
+</li>
+<li><p>docker 镜像和容器的关系？<br>A：容器是镜像的一个实例，是一个运行中的环境，可以执行应用程序。容器跟镜像相当于是类和对象的关系。<br>Q：那实体和他们之间的关系呢？<br>A：阿巴阿巴，不会捏<br>Q：你对docker的镜像分层有没有了解？<br>A：只是简单讲了构建的时候可以重用之前的层，感觉回答的很烂，面试官也没有继续追问。</p>
+</li>
+<li><p>Q：你对深度学习有了解吗？<br>A：我之前在学校有复现过别人论文里的模型，主要是做了一个基于CNN的模型，但复现的效果不是很好，训练集loss降的比较低，验证集loss高，可能有点过拟合。阿巴阿巴，感觉回答的很烂，面试官也没有继续追问。</p>
+</li>
+</ol>
+<h2 id="4-lc算法题-只有半小时时间写"><a href="#4-lc算法题-只有半小时时间写" class="headerlink" title="4. lc算法题 (只有半小时时间写)"></a>4. lc算法题 (只有半小时时间写)</h2><p>两题都是 hot100 的题，但写的太慢了，只写完了第二题。</p>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/string-compression/">最小覆盖子串</a><br>看一眼没啥太多想法，感觉像枚举加哈希，先过了</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/jump-game/description">跳跃游戏</a></p>
+</li>
+</ol>
+<p>贪心思路是对的，但写了个傻逼 $O(n^2)$ 的版本，直接被面试官说会超时。。</p>
+<p>最骚的是有个 case 是错的，input是 <code>[4, 0, 0, 0, 4]</code>，输出是 <code>false</code>，但正确答案是 <code>true</code>。我问了面试官，面试官说这个case的结果确实是错的，我还想了好几遍，后面也有一些错的case。</p>
+<h2 id="5-最后的反问"><a href="#5-最后的反问" class="headerlink" title="5. 最后的反问"></a>5. 最后的反问</h2><ol>
+<li><p>Q：工作时间？<br>A：实习生10 - 8.5，一周只需要来三天以上就行。</p>
+</li>
+<li><p>Q：具体是用什么深度学习的模型做评估呢？深度学习的话一般主要是做什么任务呢？<br>A：感觉面试官是仿真部门的也不太懂基于ai的这块。只说复现开源大模型</p>
+</li>
+</ol>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-粤港澳大湾区数字经济实验室一面"
   class="article article-type-post"
   itemscope
@@ -879,55 +974,6 @@ Q：我没有什么问题了
     <div class="article-entry" itemprop="articleBody">
        
   <h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NJU-ICS/" rel="tag">NJU_ICS</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-NJU_ICS/Lesson1-C语言拾遗-机制"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/06/28/NJU_ICS/Lesson1-C%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97-%E6%9C%BA%E5%88%B6/"
-    >Lesson1 C语言拾遗:机制</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/06/28/NJU_ICS/Lesson1-C%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97-%E6%9C%BA%E5%88%B6/" class="article-date">
-  <time datetime="2024-06-28T14:27:25.000Z" itemprop="datePublished">2024-06-28</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="1-预编译"><a href="#1-预编译" class="headerlink" title="1. 预编译"></a>1. 预编译</h2><h2 id="2-编译"><a href="#2-编译" class="headerlink" title="2. 编译"></a>2. 编译</h2><h2 id="3-链接"><a href="#3-链接" class="headerlink" title="3. 链接"></a>3. 链接</h2> 
       <!-- reward -->
       
     </div>
