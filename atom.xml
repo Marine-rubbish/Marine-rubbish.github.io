@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2026-02-11T14:45:25.241Z</updated>
+  <updated>2026-02-28T08:18:21.702Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,21 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>字节豆包安卓客户端一面</title>
+    <link href="http://example.com/2026/02/28/%E5%AD%97%E8%8A%82%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%80%E9%9D%A2/"/>
+    <id>http://example.com/2026/02/28/%E5%AD%97%E8%8A%82%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%80%E9%9D%A2/</id>
+    <published>2026-02-28T07:49:29.000Z</published>
+    <updated>2026-02-28T08:18:21.702Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;面了80min，全程坐牢。1分钟自我介绍完直接写题。&lt;/p&gt;
+&lt;h1 id=&quot;1-算法题&quot;&gt;&lt;a href=&quot;#1-算法题&quot; class=&quot;headerlink&quot; title=&quot;1. 算法题&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    
+    <category term="面经" scheme="http://example.com/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>momenta 一面面经</title>
     <link href="http://example.com/2026/02/11/momenta%E4%B8%80%E9%9D%A2%E5%87%89%E7%BB%8F/"/>
     <id>http://example.com/2026/02/11/momenta%E4%B8%80%E9%9D%A2%E5%87%89%E7%BB%8F/</id>
     <published>2026-02-11T13:17:23.000Z</published>
-    <updated>2026-02-11T14:45:25.241Z</updated>
+    <updated>2026-02-28T07:54:18.837Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;momenta-一面面经&quot;&gt;&lt;a href=&quot;#momenta-一面面经&quot; class=&quot;headerlink&quot; title=&quot;momenta 一面面经&quot;&gt;&lt;/a&gt;momenta 一面面经&lt;/h1&gt;&lt;p&gt;面试总共一小时（不过一开始没说）。&lt;/p&gt;
-&lt;h2</summary>
-        
-      
+    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
     
     
     
@@ -69,10 +86,17 @@
     <link href="http://example.com/2026/01/13/%E6%83%A0%E6%AF%8F%E4%BA%91%E7%A7%91%E6%8A%80%E4%BA%8C%E9%9D%A2/"/>
     <id>http://example.com/2026/01/13/%E6%83%A0%E6%AF%8F%E4%BA%91%E7%A7%91%E6%8A%80%E4%BA%8C%E9%9D%A2/</id>
     <published>2026-01-13T07:00:48.000Z</published>
-    <updated>2026-02-06T06:45:12.822Z</updated>
+    <updated>2026-02-28T07:54:18.829Z</updated>
     
     
-    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;公司介绍&quot;&gt;&lt;a href=&quot;#公司介绍&quot; class=&quot;headerlink&quot; title=&quot;公司介绍&quot;&gt;&lt;/a&gt;公司介绍&lt;/h2&gt;&lt;p&gt;面试形式：电话面试&lt;/p&gt;
+&lt;h2 id=&quot;面试问题&quot;&gt;&lt;a href=&quot;#面试问题&quot;</summary>
+        
+      
     
     
     
@@ -86,10 +110,16 @@
     <link href="http://example.com/2026/01/09/%E6%83%A0%E6%AF%8F%E4%BA%91%E7%A7%91%E6%8A%80%E4%B8%80%E9%9D%A2%E5%87%89%E7%BB%8F/"/>
     <id>http://example.com/2026/01/09/%E6%83%A0%E6%AF%8F%E4%BA%91%E7%A7%91%E6%8A%80%E4%B8%80%E9%9D%A2%E5%87%89%E7%BB%8F/</id>
     <published>2026-01-09T09:42:36.000Z</published>
-    <updated>2026-01-13T07:02:47.509Z</updated>
+    <updated>2026-02-28T08:17:52.226Z</updated>
     
     
-    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;惠每云科技-语音算法实习生-一面凉经&quot;&gt;&lt;a href=&quot;#惠每云科技-语音算法实习生-一面凉经&quot; class=&quot;headerlink&quot; title=&quot;惠每云科技 语音算法实习生 一面凉经&quot;&gt;&lt;/a&gt;惠每云科技 语音算法实习生</summary>
+        
+      
     
     
     
@@ -442,29 +472,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>The Missing Semester-Chap1</title>
-    <link href="http://example.com/2023/12/12/The%20Missing%20Semester/Chap1/"/>
-    <id>http://example.com/2023/12/12/The%20Missing%20Semester/Chap1/</id>
-    <published>2023-12-12T00:20:37.000Z</published>
-    <updated>2023-12-12T06:24:06.505Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-shell命令的实质&quot;&gt;&lt;a href=&quot;#1-shell命令的实质&quot; class=&quot;headerlink&quot; title=&quot;1. shell命令的实质&quot;&gt;&lt;/a&gt;1. shell命令的实质&lt;/h2&gt;&lt;p&gt;当你在 shell 中执行命令时，本质是在执行一段</summary>
-        
-      
-    
-    
-    
-    
-    <category term="The Missing Semester" scheme="http://example.com/tags/The-Missing-Semester/"/>
     
   </entry>
   
