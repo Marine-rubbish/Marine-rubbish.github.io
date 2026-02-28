@@ -2214,46 +2214,18 @@ $(document).ready(function () {
   <entry>
     <title>字节豆包安卓客户端一面</title>
     <url>/2026/02/28/%E5%AD%97%E8%8A%82%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%80%E9%9D%A2/</url>
-    <content><![CDATA[<p>面了80min，全程坐牢。1分钟自我介绍完直接写题。</p>
-<h1 id="1-算法题"><a href="#1-算法题" class="headerlink" title="1. 算法题"></a>1. 算法题</h1><p>一道mid，一道hard，都需要实现main函数。<br>mid直接写了，matrix用的可变数组，懒得改了。hard想了半天，本来想枚举两个端点的，后面想到了枚举拐点的方式，但没有考虑到节点的权重可能是负数，经过面试官两次提示后修正</p>
-<p><a href="https://leetcode.cn/problems/rotate-image/description/?envType=study-plan-v2&amp;envId=top-100-liked">旋转图像</a><br><a href="https://leetcode.cn/problems/binary-tree-maximum-path-sum/?envType=study-plan-v2&amp;envId=top-100-liked">二叉树最大路径和</a></p>
-<h1 id="2-八股文"><a href="#2-八股文" class="headerlink" title="2. 八股文"></a>2. 八股文</h1><p>先问我是不是计算机专业的，问我计算机课程怎么学的，我说除了linux操作系统以外都是自学的。</p>
-<h2 id="2-1-数据结构"><a href="#2-1-数据结构" class="headerlink" title="2.1 数据结构"></a>2.1 数据结构</h2><ol>
-<li>数组和链表有什么区别？</li>
-<li>队列的功能？队列存在什么缺点？队列阻塞怎么解决？</li>
-<li>哈希表如何实现快速查询？</li>
-<li>dp 主要解决什么问题？</li>
-<li>链表如何判环？</li>
-</ol>
-<h2 id="2-2-计算机网络"><a href="#2-2-计算机网络" class="headerlink" title="2.2 计算机网络"></a>2.2 计算机网络</h2><ol>
-<li>TCP和UDP的区别？</li>
-<li>GET和POST的区别？</li>
-<li>IPv4和IPv6的区别？为什么要发明IPv6？</li>
-<li>TCP三次握手？为什么要三次握手？</li>
-</ol>
-<h2 id="2-3-操作系统"><a href="#2-3-操作系统" class="headerlink" title="2.3 操作系统"></a>2.3 操作系统</h2><ol>
-<li>多线程同步会有什么问题？如何避免？</li>
-<li>你遇到过内存泄露的问题吗？内存泄露一般是泄露的什么地方的内存？</li>
-<li>栈上会爆内存吗？什么情况会爆内存？</li>
-</ol>
-<h2 id="2-4-项目相关"><a href="#2-4-项目相关" class="headerlink" title="2.4 项目相关"></a>2.4 项目相关</h2><ol>
-<li>Q：你做过的一个比较有难度的项目介绍一下？<br>A：我主要是做算法的，跟开发相关的项目只有一个 自动签到程序的开发、。</li>
-<li>你这个项目主要实现了什么功能？</li>
-<li>技术细节介绍？如何构造的http请求？</li>
-</ol>
-<h2 id="2-5-AI-相关"><a href="#2-5-AI-相关" class="headerlink" title="2.5 AI 相关"></a>2.5 AI 相关</h2><ol>
-<li>你了解过什么AI 应用相关的技术？简单介绍agent？你平时开发的时候有享受过agent带来的好处吗？</li>
-<li>你了解什么大模型相关的技术吗？</li>
-</ol>
-<h2 id="2-5-反问环节"><a href="#2-5-反问环节" class="headerlink" title="2.5 反问环节"></a>2.5 反问环节</h2><p>感觉面试官有点不耐烦了。</p>
-<ol>
-<li>你能来北京吗？最长能实习多久？一周几天</li>
-<li>工作时长 10 - 9.5~10点，一周5-6天</li>
-<li>实习生也跟正式员工一样会加班</li>
-<li>进组后可能也不用转java，现在组里 kotlin 和 cpp 都有，也有写一些js，反正都是vibe coding了。</li>
-<li>组里主要还是做应用程序开发</li>
-</ol>
-]]></content>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="be97d092b86d5e914076ac36d94ee1caca4ee77ea9362c6523fcd72937a4f87b">dc8235dd3dee8acc69e0c0529ffe9a6ea7dc083657a4d4fc5c0f906da7e343c0156bebba00cd9864e0b4244832dbab8773897433ba5cbc16f499564b0adbe69caa01cf897eecdf94a626e8ec42ce40aa8ae57ebcd8a770b04ed5ca68444f5b3a6ee1e90ec3faae9f1c7154c12830eace073521194583f4a0e8b1fb55712962c2f98ffc83c36e3bd2cca31d404ee6f12cb580e174c304adff165f4fa2567c058a526fc0932d8ac5d2d1ab628397311c2d9a7fa3527eb2590fc2d89deaac198179ebd15f0a1e617e383ddb12e1cf95d2b2647ba3e7b656003c108b7cc44d9e534aae800a0d74d600ed88ee86efb726c5f8acef24bcf30e2d52c46bd29e82c7bdcdeabbd7b34529657a72e31133769a624c0295a301ab2cf736d410b6d46483219ad6b04941e7fb7e51363aa656a6698e1a3f12639706dbc54367e3297a168f162e71c0d8d74aa811692d1350f5c6c883d4f26f6afd47f400b0bb199d6bb5bb5737e8d929af3424e9ffe3dbe382c35fc2fbfa722e805c71a493fddfea1c60f4746602c846d02409f8c6e098666204d038d5dc91a0db67210e4017849f4d8ee6ee27ac7c1346e0e19907f10247e15ed4734930748d50dc9630fc7141ecbb150c2f63b7b7f80320e69799cb9bc12777be750fb11dd499b6b187219f03fc66c22b71cb56467a0ce64a29fa41d6142b0a0712da2489fc0d89b293c264394f9b4719da23fb7b87bf06544b8d69d02372cdee8cc6596936150f90ee42441aff82c30922a1fa400f7985c47d295617a6d60c0126635adc512a876f992909d2e7bcb8c62702a7c744e1b0138af5608f46119a703ce949744e4369bdc7408bbdb031c680e07cb1b136229c630ca3c28049de960e37c0cf47eeb5928ab91d52567122743dba0a2f57e6dd4fb9a83b85359f0a0059962d4ab053a8b9f75071ee98750f4c7965b825f80c34606839c7d31df5f4871d21172f1dd9e409dca78e120eb5c0ee1e306d1f3b01320f350c6fa2039e834759119fa638a3fcc854e78994770803fd42a5ede55489221f1afd0c06bc9c8dbfe274acd42084f1d0fe6422502d2941cbd634ea5f1e44c0a44e47af150c8a1678c12f2370f3336edbe9d3cb4ec3234e3b1ba9a35f59bfc444909db0346105eb96d4047dba4d6fb0c876d69deadf125c23411b3c113b0f8caa625bcc1a8cb67f701e4eb703cd9eb30d55393f37ba11dc9761b298d3e1bc7efb45a250a3865a6a77cf5ec833aa42f5c9f12ef786dc271230257675630f95553c032ee9c9a7f04f1a757cf84dad25aca8c86d7e4d4378c476c4191c5500d0df6395fa56e2b3b4d02a80f5dab3380ed215e654001287d044ed1a7a744f9628633584d24c2078d555ca6492e44ec4d2ccabc30733658d2b508f9b67b4ec7796f685385576c2ecd7b11bc78eff7449d203f8e6ed800b7d0bad82f7752046b9e09a65c4d79398af2ec6961c7be3d369897179a8860454d072bfcc535b40d912d4a45c0511882aa4d152c812eb6127e31cac62a76735b84fdd405d25a51132cabed72c38bf1edc2c93a49a5a4990fff1ea21a9f0f40955325e195f05d5c4a142facc274a1a73f2552d2ece96460ade4834780caf2c24addb5d7151f7c75981c914ba79ca30f54320e0d0cf67a8fc35b3107127a743ff5c561fa9a76797fce56302dd93ca4eac155bfbcc6d507022fb349aff1e5f9fc5ead51b5de2d440ce0ab99c4cd2f5c002839b74655d81eab2fbdfda8f33ba3f4eb3082d8d3bd26f4ca3a1aa30127b04fccb03952bc322610a095262512697b36b3c520d835ad07de85a5e88f0ae19c7f145e48985580890ac5fda60d6a314461de34eed8a9338e2c12fd50ac6f9471d9275e31ff76150101010c0721a0b5ba2f6db6ae5c82d089adbe812d514d5175eeb54a929e1aba7439164f262488fa898c10eabfbdab793737617e01763b4cdd58041f5862b1355e98fc7827586a13cf874bc9127b4ddcf32d9801f504bc203e1a3b65b9ae9a957191d974746ccc53a20137573cc66ab090ad34e954979b200e171781d5d5b2e7075a93d1aca761348f8fca484f236156b890c5fb60d34b6d92c63b034b5c07efdd538f5453412a05b00d70578f397a1202b4c8eed4dbd937a1e9a16faa068e599c2a19108f98f858afe537c92dc1c1c4f62f5efda20d202869bd2c0546389806813acc416999f8c186e0696bee89709a554f9a45d44535efcf069e5c67129cc87278766aa478b5bbb49c22b05c85e072fe6ef8f68dd4cc7fde851ee62288eda0220dabd7f88641b75a507a5469feeedc8f289976f21788ef0b41d0bc7fafa86e47d9fed92aa4d561788258637f50dd275316e48d4669ab326af0918d55aa9d49a6648399ad19077fc5bb906663e8f08dc787d813047c94bafd3711be9890c5b6137a74d73cc101b580ee15cb2b4c3a1d14916aa98d693062dca5abd2228472ec0a8b7a0bd4988c4c764cd593f0d6d4b4b9fd49a3841699b367e4443134a3886e4adc32b46e38bbde66bf267d115a2eaaadfb33552ca5892ebbebe0bca75fb0b7cf0531b80d0a4f0abd8d1b73e7e87cc1e3be595f953bd85308a27db141dac18109723a16f02d6e11b8b2a29f7b312a29e1af5792ec7e45124521d7c7307427ae4c0c1a95279a2aa0011dd2508d5d6dab94abb329ccaf03cf4b16211c8ba11f436f40c40dce48bfe29796f2e3b14ece0072b151225a3efffcffc8e90acccd2c6503a0e3f5550135a5147aebfc566556c79c102c37c7ca15366962c7628449e8e2a8568543148f3a095fc121088be5a6c023cc8a076893c0def18688a6c8df98060030427fe2dd63c4a28b52402548094616116989d940d16fa8d7ecbfde910009a3dc28f13fcd8ff5c243d15c207903d3b80bb143f0752ae6fa807a2aa690a95469a4ba6fa62cb502ebcdce1deafef8f66a8d4f1c1b5c5750dcd22bd8160eb263d81f49eed603fd99d79e48d09d310e69636b2d973d3e5655eb387366c542a261d2ba7951e467d3e3280f839057151dd4e40d335be47f13812073fe94dbcf81acc9da1dc64e76e630c3b0470a60d6519c9f894080fb75852498654c82b317f1465b7777989c85fb76b774818679c5bb2f1a8791238025b32212bb823906bb2cce315f982a75e9773a957f35162d8a6aed336c77c01f53d58c38c4f5c3381fe17f1bed13dc620e2eea12cfeb2ada764788c05d01fce5e36709de20c482691ec537b159cf1ee61848f54453254c6c8db41acaa8026b07eadf60177e673de7d1e957b598b0f04080e14679d7fee4481906c3d790911d70c3562f47334b365ab1b12e468c92a7efc2ca199b396c728220d4f2add8f756b851ce43af7fed2a20c1f18691f7d41c0a170e417b4f69259c7dbfebfe073e102356f56702deeac2972106a56ab114a0cd5bd3ebeeb1a176ae329d4d1ec883b5774d8b187ecf1c0462c07595ca38483a4ac9d632eb47f26141a1753a027f811c44dc19dd03f15ead9eb1c5885660ab8bb0ba1f22baf1a227767ba04126f5d872d98e5a77c94ffe8706504f0532c73fbc23d9dd2b9ef081c75dcb190624f7e64385abd13e5531db3912642457fd39d4853ed1a937e7455733fb97c9e4dfb1e57d78df635936f038e3f76707cdc5bdfa7ee7aa1d8ed99e2f10d2c2eb7bc0826c7c0376acbb5fafdab62ca85d0847def8da9e20602cc3cccafab8655222b97f816829fc1e52849af6e3cce181a71ea47939d1c33a492de753051b3e31152ddac6f0c93712d74b0029de40aead8920209102d7fe631618ca591894abc78e5d51798b8b3f4b14d1c939ff7787875cc74e01f9e24d4e4073b712ad743bcd6617a0cd23bdaf711ebd7aa885394e2baa1d0856491c5d21a50192ca386aad65a68cca56c53c7344c1ffe3cb958886381337bef9702459d35959e45916c5114cdc7abd34b1868c301bf4f309073c82f1baeaa3f91563f9ec5997852caf390837ce3671de6fca4e62e62720e269198a51392a69fa24a9f38eb2552b97e52d6e0de6adc46a71fc33871dd2616be986e417428aedfa28e4feeb91af7041b602cbcc512ddfcc2b8ccfe2905084115ebb958b8569e4db50922eeeef2879523fe20ea618e2ed3634495eede4266ebb1168f5cefa5a9726cf1895c504c8b88d93f21e1de3b099512e10e85fe4be83e0939c2170e836d56f2a20bdc9ec528c23ab5ae377a6722a188c6e5fa4a07d6dfedab25369b1ee5aac48561a9227d9476569513c126b2f0166cf04ea66787781b76682b9915a41da58ffc21780256350701ad15b8efdd6beab345ac9375ad9ba179a6f9be6365cedd0c386eb0f3c04679b5dc5662678d4840ca4621b672e225d2ec1e2984d95b394f4c0c64da8007c6e8f2264dec6b3cfbbeaa747192fee6034d24b2f30c030f0d4913b72edfdff76145ff3a37e734d3be7ecc512a76d57125ccfea6d18d1bd60fc2ece1bfdeebd5a03648bd8cc5258db6072c7c6f2d6c537a102b4cc72dc0b8081fc7c011b1c8501f5de2f993f899d37d295b83543cdb53935ced035db4a0df55d86edb4c1b5f64e07615ab8373d4c2145ea6944bb7b0255ca4b6ac0cb1b1bbf4e9fa5f143d2d9b812ba4f136b42fc66a9acb770348d7169bce19bdcc3842e82dcb37538f6e9c3e76e92ff467ce5d9ab7be333d64e12864d4a4d9ed95e3388ca3d31963a4945685de3cf7c8c5d58e12a7869a7d0dd36f5d2b6bcae5e4939a02fd3a00ffdd767f0590ad1a8e4c5a9a82664b6562454891439016e2406d996d208fc34a8eba9bd867c296a80729cf8a5423d2121190e02521876d5889488b9d7ddf9ea684187cb503bac83323337d7edea6b6</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码解锁</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <tags>
         <tag>面经</tag>
       </tags>
