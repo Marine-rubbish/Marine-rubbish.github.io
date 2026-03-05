@@ -226,6 +226,59 @@
 
     
     <article
+  id="post-字节客户端三面"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2026/03/02/%E5%AD%97%E8%8A%82%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%89%E9%9D%A2/"
+    >字节豆包安卓客户端二面</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2026/03/02/%E5%AD%97%E8%8A%82%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%89%E9%9D%A2/" class="article-date">
+  <time datetime="2026-03-02T10:14:29.000Z" itemprop="datePublished">2026-03-02</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  Here's something encrypted, password is required to continue reading. 
+      <a class="article-more-link" href="/2026/03/02/%E5%AD%97%E8%8A%82%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%89%E9%9D%A2/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-字节客户端一面"
   class="article article-type-post"
   itemscope
@@ -1006,113 +1059,6 @@ Q：我没有什么问题了
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-深度学习/免费服务器的选择"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2025/11/26/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E5%85%8D%E8%B4%B9%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E6%8B%A9/"
-    >免费服务器的选择</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2025/11/26/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E5%85%8D%E8%B4%B9%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E6%8B%A9/" class="article-date">
-  <time datetime="2025-11-26T15:00:00.000Z" itemprop="datePublished">2025-11-26</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>深度学习模型的训练和部署通常需要强大的计算资源，尤其是GPU加速。对于个人用户或小型项目来说，购买高性能服务器可能成本较高，因此选择免费的服务器资源成为一个不错的选择。以下是我用过的一些免费服务器选项：</p>
-<h1 id="1-启智协作平台"><a href="#1-启智协作平台" class="headerlink" title="1. 启智协作平台"></a>1. 启智协作平台</h1><p><a target="_blank" rel="noopener" href="https://openi.pcl.ac.cn/">启智协作平台</a> 是一个提供免费GPU、NPU等计算资源的平台。平台支持多种深度学习框架，如TensorFlow和PyTorch。注册后，用户可以获得50个积分的免费额度，用于租用如GPU、NPU等计算资源。</p>
-<h2 id="1-1-创建任务"><a href="#1-1-创建任务" class="headerlink" title="1.1 创建任务"></a>1.1 创建任务</h2><p>首先先需要创建数据集和项目，然后才能创建云脑任务。创建数据集和项目流程略。</p>
-<p><img src="/image/创建数据集.jpg" alt="创建数据集示例"></p>
-<p>任务主要分为四种类型：</p>
-<ul>
-<li>调试任务（最多运行4小时）</li>
-<li>训练任务（适合长期训练，但不会返回运行时出现的错误）</li>
-<li>推理任务</li>
-<li>通用任务（需要审批）</li>
-</ul>
-<p>下面以训练任务为例介绍如何创建任务：</p>
-<p><img src="/image/训练任务模板.jpg" alt="训练任务"></p>
-<p>基本信息这边根据个人情况选择即可，建议选择NPU，不仅显存、内存、CPU核数比传统GPU高，并且消耗积分也更少。</p>
-<p>镜像的话可以选择一个别人用的镜像（最好带cann），也可以把自己调试任务的环境保存成镜像。启动文件的话选择自己训练主程序入口（<strong>路径不要带点</strong>，如./examples/myexp_NPU.py，否则运行出错）。</p>
-<h2 id="1-2-tricks"><a href="#1-2-tricks" class="headerlink" title="1.2 tricks"></a>1.2 tricks</h2><ul>
-<li>每天可以通过创建数据集、创建项目仓库等方式获取积分。</li>
-<li>还可以通过每日运行一次任务获得10个积分。</li>
-<li>任务终止后只有 <strong>work</strong> 路径下的文件会被保存，其他路径下的文件还有已经配好的环境都会丢失，建议把结果保存到 <strong>work</strong> 路径下，并且在主程序里添加pip下载依赖的代码。</li>
-</ul>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.system(<span class="string">&#x27;pip install numpy hickle lightning torch==2.1.0 torchvision xarray fvcore lpips pandas scikit-image timm tqdm einops PyWavelets&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>如果检测不到 NPU，可以在终端输入以下命令：</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /usr/local/Ascend/ascend-toolkit/set_env.sh</span><br></pre></td></tr></table></figure>
-<ul>
-<li>GPU 训练的代码可以通过torch_npu框架的代码转换直接在 NPU 上运行，代码转换代码：</li>
-</ul>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">import</span> torch_npu</span><br><span class="line">    <span class="keyword">from</span> torch_npu.contrib <span class="keyword">import</span> transfer_to_npu</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 1. 修复 get_device_capability 返回 None 的问题</span></span><br><span class="line">    <span class="comment"># NPU 不支持这个概念，我们伪造一个返回值 (比如 8.0，代表 Ampere 架构，骗过 Lightning)</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">hasattr</span>(torch.cuda, <span class="string">&#x27;get_device_capability&#x27;</span>):</span><br><span class="line">        torch.cuda.get_device_capability = <span class="keyword">lambda</span> device=<span class="literal">None</span>: (<span class="number">8</span>, <span class="number">0</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># 如果已经存在但返回 None (transfer_to_npu 的副作用)，则覆盖它</span></span><br><span class="line">        original_get_cap = torch.cuda.get_device_capability</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">patched_get_cap</span>(<span class="params">device=<span class="literal">None</span></span>):</span><br><span class="line">            cap = original_get_cap(device)</span><br><span class="line">            <span class="keyword">if</span> cap <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">                <span class="keyword">return</span> (<span class="number">8</span>, <span class="number">0</span>) <span class="comment"># 伪造一个支持 TF32 的架构</span></span><br><span class="line">            <span class="keyword">return</span> cap</span><br><span class="line">        torch.cuda.get_device_capability = patched_get_cap</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Info: 成功启用 NPU 自动迁移 (transfer_to_npu)。&quot;</span>)</span><br><span class="line">    <span class="comment"># 2. 禁用 Lightning 的 TF32 精度检查 (NPU 不需要这个)</span></span><br><span class="line">    torch.set_float32_matmul_precision(<span class="string">&#x27;medium&#x27;</span>) </span><br><span class="line"><span class="keyword">except</span> ImportError:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Info: 未检测到 torch_npu，将使用标准 CPU/GPU 模式。&quot;</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="2-Kaggle"><a href="#2-Kaggle" class="headerlink" title="2. Kaggle"></a>2. Kaggle</h2><p><a target="_blank" rel="noopener" href="https://www.kaggle.com/">Kaggle</a> 是一个数据科学竞赛平台，提供免费的GPU资源（NVIDIA Tesla P100）。用户可以创建Notebook并使用这些资源进行深度学习模型的训练和测试。Kaggle 每周提供30小时的GPU使用时间，适合中小型项目，且使用方便。</p>
-<h2 id="2-1-创建Notebook"><a href="#2-1-创建Notebook" class="headerlink" title="2.1 创建Notebook"></a>2.1 创建Notebook</h2><p>在Kaggle主页，点击右上角的“New Notebook”按钮，选择“Notebook”选项。然后在Notebook界面，点击右侧的“Settings”图标，选择“Accelerator”为GPU。注意需要手机验证后才能使用GPU资源。</p>
-<h2 id="2-2-tricks"><a href="#2-2-tricks" class="headerlink" title="2.2 tricks"></a>2.2 tricks</h2><ul>
-<li>Kaggle的GPU资源是按周计算的，每周六重置30小时的使用时间。</li>
-<li>需要预先把数据上传到 <code>input</code> 里面，模型默认保存在 <code>output</code> 路径下</li>
-<li>如果在本地已经写好了训练代码，可以先上传到input，通过以下代码拷贝到工作区</li>
-</ul>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"></span><br><span class="line">src_dir = <span class="string">&#x27;/kaggle/input/openstl-hycom-code&#x27;</span></span><br><span class="line">dst_dir = <span class="string">&#x27;/kaggle/working/openstl-hycom-code&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果目标文件夹已存在，需先删除或用 dirs_exist_ok=True（Python 3.8+）</span></span><br><span class="line">shutil.copytree(src_dir, dst_dir, dirs_exist_ok=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>通过下面这个魔术命令可以修改在 kaggle路径下的代码内容：</li>
-</ul>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">%%writefile /kaggle/working/path/to/yourcode/myexp.py</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="comment"># ..new code..</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>Notebook中代码在docker容器中运行，每次运行前都需要配置环境，配置环境代码如下所示：</li>
-</ul>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在训练代码入口添加</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.system(<span class="string">&#x27;pip install numpy&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Notebook运行结束后，可以从 <code>output</code> 路径下下载所需模型文件</li>
-<li>默认工作路径 <code>/kaggle/working</code> 限制大小为20G，可以考虑把模型工作路径迁移到 <code>/kaggle/tmp</code> 文件夹下：</li>
-</ul>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># notebook的魔术命令</span></span><br><span class="line">!mkdir /kaggle/tmp</span><br><span class="line">%cd /kaggle/tmp</span><br></pre></td></tr></table></figure>
-<ul>
-<li>可以把模型和训练日志等上传到模型托管平台（如huggingface（可免费存100G）），上传代码如下所示：</li>
-</ul>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">HuggingFaceSyncCallback</span>(<span class="title class_ inherited__">Callback</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, repo_id, token, src_dir, log_dir</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line">        <span class="variable language_">self</span>.repo_id = repo_id</span><br><span class="line">        <span class="variable language_">self</span>.token = token</span><br><span class="line">        <span class="variable language_">self</span>.src_dir = src_dir</span><br><span class="line">        <span class="variable language_">self</span>.log_dir = log_dir</span><br><span class="line">        <span class="variable language_">self</span>.api = HfApi(token=token)</span><br><span class="line">        <span class="variable language_">self</span>.current_epoch = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">on_train_epoch_end</span>(<span class="params">self, trainer, pl_module</span>):</span><br><span class="line">        <span class="variable language_">self</span>.current_epoch = trainer.current_epoch</span><br><span class="line">        <span class="variable language_">self</span>._upload()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_upload</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="comment"># 上传整个 checkpoints 文件夹</span></span><br><span class="line">            <span class="variable language_">self</span>.api.upload_large_folder(</span><br><span class="line">                folder_path=<span class="variable language_">self</span>.src_dir,</span><br><span class="line">                repo_id=<span class="variable language_">self</span>.repo_id,</span><br><span class="line">                repo_type=<span class="string">&quot;model&quot;</span>,</span><br><span class="line">                <span class="comment"># path_in_repo=&quot;checkpoints&quot;, # 在仓库中的路径</span></span><br><span class="line">                <span class="comment"># commit_message=f&quot;Upload checkpoints epoch &#123;self.current_epoch&#125;&quot;,</span></span><br><span class="line">                num_workers=<span class="number">4</span>,  <span class="comment"># 并发上传数</span></span><br><span class="line">                print_report=<span class="literal">True</span>,</span><br><span class="line">                print_report_every=<span class="number">60</span>,  <span class="comment"># 每60秒打印进度</span></span><br><span class="line">            )</span><br><span class="line">            </span><br><span class="line">            <span class="variable language_">self</span>.api.upload_folder(</span><br><span class="line">                folder_path=<span class="variable language_">self</span>.log_dir,</span><br><span class="line">                repo_id=<span class="variable language_">self</span>.repo_id,</span><br><span class="line">                repo_type=<span class="string">&quot;model&quot;</span>,</span><br><span class="line">                path_in_repo=<span class="string">&quot;lightning_logs&quot;</span>, <span class="comment"># 在仓库中的路径</span></span><br><span class="line">                commit_message=<span class="string">f&quot;Upload logs epoch <span class="subst">&#123;self.current_epoch&#125;</span>&quot;</span></span><br><span class="line">            )</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;Successfully uploaded checkpoints to HuggingFace Hub&quot;</span>)</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;Upload failed: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>可以从huggingface下载最新的checkpoint再次训练，代码如下：</li>
-</ul>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> huggingface_hub <span class="keyword">import</span> hf_hub_download</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载 last.ckpt 到本地</span></span><br><span class="line">model_path = hf_hub_download(</span><br><span class="line">    repo_id=<span class="string">&quot;marinerubbish/openstl-hycom-model&quot;</span>,</span><br><span class="line">    filename=<span class="string">&quot;./last.ckpt&quot;</span>,</span><br><span class="line">    local_dir=<span class="string">&quot;.&quot;</span>  <span class="comment"># 下载到哪个文件夹</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag">深度学习</a></li></ul>
 
     </footer>
   </div>
