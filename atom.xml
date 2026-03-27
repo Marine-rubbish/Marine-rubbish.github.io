@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2026-03-05T09:04:46.807Z</updated>
+  <updated>2026-03-27T16:40:59.641Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>（负慎）大厂landing一周感受</title>
+    <link href="http://example.com/2026/03/28/%E5%A4%A7%E5%8E%82landing%E4%B8%80%E5%91%A8%E6%84%9F%E5%8F%97/"/>
+    <id>http://example.com/2026/03/28/%E5%A4%A7%E5%8E%82landing%E4%B8%80%E5%91%A8%E6%84%9F%E5%8F%97/</id>
+    <published>2026-03-27T16:10:40.000Z</published>
+    <updated>2026-03-27T16:40:59.641Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;lz 作为 开发岗实习生 刚 landing 北京某大厂一周，目前工作强度早10:30 -</summary>
+        
+      
+    
+    
+    
+    
+    <category term="杂谈" scheme="http://example.com/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
   
   <entry>
     <title>字节豆包安卓客户端三面</title>
@@ -432,29 +455,6 @@
     
     
     <category term="MySQL学习" scheme="http://example.com/tags/MySQL%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Chap2</title>
-    <link href="http://example.com/2024/03/24/The%20Missing%20Semester/Chap2/"/>
-    <id>http://example.com/2024/03/24/The%20Missing%20Semester/Chap2/</id>
-    <published>2024-03-24T12:35:20.000Z</published>
-    <updated>2024-03-24T12:44:56.158Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-作业答案&quot;&gt;&lt;a href=&quot;#1-作业答案&quot; class=&quot;headerlink&quot; title=&quot;1. 作业答案&quot;&gt;&lt;/a&gt;1. 作业答案&lt;/h2&gt;&lt;p&gt;Q1: 阅读 man ls ，然后使用ls</summary>
-        
-      
-    
-    
-    
-    
-    <category term="The Missing Semester" scheme="http://example.com/tags/The-Missing-Semester/"/>
     
   </entry>
   

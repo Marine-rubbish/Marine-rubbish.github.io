@@ -173,6 +173,71 @@
     
     
     <article
+  id="post-通过自定义域名中转api"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2025/12/09/%E9%80%9A%E8%BF%87%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E4%B8%AD%E8%BD%ACapi/"
+    >通过自定义域名中转api</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2025/12/09/%E9%80%9A%E8%BF%87%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E4%B8%AD%E8%BD%ACapi/" class="article-date">
+  <time datetime="2025-12-09T06:17:40.000Z" itemprop="datePublished">2025-12-09</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="1-域名准备"><a href="#1-域名准备" class="headerlink" title="1. 域名准备"></a>1. 域名准备</h1><p>通过 <a target="_blank" rel="noopener" href="https://dash.domain.digitalplat.org/">https://dash.domain.digitalplat.org/</a> 网站获取一个免费自定义域名<br>（注意最好申请 .dpdns.org 结尾的，.us.kg 结尾的需要key，而这个key是要钱的）</p>
+<p>注意自定义域名需要设置dns解析服务器，这里以cloudflare dns解析服务器为例进行配置：<br><img src="/image/domain_dns_setting.jpg" alt="域名DNS解析服务器设置"></p>
+<p>申请好后可以把域名托管到 cloudflare上，具体操作如下：</p>
+<ul>
+<li>登录 cloudflare 账号，点击 <code>onboard domain</code><br><img src="/image/onboard_domain.jpg" alt="onboard domain"></li>
+<li>填入申请好的域名后，剩下全默认，continue<br><img src="/image/dns_setting.jpg" alt="filling domain"></li>
+<li>收费计划选择免费即可<br><img src="/image/pay.jpg" alt="free plan"></li>
+</ul>
+<h1 id="2-启动中转项目"><a href="#2-启动中转项目" class="headerlink" title="2. 启动中转项目"></a>2. 启动中转项目</h1><p>将<a target="_blank" rel="noopener" href="https://github.com/tech-shrimp/gemini-balance-lite">中转项目</a> fork到你个人的仓库，然后部署到vercel上<br>（注意不要部署到cloudflare上，否则会被分配到香港的边缘节点，无法访问gemini）</p>
+<p>在 Cloudflare 的 DNS记录 中添加vercel提供的DNS记录：</p>
+<p><img src="/image/vercel_dns_record.jpg" alt="vercel dns record"></p>
+<p>过几分钟访问你申请的域名，看到proxy成功启动说明部署成功。</p>
+<p><img src="/image/proxy_success.png" alt="proxy success"></p>
+<h1 id="3-在前端平台上使用"><a href="#3-在前端平台上使用" class="headerlink" title="3. 在前端平台上使用"></a>3. 在前端平台上使用</h1><p>可以在 <a target="_blank" rel="noopener" href="https://lobechat.com/chat">lobechat</a> 平台上部署你的域名。</p>
+<p><img src="/image/lobe_chat.jpg" alt="lobe chat"></p>
+<p><img src="/image/lobe_setting.png" alt="lobe setting"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-深度学习/免费服务器的选择"
   class="article article-type-post"
   itemscope
@@ -729,67 +794,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL%E5%AD%A6%E4%B9%A0/" rel="tag">MySQL学习</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-The Missing Semester/Chap2"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/24/The%20Missing%20Semester/Chap2/"
-    >Chap2</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/24/The%20Missing%20Semester/Chap2/" class="article-date">
-  <time datetime="2024-03-24T12:35:20.000Z" itemprop="datePublished">2024-03-24</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="1-作业答案"><a href="#1-作业答案" class="headerlink" title="1. 作业答案"></a>1. 作业答案</h2><p>Q1: 阅读 man ls ，然后使用ls 命令进行如下操作：</p>
-<ul>
-<li>列出所有文件信息：-l</li>
-<li>所有文件（包括隐藏文件） ：-a</li>
-<li>文件打印以人类可以理解的格式输出 (例如，使用454M 而不是 454279954) : -h</li>
-<li>文件以最近访问顺序排序：-t</li>
-<li>以彩色文本显示输出结果：—color=auto</li>
-</ul>
-<p>典型输出如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-rw-r--r--   1 user group 1.1M Jan 14 09:53 baz</span><br><span class="line">drwxr-xr-x   5 user group  160 Jan 14 09:53 .</span><br><span class="line">-rw-r--r--   1 user group  514 Jan 14 06:42 bar</span><br><span class="line">-rw-r--r--   1 user group 106M Jan 13 12:12 foo</span><br><span class="line">drwx------+ 47 user group 1.5K Jan 12 18:08 ..</span><br></pre></td></tr></table></figure></p>
-<p>A:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -lhat --color=auto</span><br></pre></td></tr></table></figure></p>
-<p>Q2: 编写两个bash函数 marco 和 polo 执行下面的操作。每当你执行 marco 时，当前的工作目录应当以某种形式保存，当执行 polo 时，无论现在处在什么目录下，都应当 cd 回到当时执行 marco 的目录。为了方便debug，你可以把代码写在单独的文件 marco.sh 中，并通过 source marco.sh命令，（重新）加载函数。</p>
-<p>A:</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/The-Missing-Semester/" rel="tag">The Missing Semester</a></li></ul>
 
     </footer>
   </div>
