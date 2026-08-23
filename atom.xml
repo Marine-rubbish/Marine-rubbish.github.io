@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2026-05-25T18:49:59.318Z</updated>
+  <updated>2026-08-23T05:04:53.055Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>大疆 激光雷达算法岗笔试题</title>
+    <link href="http://example.com/2026/08/23/%E5%A4%A7%E7%96%86_%E6%BF%80%E5%85%89%E9%9B%B7%E8%BE%BE%E7%AE%97%E6%B3%95%E5%B2%97%E7%AC%94%E8%AF%95%E9%A2%98/"/>
+    <id>http://example.com/2026/08/23/%E5%A4%A7%E7%96%86_%E6%BF%80%E5%85%89%E9%9B%B7%E8%BE%BE%E7%AE%97%E6%B3%95%E5%B2%97%E7%AC%94%E8%AF%95%E9%A2%98/</id>
+    <published>2026-08-23T05:03:00.000Z</published>
+    <updated>2026-08-23T05:04:53.055Z</updated>
+    
+    
+    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
+    
+    
+    
+    
+    <category term="面经" scheme="http://example.com/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>（负慎）小米清退实习生有感</title>
@@ -125,7 +142,7 @@
     <link href="http://example.com/2026/02/28/%E5%AD%97%E8%8A%82%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%80%E9%9D%A2/"/>
     <id>http://example.com/2026/02/28/%E5%AD%97%E8%8A%82%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%80%E9%9D%A2/</id>
     <published>2026-02-28T07:49:29.000Z</published>
-    <updated>2026-03-01T07:30:56.558Z</updated>
+    <updated>2026-03-02T12:21:59.894Z</updated>
     
     
     <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
@@ -423,30 +440,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;1-查询表&quot;&gt;&lt;a href=&quot;#1-查询表&quot; class=&quot;headerlink&quot; title=&quot;1. 查询表&quot;&gt;&lt;/a&gt;1. 查询表&lt;/h2&gt;&lt;p&gt;查询 &lt;code&gt;sys&lt;/code&gt; 数据库里的表:&lt;br&gt;&lt;figure class=&quot;highlight</summary>
-        
-      
-    
-    
-    
-    
-    <category term="MySQL学习" scheme="http://example.com/tags/MySQL%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第2节 数据库操作</title>
-    <link href="http://example.com/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC2%E8%8A%82-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/"/>
-    <id>http://example.com/2024/06/09/MySQL%E5%AD%A6%E4%B9%A0/%E7%AC%AC2%E8%8A%82-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/</id>
-    <published>2024-06-09T15:30:08.000Z</published>
-    <updated>2024-06-09T16:29:58.636Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;0-SQL通用语法分类&quot;&gt;&lt;a href=&quot;#0-SQL通用语法分类&quot; class=&quot;headerlink&quot; title=&quot;0. SQL通用语法分类&quot;&gt;&lt;/a&gt;0. SQL通用语法分类&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;DDL:</summary>
         
       
     
